@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>IconFont</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="iconfont.css">
+</head>
+<body>
+    <div class="main markdown">
+        <h1>IconFont 图标</h1>
+        <ul class="icon_lists clear">
+            
+                <li>
+                <i class="icon iconfont icon-xitongrizhi"></i>
+                    <div class="name">系统日志</div>
+                    <div class="fontclass">.icon-xitongrizhi</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-gongyingshanghover"></i>
+                    <div class="name">供应商Hover</div>
+                    <div class="fontclass">.icon-gongyingshanghover</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-kucunhui"></i>
+                    <div class="name">库存-灰</div>
+                    <div class="fontclass">.icon-kucunhui</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-quanxianguanli"></i>
+                    <div class="name">权限管理</div>
+                    <div class="fontclass">.icon-quanxianguanli</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-cf-c53"></i>
+                    <div class="name">采购统计</div>
+                    <div class="fontclass">.icon-cf-c53</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-gongyingshangguanli"></i>
+                    <div class="name">供应商管理</div>
+                    <div class="fontclass">.icon-gongyingshangguanli</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-dingdantongji"></i>
+                    <div class="name">订单统计</div>
+                    <div class="fontclass">.icon-dingdantongji</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-weibiaoti1dinghuodan"></i>
+                    <div class="name">未标题-1_订货单</div>
+                    <div class="fontclass">.icon-weibiaoti1dinghuodan</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-shouzhimingxi-copy"></i>
+                    <div class="name">收支明细</div>
+                    <div class="fontclass">.icon-shouzhimingxi-copy</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-baobiao"></i>
+                    <div class="name">报表</div>
+                    <div class="fontclass">.icon-baobiao</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-dinghuodan"></i>
+                    <div class="name">订货单 </div>
+                    <div class="fontclass">.icon-dinghuodan</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-tuihuodan"></i>
+                    <div class="name">退货单</div>
+                    <div class="fontclass">.icon-tuihuodan</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-gongsi"></i>
+                    <div class="name">公司</div>
+                    <div class="fontclass">.icon-gongsi</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-shangjia"></i>
+                    <div class="name">上架</div>
+                    <div class="fontclass">.icon-shangjia</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-xiajia"></i>
+                    <div class="name">下架</div>
+                    <div class="fontclass">.icon-xiajia</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-zhuanzhang"></i>
+                    <div class="name">转账</div>
+                    <div class="fontclass">.icon-zhuanzhang</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-youxuanshangpindingdan"></i>
+                    <div class="name">优选商品订单</div>
+                    <div class="fontclass">.icon-youxuanshangpindingdan</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-chongzhi"></i>
+                    <div class="name">充值</div>
+                    <div class="fontclass">.icon-chongzhi</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-fahuoliangpaihang"></i>
+                    <div class="name">发货量排行</div>
+                    <div class="fontclass">.icon-fahuoliangpaihang</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-kucunguanli"></i>
+                    <div class="name">库存管理</div>
+                    <div class="fontclass">.icon-kucunguanli</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-maolishenpi"></i>
+                    <div class="name">毛利审批</div>
+                    <div class="fontclass">.icon-maolishenpi</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-zuzhiguanli"></i>
+                    <div class="name">组织管理</div>
+                    <div class="fontclass">.icon-zuzhiguanli</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-duizhang"></i>
+                    <div class="name">对账</div>
+                    <div class="fontclass">.icon-duizhang</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-fq_chukudengji"></i>
+                    <div class="name">fq_出库登记</div>
+                    <div class="fontclass">.icon-fq_chukudengji</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-tuihuo"></i>
+                    <div class="name">退货</div>
+                    <div class="fontclass">.icon-tuihuo</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-tuihuodanhao"></i>
+                    <div class="name">退货单号</div>
+                    <div class="fontclass">.icon-tuihuodanhao</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-fukuan"></i>
+                    <div class="name">付款单</div>
+                    <div class="fontclass">.icon-fukuan</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-shoukuan"></i>
+                    <div class="name">收款单</div>
+                    <div class="fontclass">.icon-shoukuan</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-cloud-listing"></i>
+                    <div class="name">明细</div>
+                    <div class="fontclass">.icon-cloud-listing</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-shangpinfenlei"></i>
+                    <div class="name">商品分类</div>
+                    <div class="fontclass">.icon-shangpinfenlei</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-quyutu"></i>
+                    <div class="name">区域图</div>
+                    <div class="fontclass">.icon-quyutu</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-shangpinguanli"></i>
+                    <div class="name">商品管理</div>
+                    <div class="fontclass">.icon-shangpinguanli</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-shoukuanzhanghu"></i>
+                    <div class="name">收款账户</div>
+                    <div class="fontclass">.icon-shoukuanzhanghu</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-caidanguanli"></i>
+                    <div class="name">菜单管理</div>
+                    <div class="fontclass">.icon-caidanguanli</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-cw"></i>
+                    <div class="name">财务</div>
+                    <div class="fontclass">.icon-cw</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-kehu"></i>
+                    <div class="name">客户</div>
+                    <div class="fontclass">.icon-kehu</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-zijinfenxi"></i>
+                    <div class="name">资金分析</div>
+                    <div class="fontclass">.icon-zijinfenxi</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-koukuan"></i>
+                    <div class="name">扣款</div>
+                    <div class="fontclass">.icon-koukuan</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-qimojiezhuan-normal"></i>
+                    <div class="name">期末结转-normal</div>
+                    <div class="fontclass">.icon-qimojiezhuan-normal</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-fuwudanwei"></i>
+                    <div class="name">服务单位</div>
+                    <div class="fontclass">.icon-fuwudanwei</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-jichushujuguanli"></i>
+                    <div class="name">基础数据管理</div>
+                    <div class="fontclass">.icon-jichushujuguanli</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-tuikuan"></i>
+                    <div class="name">退款</div>
+                    <div class="fontclass">.icon-tuikuan</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-chengben"></i>
+                    <div class="name">成本</div>
+                    <div class="fontclass">.icon-chengben</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-zhanghaoguanli"></i>
+                    <div class="name">账号管理</div>
+                    <div class="fontclass">.icon-zhanghaoguanli</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-zhinengcaigoujianyi"></i>
+                    <div class="name">智能采购建议</div>
+                    <div class="fontclass">.icon-zhinengcaigoujianyi</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-tuikuanshibai"></i>
+                    <div class="name">退货</div>
+                    <div class="fontclass">.icon-tuikuanshibai</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-caigouhuizong"></i>
+                    <div class="name">采购汇总</div>
+                    <div class="fontclass">.icon-caigouhuizong</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-caiwu"></i>
+                    <div class="name">财务</div>
+                    <div class="fontclass">.icon-caiwu</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-stock-in"></i>
+                    <div class="name">入库</div>
+                    <div class="fontclass">.icon-stock-in</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-xitongguanli"></i>
+                    <div class="name">系统管理</div>
+                    <div class="fontclass">.icon-xitongguanli</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-churukujilu"></i>
+                    <div class="name">出入库记录</div>
+                    <div class="fontclass">.icon-churukujilu</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-CDdingdanguanli"></i>
+                    <div class="name">CD订单列表</div>
+                    <div class="fontclass">.icon-CDdingdanguanli</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-fukuandan"></i>
+                    <div class="name">付款单</div>
+                    <div class="fontclass">.icon-fukuandan</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-dianpuxiaoshoutongji"></i>
+                    <div class="name">店铺销售统计</div>
+                    <div class="fontclass">.icon-dianpuxiaoshoutongji</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-CDdingdanguanlisvg"></i>
+                    <div class="name">CD订单管理</div>
+                    <div class="fontclass">.icon-CDdingdanguanlisvg</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-zijinzhanghu"></i>
+                    <div class="name">资金账户</div>
+                    <div class="fontclass">.icon-zijinzhanghu</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-kucunyidong"></i>
+                    <div class="name">库存移动</div>
+                    <div class="fontclass">.icon-kucunyidong</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-cangkuzhongchanpin"></i>
+                    <div class="name">仓库中产品</div>
+                    <div class="fontclass">.icon-cangkuzhongchanpin</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-pandianrenwu"></i>
+                    <div class="name">盘点任务</div>
+                    <div class="fontclass">.icon-pandianrenwu</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-duizhangdan"></i>
+                    <div class="name">对账单</div>
+                    <div class="fontclass">.icon-duizhangdan</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-shangpinliebiao"></i>
+                    <div class="name">商品列表</div>
+                    <div class="fontclass">.icon-shangpinliebiao</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-liushui"></i>
+                    <div class="name">收款/退费流水</div>
+                    <div class="fontclass">.icon-liushui</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-yuanliaoshoufa"></i>
+                    <div class="name">原料收发</div>
+                    <div class="fontclass">.icon-yuanliaoshoufa</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-kehudingdan"></i>
+                    <div class="name">客户订单</div>
+                    <div class="fontclass">.icon-kehudingdan</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-chukushenqing"></i>
+                    <div class="name">出库申请</div>
+                    <div class="fontclass">.icon-chukushenqing</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-caigouguanli"></i>
+                    <div class="name">采购管理</div>
+                    <div class="fontclass">.icon-caigouguanli</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-kehuliebiao"></i>
+                    <div class="name">客户列表</div>
+                    <div class="fontclass">.icon-kehuliebiao</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-yixiangjinguanli_shoukuandan"></i>
+                    <div class="name">意向金管理_收款单</div>
+                    <div class="fontclass">.icon-yixiangjinguanli_shoukuandan</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-quyurenliu"></i>
+                    <div class="name">区域人流 18*18px</div>
+                    <div class="fontclass">.icon-quyurenliu</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-shangpindown"></i>
+                    <div class="name">商品 down</div>
+                    <div class="fontclass">.icon-shangpindown</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-dingdantongji1"></i>
+                    <div class="name">订单统计</div>
+                    <div class="fontclass">.icon-dingdantongji1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-ruku"></i>
+                    <div class="name">入库</div>
+                    <div class="fontclass">.icon-ruku</div>
+                </li>
+            
+        </ul>
+
+        <h2 id="font-class-">font-class引用</h2>
+        <hr>
+
+        <p>font-class是unicode使用方式的一种变种，主要是解决unicode书写不直观，语意不明确的问题。</p>
+        <p>与unicode使用方式相比，具有如下特点：</p>
+        <ul>
+        <li>兼容性良好，支持ie8+，及所有现代浏览器。</li>
+        <li>相比于unicode语意明确，书写更直观。可以很容易分辨这个icon是什么。</li>
+        <li>因为使用class来定义图标，所以当要替换图标时，只需要修改class里面的unicode引用。</li>
+        <li>不过因为本质上还是使用的字体，所以多色图标还是不支持的。</li>
+        </ul>
+        <p>使用步骤如下：</p>
+        <h3 id="-fontclass-">第一步：引入项目下面生成的fontclass代码：</h3>
+
+
+        <pre><code class="lang-js hljs javascript"><span class="hljs-comment">&lt;link rel="stylesheet" type="text/css" href="./iconfont.css"&gt;</span></code></pre>
+        <h3 id="-">第二步：挑选相应图标并获取类名，应用于页面：</h3>
+        <pre><code class="lang-css hljs">&lt;<span class="hljs-selector-tag">i</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">iconfont</span> <span class="hljs-selector-tag">icon-xxx</span>"&gt;&lt;/<span class="hljs-selector-tag">i</span>&gt;</code></pre>
+        <blockquote>
+        <p>"iconfont"是你项目下的font-family。可以通过编辑项目查看，默认是"iconfont"。</p>
+        </blockquote>
+    </div>
+</body>
+</html>

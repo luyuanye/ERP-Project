@@ -1,0 +1,79 @@
+/*a--pages***********container************/
+.clear{overflow: hidden;}
+.fl{float: left;}
+.pos-r{position: relative;}
+/*角色权限rolepage和数字字典dictionary【有固定头部】*/
+.Rolepage-container,.dictionary1,.dictionary{height: 100%;}
+.Rolepage-container  .section-wrap-title,
+.dictionary1         .section-wrap-title{
+	font-size: 14px;font-weight: 600;padding:0px 15px;box-sizing:border-box;border-bottom: 1px solid #dedede;height: 41px;line-height:36px;overflow-x: hidden; overflow-y: auto; 	
+}
+.dictionary .portlet .portlet-title{
+	font-size: 14px;font-weight: 600;padding:0px 15px;box-sizing:border-box;border-bottom: 1px solid #dedede;height: 41px;line-height:36px;overflow-x: hidden;   overflow-y: auto;	
+}
+.Rolepage-container  .section-wrap-title>span{display: inline-block; line-height: 40px;}   
+.dictionary1         .section-wrap-title>div>span{display: inline-block;line-height: 40px;}
+
+/*左右*/
+/*角色权限rolepage*/
+ .Rolepage-container .container_left {
+   /*  width:calc(100% - 220px);*/
+     height: 100%; 
+     position: relative;
+      /*去除那个伪类做的线，因为js定了放tree的盒子高自适应屏幕*/
+       /* border-right: 1px solid #eee;*/
+}
+
+ .Rolepage-container .container_right {	
+   /* width: 220px;*/
+    height: 100%;   
+     position: relative; 
+   
+}  
+.Rolepage-container  .container_right .tree-demo{height:calc(100% - 45px);overflow: auto;}
+.Rolepage-container>.container_left>.portlet{height:calc(100% - 45px);}
+.Rolepage-container>.container_left>.portlet>.portlet-body{height:100%; overflow: auto;}
+/*数字字典dictionary*/
+
+ .dictionary1 .container_left {	
+       height: 100%;       
+      position: relative; 
+       /* width: 220px;*/ 
+       /*去除那个伪类做的线，因为js定了放tree的盒子高自适应屏幕*/
+       /* border-right: 1px solid #eee;*/
+}
+.dictionary1 .container_right {
+      /*width:calc(100% - 220px);*/
+      height: 100%; 
+       position: relative; 
+}
+.dictionary1  .container_left .tree-demo{height:calc(100% - 45px); overflow: auto;}
+.dictionary1>.container_right>.portlet{height:calc(100% - 45px);}
+.dictionary1>.container_right>.portlet>.portlet-body{height:100%; overflow: auto;}
+/*other其他无固定头的tree*/
+ .dictionary .container_left {
+       height: 100%;        
+       position: relative; 
+       /* width: 220px;*/ 
+       /*去除那个伪类做的线，因为js定了放tree的盒子高自适应屏幕*/
+       /* border-right: 1px solid #eee;*/    
+}
+  .dictionary  .container_right {
+      /*width:calc(100% - 220px);*/
+      height: 100%; 
+       position: relative; 
+}
+.dictionary .tree-demo{height:100%;  overflow: auto;}
+.dictionary>.container_right>.portlet{height:100%;}
+.dictionary>.container_right>.portlet>.portlet-body{height:calc(100% - 45px); overflow: auto;}
+/*拖动线*/
+.hj-wrap .hj-transverse-split-label{
+position: absolute;right: 0;top: 0;
+width: 5px;
+height: 100%;
+display:block;
+cursor: col-resize;
+background-color:transparent;
+border-right:1px solid #eee;
+
+}

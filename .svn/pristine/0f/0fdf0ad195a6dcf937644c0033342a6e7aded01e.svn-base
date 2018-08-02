@@ -1,0 +1,51 @@
+
+    <div class="page-footer" style="position: fixed;bottom: 0;left: 0;width: 100%;background: #3c9765;color: #fff;text-align: center;z-index: 10050;">
+        <div style="width: 100%;color: #fff;"> 2018 &copy; Metronic Theme By
+            <a target="_blank" href="http://guoxn.com">国兴农</a> &nbsp;|&nbsp;                    
+        </div>           
+    </div>
+  
+ <!--添加add或者编辑edit 模态框-->
+	 <div class="modal fade" id="memberModal" data-backdrop="static"   tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+        </div>
+      </div>
+  </div>
+ 
+<!--用户管理弹框-->
+	
+<div class="modal fade " id="indexModal"  data-backdrop="static"   tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+       
+       <!--绑定挂接模态框-->
+	<div class="modal fade" id="bind_Modal" data-backdrop="static"   tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" style="width: 60%;" >		
+			<div class="modal-content">
+				
+			</div>
+		</div>
+	</div>
+	<!--二维码-->
+	<div class="modal fade" id="erwmModal"  data-backdrop="static"   tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" style="width: 300px;" >		
+			<div class="modal-content">
+			
+			
+			</div>
+		</div>
+	</div>
+	
+	<!--添加提示 模态框-->
+    <div class="modal fade" id="tapModal" data-backdrop="static"   tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 460px;">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+	

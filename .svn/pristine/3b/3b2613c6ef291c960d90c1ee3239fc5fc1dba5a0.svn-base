@@ -1,0 +1,72 @@
+<!--<p>资金账户</p>-->
+<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css">
+<div class="portlet light">
+    <div class="portlet-title">
+        <form class="form-inline">
+            <div class="pull-left">
+                <div class="form-group pull-left">
+                    <input type="text" class="form-control input-medium pull-left" placeholder="请输入客户名称">
+                    <button type="submit" class="btn green pull-left"><i class="fa fa-search"></i>搜索</button>
+                </div>
+            </div>
+            <div class="form-group pull-right">
+                <a title="导入" onclick="addTab('导入','Finance/Finance/fundAccountImport.html','fundAccountImport','fa fa-file-excel-o',this)" date-num="fundAccountImport" class="btn green btn-outline radius"><i class="fa fa-file-excel-o"></i> 导入</a>
+
+                <a href="javascript:;" class="btn green btn-outline radius" title="导出"><i class="fa fa-file-excel-o"></i> 导 出</a>
+            </div>
+        </form>
+    </div>
+    <div class="portlet-body">
+        <div class="statistics-box mt10">
+            <div class="ant-row">
+                <div class="ant-col-sm-8" style="width: 100%">
+                    <div class="statistics-item bg-light-red">现金账户 余额总计<h4>10.00</h4></div>
+                </div>
+            </div>
+        </div>
+        <table style="width: 100%;"
+               class="table table-striped table-bordered table-hover table-checkable order-column table_example dataTable no-footer"
+               id="funAccountTab" role="grid" aria-describedby="funAccountTab_info">
+            <thead>
+            <tr style="width: 55px;"></th>
+                <th>客户名称</th>
+                <th>现金账户</th>
+                <th>总计</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>lsy</td>
+                <td>10.00</td>               
+                <td>
+                    <div class="action-buttons f18">
+                        <a title="资金明细" onclick="addTab('资金明细','Finance/Finance/fundAccountDetail.html','fundAccountDetail','fa fa-file-code-o',this)" date-num="fundAccountDetail"><i class="fa fa-file-code-o"></i></a>
+                        <a data-toggle="modal" data-target="#memberModal" class="modelbtn ml-5" data-title="充值" onclick="clickModel(this)" editurl="Finance/Finance/fundAccountPlus.html"title="充值"><i class="fa fa-sign-in"></i></a>
+                        <a data-toggle="modal" data-target="#memberModal" class="modelbtn ml-5" data-title="扣款" onclick="clickModel(this)" editurl="Finance/Finance/fundAccountMinus.html" title="扣款"><i class="fa fa-rub"></i></a>
+                        <a href="javascript:;" class="ml-5" title="转账" onclick="bind(this)"><i class="fa fa-dollar"></i></a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(function ($) {
+        TableDatatablesManaged.init("#funAccountTab");
+    })
+</script>
+<script type="text/javascript">
+    $(function () {
+        	//可搜索的时间插件
+		$(".date-picker").datepicker({
+			language: 'zh-CN',
+			orientation: "left",
+			format: 'yyyy-mm-dd',
+			autoclose: true
+		});;
+    })
+</script>

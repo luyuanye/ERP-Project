@@ -1,0 +1,38 @@
+
+var TabControlFUN=function(ids){
+	var TabControl=function(ids){		
+		changeTab(ids);
+		$(window).resize(function(){	
+			setTimeout(function(){
+				 $(ids).find('.tabErp a.tabErpA.on').trigger("click");
+	             changeTab(ids);
+			},100)
+	     
+		});
+		function changeTab(ids){	
+		    ulPW= $(ids).width();		
+				$(ids).find('.tabErp a.tabErpA').click(function(){
+					$(this).addClass('on').siblings().removeClass('on');
+					var index = $(this).index();
+					var distance = -ulPW*index;
+					$(ids).find('.contentErpbox ul.contentErpboxUL').stop().animate({left:distance});	   
+						
+					 
+				   /*判断什么时候出现最上面的按钮*/
+				     if(index==0){
+				     	$(ids).find('.tabErp .tabErpBtns').css("display","block")
+				     }else{
+				     	$(ids).find('.tabErp .tabErpBtns').css("display","none")
+				     }
+				    
+			    })
+	    }
+		    
+	};
+	
+    return {
+		init: function(ids)  {
+			TabControl(ids)
+		}
+	}
+}()

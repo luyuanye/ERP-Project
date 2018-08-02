@@ -1,0 +1,125 @@
+<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css">
+<div class="portlet light">
+    <div class="portlet-title">
+        <form class="form-inline">
+            <div class="pull-left">
+                <div class="btn-group pull-left">
+                    <button class="btn green  btn-outline dropdown-toggle pr-5" data-toggle="dropdown">全部仓库<i
+                            class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-left">
+                        <li><a href="javascript:;">全部仓库</a></li>
+                        <li><a href="javascript:;">默认仓</a></li>
+                    </ul>
+                </div>
+                <div class="form-group pull-left ml-10">
+                    <input type="text" class="form-control input-medium pull-left" placeholder="请输入订单号/客户名称">
+                    <button type="submit" class="btn green pull-left"><i class="fa fa-search"></i>搜索</button>
+                </div>
+            </div>
+            <div class="form-group pull-right">
+                <div class="rule-help">
+                    <span>统计说明 <i class="fa fa-question"></i></span>
+                    <div class="rule-help-wrap">
+                        <p>1、退货单提交订单后即计入统计；</p>
+                        <p>2、如需【品牌】字段有内容，需在【系统设置-系统参数设置-商品设置】中启用商品品牌，并在商品列表完善商品品牌信息；</p>
+                        <p>3、客户归属的【部门】、【业务员】及【区域】信息均取的客户列表中当前最新值。</p>
+                    </div>
+                </div>
+                <a href="javascript:;" type="button" class="btn green btn-outline radius"><i class="fa fa-file-excel-o"></i> 导 出</a>
+            </div>
+        </form>
+    </div>
+    <div class="portlet-body">
+        <div class="portle-modify">滞销商品:指近 <span>30</span>天内,销售≤<span>0</span>且有库存的商品。
+            <a data-toggle="modal" data-target="#tapModal" class="" data-title="商品滞销设置"
+               onclick="clickModel(this)" editUrl="Report/MerchandisingAedittTap.html"><i
+                    class="fa fa-pencil"></i> 修改</a></div>
+        <div class="portlet-body">
+               <table style="white-space: nowrap;text-overflow: ellipsis; overflow: hidden;width: 100%;"
+                       class="table table-striped table-bordered table-hover table-checkable order-column table_example dataTable no-footer "
+                       id="MerchandisingAdTab" role="grid" aria-describedby="MerchandisingAdTab_info">
+                    <thead>
+                    <th>商品编码</th>
+                    <th>商品名称</th>
+                    <th>规格</th>
+                    <th>单位</th>
+                    <th>商品状态</th>
+                    <th>滞销期销量</th>
+                    <th>当前库存</th>
+                    <th>最近采购入库时间</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd"  >
+                        <td>白菜</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</div>
+<script>
+    var amountOfAccess = function () {
+        var myChart2 = echarts.init(document.getElementById('container2'));
+        option2 = {
+            title: {
+                text: '',
+                subtext: '',
+                x: ''
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: ['白菜', '敌敌畏']
+            },
+            series: [
+                {
+                    name: '',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    data: [
+                        {value: 335, name: '白菜'},
+                        {value: 10, name: '敌敌畏'},
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+        myChart2.setOption(option2);
+    }
+    amountOfAccess();
+</script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        TableDatatablesManaged.init("#MerchandisingAdTab");
+    })
+</script>
+<script type="text/javascript">
+    $(function () {
+        $(".date-picker").datepicker({
+            language: 'zh-CN',
+            orientation: "left",
+            format: 'yyyy-mm-dd',
+            autoclose: true
+        });
+    })
+</script>

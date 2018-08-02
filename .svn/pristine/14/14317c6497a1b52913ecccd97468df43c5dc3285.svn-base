@@ -1,0 +1,46 @@
+
+ 
+ <!--添加add或者编辑edit 模态框-->
+	 <div class="modal fade" id="memberModal" data-backdrop="static"   tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+        </div>
+      </div>
+  </div>
+ 
+<!--用户管理弹框-->
+	
+<div class="modal fade " id="indexModal"  data-backdrop="static"   tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+       
+       <!--绑定挂接模态框-->
+	<div class="modal fade" id="bind_Modal" data-backdrop="static"   tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" style="width: 60%;" >		
+			<div class="modal-content">
+				
+			</div>
+		</div>
+	</div>
+	<!--二维码-->
+	<div class="modal fade" id="erwmModal"  data-backdrop="static"   tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" style="width: 300px;" >		
+			<div class="modal-content">
+			
+			
+			</div>
+		</div>
+	</div>
+	
+	<!--添加提示 模态框-->
+    <div class="modal fade" id="tapModal" data-backdrop="static"   tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 460px;">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+	

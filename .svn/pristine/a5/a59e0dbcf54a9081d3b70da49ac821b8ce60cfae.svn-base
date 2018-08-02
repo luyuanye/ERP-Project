@@ -1,0 +1,35 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+            class="sr-only">关闭</span></button>
+    <p class="modal-title f16" id="myModalLabel"></p>
+</div>
+<!--scroll start-->
+<div class="formbox_scroll scrollBox">
+    <div class="overTap">
+        <div class="overTapData">
+            <span class="label"><i>*</i>结转截止日期</span>
+            <div class="form-group pull-left ml-3" style="width: 230px;">
+                <div class="form-group">
+                    <div class="input-group date date-picker" data-date-format="dd-mm-yyyy">
+                        <input type="TEXT" class="form-control" placeholder="开始时间" name="datepicker"
+                               aria-required="true" aria-describedby="datepicker-error">
+                        <span class="input-group-btn lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overTapText">
+            <span>执行结转后，结转截止日期当天及之前的库存及成本数据将冻结，此时段内的出入库单据禁止变更。</span>
+            <span>开始结转前，将自动重新核算商品收发成本。</span>
+        </div>
+    </div>
+</div>
+<!--scroll end-->
+<div class="modal-footer form-actions right">
+    <button type="button" class="btn btn-success" data-dismiss="modal">确定</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+</div>

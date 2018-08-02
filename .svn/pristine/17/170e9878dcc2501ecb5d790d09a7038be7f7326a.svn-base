@@ -1,0 +1,281 @@
+<link href="../js/treeview/bootstrap-treeview.min.css" rel="stylesheet" type="text/css">
+<link href="../assets/global/plugins/bootstrap-dialog/bootstrap-dialog.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/treeview/bootstrap-treeview.js">
+</script>
+<script type="text/javascript" src="../assets/global/plugins/bootstrap-dialog/bootstrap-dialog.min.js"></script>
+<div class="portlet light bordered">
+	<div class="portlet-title" >		
+		<a  id="btnAdd"  class="btn btn-success"  ><i class="fa fa-plus"></i> 新增</a>
+		<a  id="btnEdit"  class="btn btn-success"  ><i class="fa fa-edit"></i> 编辑</a>
+		<a  id="btnUp"  class="btn btn-info"  ><i class="fa fa-arrow-up"></i> 置顶</a>
+		<a  id="btnMove"  class="btn btn-info"  ><i class="fa fa-plane"></i> 移动</a>
+		<a  id="btnDel"  class="btn btn-danger"  ><i class="fa fa-trash"></i> 删除</a>
+		
+	</div>
+	<div id="Departmenttreeview"></div>
+</div>
+<!--弹出框 新增start-->
+<div class="modal fade" id="addOperation-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content radius_5">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">新增</h4>
+			</div>
+			<form class="form-horizontal" id="categoryaddfrom">
+				<div class="modal-body">
+					<div group="" item="add">
+						<div class="form-group ml-0 mr-0">
+							<label for="addName" class="col-sm-2 required">分类名称:</label>
+							<div class="col-md-9 col-sm-10">
+								<div class="testInput">
+									<input id="addName" name="addName" type="text" class="form-control" placeholder="分类名称" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button id="Save" type="button" class="btn btn-primary">提交</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!--弹出框  编辑 start-->
+<div class="modal fade" id="editOperation-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEdit" data-backdrop="static">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content radius_5">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabelEdit">编辑</h4>
+			</div>
+			<form class="form-horizontal" id="categoryeditfrom">
+				<div class="modal-body">
+					<div group="" item="edit">
+						<div class="form-group ml-0 mr-0">
+							<label for="editName" class="col-sm-2 required">分类名称:</label>
+							<div class="col-md-9 col-sm-10">
+								<div class="testInput">
+									<input id="editName" name="editName" type="text" class="form-control" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button id="editSave" type="button" class="btn btn-primary">提交</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(function() {
+		onLoadTree();
+		//置顶
+		$("#btnUp").click(function() {
+			var node = $('#Departmenttreeview').treeview('getSelected');		
+			if(node.length == 0) {
+				layer.open({
+					time: 0,
+					title: '提示',
+					content: '请选择要置顶的节点',
+					btn: ['确定']
+				});
+				return;
+			}
+			
+		});
+			//移动
+		$("#btnMove").click(function() {
+			var node = $('#Departmenttreeview').treeview('getSelected');		
+			if(node.length == 0) {
+				layer.open({
+					time: 0,
+					title: '提示',
+					content: '请选择要移动的节点',
+					btn: ['确定']
+				});
+				return;
+			}
+			
+		});
+
+		//删除
+		$("#btnDel").click(function() {
+			var node = $('#Departmenttreeview').treeview('getSelected');		
+			if(node.length == 0) {
+				layer.open({
+					time: 0,
+					title: '提示',
+					content: '请选择要删除的节点',
+					btn: ['确定']
+				});
+				return;
+			}
+			if($("#selectId").val() == '1') {
+				layer.open({
+					time: 0,
+					title: '提示',
+					content: '该节点不允许删除',
+					btn: ['确定']
+				});
+				return;
+			}
+
+			// 删除分类
+			var sUrl = "${ctxPath!}/base/category/delete";
+			layer.open({
+				time: 0, //不自动关闭
+				title: '删除',
+				content: '你确定删除吗？',
+				btn: ['确定', '取消'],
+				yes: function(index) {
+					layer.msg('已删除!', {
+						icon: 1,
+						time: 1
+					});
+					$('#Departmenttreeview').treeview('removeNode', [node, {
+						silent: true
+					}]);
+
+				}
+			});
+		});
+
+		//显示-添加
+		$("#btnAdd").click(function() {
+			var node = $('#Departmenttreeview').treeview('getSelected');
+			if(node.length == 0) {
+				layer.open({
+					time: 0,
+					title: '提示',
+					content: '请选择要新增子集的节点',
+					btn: ['确定']
+				});
+				return;
+			}
+			console.log($("#addName").parent());
+			$("#addName").parent().removeClass("has-error");
+			$("#addName").parent().removeClass("has-success");
+			document.getElementById("addName").value = "";
+			$("#addName-error").remove();
+			$('#addOperation-dialog').modal('show');
+		});
+
+		//保存-新增
+		$("#Save").click(function() {
+			var node = {
+				text: $('#addName').val()
+			};
+			//静态添加节点
+			var parentNode = $('#Departmenttreeview').treeview('getSelected');
+			$('#Departmenttreeview		').treeview('addNode', [node, parentNode]);
+			$('#addOperation-dialog').modal('hide')
+		});
+		//显示-编辑
+		$("#btnEdit").click(function() {
+			var node = $('#Departmenttreeview').treeview('getSelected');
+			if(node.length == 0) {
+				layer.open({
+					time: 0,
+					title: '提示',
+					content: '请选择要编辑的节点',
+					btn: ['确定']
+				});
+				return;
+			}
+
+			$("#editName").parent().removeClass("has-error");
+			$("#adeditNamedName").parent().removeClass("has-success");
+			$("#editName-error").remove();
+			$('#editName').val($('#selectText').val());
+			$('#editOperation-dialog').modal('show');
+
+		});
+
+		//保存-编辑
+		$("#editSave").click(function() {
+			//静态添加节点
+			var node = $('#Departmenttreeview').treeview('getSelected');
+			var newNode = {
+				id: $("#selectId").val(),
+				text: $('#editName').val()
+			};
+			$('#Departmenttreeview').treeview('updateNode', [node, newNode]);
+			$('#editOperation-dialog').modal('hide')
+		});
+
+		function onLoadTree() {
+			var defaultData = [{
+				"id": "1",
+				"nodes": [{
+					"id": "2d65bea4fd9345f9b1a07bfe93ccaea7",
+					"nodes": [{
+						"id": "68b39ee9fe12490f962670c6f4bc0cbc",
+						"nodes": [],
+						"pid": "2d65bea4fd9345f9b1a07bfe93ccaea7",
+						"text": "总部"
+					}],
+					"pid": "1",
+					"text": "销售部门"
+				}, {
+					"id": "a65352befb0c4884ad6f075d6081414e",
+					"nodes": [{
+						"id": "0b9f0e55836a40749da14ed091287ad3",
+						"nodes": [],
+						"pid": "a65352befb0c4884ad6f075d6081414e",
+						"text": "人事"
+					}],
+					"pid": "1",
+					"text": "人事部"
+				}, {
+					"id": "bd5e014b22e54fa6b9c3901513c53489",
+					"nodes": [],
+					"pid": "1",
+					"text": "财务部"
+				}, {
+					"id": "bde195a026c04401986dc70f59dd2284",
+					"nodes": [],
+					"pid": "1",
+					"text": "营销部"
+				}, {
+					"id": "c2b6f08cf5074106b78aa4bffa245956",
+					"nodes": [],
+					"pid": "1",
+					"text": "技术部"
+				}, {
+					"id": "d61b15402aac44deb8ff4cfdcab7164f",
+					"nodes": [],
+					"pid": "1",
+					"text": "产品部"
+				}, {
+					"id": "d670cba780774d07bae4ded0c643a8ad",
+					"nodes": [],
+					"pid": "1",
+					"text": "市场部门"
+				}],
+				"pid": "!",
+				"text": "总公司"
+			}];
+			$('#Departmenttreeview').treeview({
+				data: defaultData,
+				color: "#000000",
+				onNodeSelected: function(event, node) {
+					$("#selectId").val(node.id);
+					$("#selectText").val(node.text);
+
+				},
+				onNodeUnselected: function(event, node) {}
+			});
+		}
+
+	})
+</script>

@@ -1,0 +1,309 @@
+<!--<p>订单统计报表</p>-->
+<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css">
+<div class="portlet light">
+    <div class="portlet-title">
+        <form class="form-inline">
+            <div class="pull-left">
+                <div class="btn-group pull-left" role="group" aria-label="...">
+                    <button type="button" class="btn btn-info"><i class="fa fa-calendar f12"></i>&nbsp;&nbsp;本周</button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-calendar f12"></i>&nbsp;&nbsp;上周</button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-calendar f12"></i>&nbsp;&nbsp;本月</button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-calendar f12"></i>&nbsp;&nbsp;上月</button>
+                </div>
+                <div class="form-group pull-left ml-10">
+                    <div class="form-group">
+                        <label class="lh22">从</label>
+                        <div class="input-group date date-picker">
+                            <input type="TEXT" class="form-control" placeholder="开始时间">
+                            <span class="input-group-btn lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                        </div>
+                        <label class="lh22">到</label>
+                        <div class="input-group date date-picker">
+                            <input type="TEXT" class="form-control" placeholder="结束时间">
+                            <span class="input-group-btn  lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group pull-right">
+                <div class="rule-help">
+                    <span>统计说明 <i class="fa fa-question"></i></span>
+                    <div class="rule-help-wrap">
+                        <p>1、退货单提交订单后即计入统计；</p>
+                        <p>2、如需【品牌】字段有内容，需在【系统设置-系统参数设置-商品设置】中启用商品品牌，并在商品列表完善商品品牌信息；</p>
+                        <p>3、客户归属的【部门】、【业务员】及【区域】信息均取的客户列表中当前最新值。</p>
+                    </div>
+                </div>
+                <a href="javascript:;" type="button" class="btn green btn-outline radius"><i
+                        class="fa fa-file-excel-o"></i> 导 出</a>
+            </div>
+        </form>
+    </div>
+    <div class="portlet-body">
+        <div class="reportWrapper">
+            <div class="reportSum">
+                <div class="reportSumList col-md-3">
+                    <a title="订货单" onclick="addTab('订货单','Order/orderManagement/orderForm.html','orderForm','fa fa-sticky-note',this)"
+                       date-num="orderForm" class="hoverColor">
+                        <div class="reportFont col-md-6">
+                            <h3>订货单</h3>
+                            <h4><span>4</span>笔</h4>
+                        </div>
+                    </a>
+                    <a title="退货单" onclick="addTab('退货单','Order/orderManagement/returnForm.html','returnForm','fa fa-sticky-note',this)"
+                       date-num="returnForm"  class="hoverColor">
+                    <div class="reportFont col-md-6">
+                        <h3>退货单</h3>
+                        <h4><span>4</span>笔</h4>
+                    </div>
+                    </a>
+                </div>
+                <div class="reportSumList col-md-3">
+                    <div class="reportFont col-md-6">
+                        <h3>订货客户数</h3>
+                        <h4><span>4</span></h4>
+                    </div>
+                    <div class="reportFont col-md-6">
+                        <h3>退货客户数</h3>
+                        <h4><span>4</span></h4>
+                    </div>
+                </div>
+                <div class="reportSumList col-md-6">
+                    <div class="reportFont col-md-4">
+                        <h3>订货金额</h3>
+                        <h4><span>0.00</span></h4>
+                    </div>
+                    <div class="reportFont col-md-4">
+                        <h3>退货金额</h3>
+                        <h4><span>101.00</span></h4>
+                    </div>
+                    <div class="reportFont col-md-4">
+                        <h3>金额合计</h3>
+                        <h4><span>-101.00</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="echartsWrapper">
+                <div class="chart-top">
+                    <div class="btn-group pull-left mar-left">
+                        <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">订货单数<i
+                                class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="javascript:;">订货单数</a></li>
+                            <li><a href="javascript:;">退货单数</a></li>
+                            <li><a href="javascript:;">订货金额</a></li>
+                            <li><a href="javascript:;">退货金额</a></li>
+                            <li><a href="javascript:;">金额合计</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-info"><i class="fa fa-calendar f12"></i>&nbsp;&nbsp;按天
+                        </button>
+                        <button type="button" class="btn btn-info"><i class="fa fa-calendar f12"></i>&nbsp;&nbsp;按周
+                        </button>
+                        <button type="button" class="btn btn-info"><i class="fa fa-calendar f12"></i>&nbsp;&nbsp;按月
+                        </button>
+                    </div>
+                    <div class="chart-right">
+                        <h3>-101.00</h3>
+                        <div>
+                            <span>-</span>
+                            <span>相比上周期</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <div id="container1" style="width:115%;height:340px; margin-top: -45px; margin-left: -70px;"></div>
+                    <script>
+                        /*访问量折线图*/
+                        var amountOfAccess = function () {
+// 基于准备好的dom，初始化echarts实例
+                            var myChart1 = echarts.init(document.getElementById('container1'));
+                            var xData1 = [];
+                            var yData1 = [];
+                            var xlen1 = 12;
+                            var ylen1 = 12;
+
+                            function gitreportData1() {
+                                $.ajax({
+                                    type: 'get',
+                                    url: 'Report/report.json',
+                                    dataType: 'json',
+                                    success: function (result) {
+                                        $.each(result.reportDate, function (index, item) {
+                                            xData1.push(item.reportTime)
+                                            yData1.push(item.reportCount)
+                                        });
+                                        myChart1.setOption({        //加载数据图表
+                                            xAxis: {
+                                                data: (function () {
+                                                    var xRes1 = [];
+                                                    for (let i = 0; i < xlen1; i++) {
+                                                        xRes1.push(xData1[i])
+                                                    }
+                                                    return xRes1;
+                                                })()
+                                            },
+                                            series: [{
+                                                // 根据名字对应到相应的系列
+                                                name: '',  //显示在上部的标题
+                                                data: (function () {
+                                                    var yRes1 = [];
+                                                    for (let i = 0; i < ylen1; i++) {
+                                                        yRes1.push(yData1[i])
+                                                    }
+                                                    return yRes1
+                                                })()
+                                            }]
+                                        });
+                                    }
+                                })
+                            }
+
+                            gitreportData1()
+                            option1 = {
+                                xAxis: {
+                                    boundaryGap: false,
+                                    axisTick: {
+                                        show: false
+                                    },
+                                    splitLine: {
+                                        show: false
+                                    },
+                                    splitArea: {
+                                        show: false
+                                    },
+                                    data: xData1,
+                                    //设置字体倾斜
+                                    axisLabel: {
+                                        interval: 0,
+                                        fontSize: 12,
+                                        //rotate: -50,//倾斜度 -90 至 90 默认为0
+                                        textStyle: {
+                                            color: '#7c8890',
+                                        }
+                                    },
+                                    grid: {
+                                        y2: 100
+                                    },
+                                    axisLine: {
+                                        lineStyle: {
+                                            color: '#7c8890'
+                                        }
+                                    }
+                                },
+                                tooltip: {
+                                    show: true,
+                                    formatter: function (params) {
+                                        return params.name + '<br/>' + "数量" + ":" + params.value;
+                                    },
+                                },
+                                yAxis: {
+                                    axisTick: {
+                                        show: false
+                                    },
+                                    splitLine: {
+                                        show: false
+                                    },
+                                    splitArea: {
+                                        show: false
+                                    },
+                                    axisLabel: {
+                                        textStyle: {
+                                            color: '#7c8890',
+                                            fontSize: "12",
+                                        }
+                                    },
+                                    axisLine: {
+                                        show: true,
+                                        lineStyle: {
+                                            color: '#7c8890',
+                                            width: 1
+                                        },
+                                    }
+                                },
+                                series: {
+                                    type: "line",
+                                    smooth: true,//是否平滑处理值0-1,true相当于0.5
+                                    itemStyle: {
+                                        normal: {
+                                            color: 'rgb(255, 147, 155)'
+                                        }
+                                    },
+                                    areaStyle: {
+                                        normal: {
+                                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                                offset: 0,
+                                                color: 'rgb(249, 249, 249)'
+                                            }, {
+                                                offset: 1,
+                                                color: 'rgb(208, 130, 136)'
+                                            }])
+                                        }
+                                    },
+                                    data: yData1
+                                }
+                            };
+                            // 使用刚指定的配置项和数据显示图表。
+                            myChart1.setOption(option1);
+                        }
+                        amountOfAccess();
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <table style="width: 100%;"
+                   class="table table-striped table-bordered table-hover table-checkable order-column table_example dataTable no-footer "
+                   id="orderStatisticsTab" role="grid" aria-describedby="orderStatisticsTab_info">
+                <thead>
+                <th style="min-width: 100px;">日期（2018-07-01~2018-07-12）</th>
+                <th>订货单</th>
+                <th>退货单</th>
+                <th>订货客户数</th>
+                <th>退货客户数</th>
+                <th>订货金额</th>
+                <th>退货金额</th>
+                <th>金额小计</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd" role="row">
+                    <td>2018-07-12</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(function ($) {
+        TableDatatablesManaged.init("#orderStatisticsTab");
+    })
+</script>
+<script type="text/javascript">
+    $(function () {
+        $(".date-picker").datepicker({
+            language: 'zh-CN',
+            orientation: "left",
+            format: 'yyyy-mm-dd',
+            autoclose: true
+        });
+    })
+</script>

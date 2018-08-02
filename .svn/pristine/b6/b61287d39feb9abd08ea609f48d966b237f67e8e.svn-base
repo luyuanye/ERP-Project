@@ -1,0 +1,465 @@
+<ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true"
+    data-slide-speed="200">
+    <!--系统管理-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="fa fa-gears"></i>
+            <span class="title">系统管理</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('组织管理','System/Department.html','Department','icon-user',this)"
+                   date-num="Department">
+                    <i class="fa fa-gear"></i>组织管理</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('员工账号管理','System/employeeAccount.html','employeeAccount','icon-user',this)"
+                   date-num="employeeAccount">
+                    <i class="fa fa-male"></i>员工账号管理</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('菜单管理','System/Menu.html','Menu','icon-user',this)"
+                   date-num="Menu">
+                    <i class="fa fa-navicon"></i>菜单管理</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('角色权限管理','System/rolePermissions.html','rolePermissions','icon-user',this)"
+                   date-num="rolePermissions">
+                    <i class="fa fa-user"></i>角色权限管理</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('系统日志管理','System/systemLog.html','systemLog','icon-user',this)"
+                   date-num="systemLog">
+                    <i class="fa fa-calendar"></i>系统日志管理</a>
+            </li>
+        </ul>
+    </li>
+    <!--基础数据-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="fa fa-barcode"></i>
+            <span class="title">基础数据</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('公司信息','Data/companyInformation.html','companyInformation','icon-user',this)"
+                   date-num="companyInformation">
+                    <i class="fa fa-building-o"></i>公司信息</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('商品分类','Data/Categories.html','Categories','icon-user',this)"
+                   date-num="Categories">
+                    <i class="fa fa-cube"></i>商品分类</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('计量单位','Data/Measurement.html','Measurement','icon-user',this)"
+                   date-num="Measurement">
+                    <i class="fa fa-user-secret"></i>计量单位</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('仓库管理','Data/Warehouse.html','Warehouse','icon-user',this)"
+                   date-num="Warehouse">
+                    <i class="fa fa-user-secret"></i>仓库管理</a>
+            </li>
+          
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('客户归属区域','Data/customerArea.html','customerArea','icon-user',this)"
+                   date-num="customerArea">
+                    <i class="fa fa-user-secret"></i>客户归属区域</a>
+            </li>
+        </ul>
+    </li>
+    <!--供应商-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="fa fa-user-secret"></i>
+            <span class="title">供应商</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('供应商信息','Supplier/Supplier.html','Supplier','icon-user',this)"
+                   date-num="Supplier">
+                    <i class="fa fa-users"></i>供应商信息</a>
+            </li>
+        </ul>
+    </li>
+    <!--	客户管理-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="fa fa-users"></i>
+            <span class="title">客户管理</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('客户列表','Client/Client.html','Client','icon-user',this)"
+                   date-num="Client">
+                    <i class="fa fa-users"></i>客户列表</a>
+            </li>
+        </ul>
+    </li>
+    <!--订单-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="fa fa-file-text"></i>
+            <span class="title">订单</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <!--订单管理-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-settings"></i>
+                    <span class="title">订单管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('订货单','Order/orderManagement/orderForm.html','orderForm','icon-user',this)"
+                           date-num="orderForm">
+                            <i class="fa fa-area-chart"></i>订货单</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('退货单','Order/orderManagement/returnForm.html','returnForm','icon-power',this)"
+                           date-num="returnForm">
+                            <i class="fa fa-area-chart"></i>退货单</a>
+                    </li>
+                </ul>
+            </li>
+            <!--订单统计-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-settings"></i>
+                    <span class="title">订单统计</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('出库发货记录','Order/orderStatistics/deliveryRecord.html','deliveryRecord','icon-user',this)"
+                           date-num="deliveryRecord">
+                            <i class="fa fa-area-chart"></i>出库发货记录</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('订单商品统计（明细）','Order/orderStatistics/statisticsDetail.html','statisticsDetail','icon-user',this)"
+                           date-num="statisticsDetail">
+                            <i class="fa fa-area-chart"></i>订单商品统计（明细）</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('订单商品统计（按客户）','Order/orderStatistics/statisticsClient.html','statisticsClient','icon-user',this)"
+                           date-num="statisticsClient">
+                            <i class="fa fa-area-chart"></i>订单商品统计（按客户）</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('订单商品统计（按商品）','Order/orderStatistics/statisticsCommodity.html','statisticsCommodity','icon-user',this)"
+                           date-num="statisticsCommodity">
+                            <i class="fa fa-area-chart"></i>订单商品统计（按商品）</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('发货统计','Order/orderStatistics/Statistics.html','Statistics','icon-user',this)"
+                           date-num="Statistics">
+                            <i class="fa fa-area-chart"></i>发货统计</a>
+                    </li>
+                </ul>
+            </li>
+            <!--退单统计-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-settings"></i>
+                    <span class="title">退单统计</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('退货商品统计（明细）','Order/refundStatistics/refundStatistics.html','order','icon-user',this)"
+                           date-num="order">
+                            <i class="fa fa-area-chart"></i>退货商品统计（明细）
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--商品-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="fa fa-cubes"></i>
+            <span class="title">商品</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <!--商品管理-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-settings"></i>
+                    <span class="title">商品管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('商品列表','Commodity/Commodity/productList.html','productList','icon-user',this)"
+                           date-num="productList">
+                            <i class="fa fa-area-chart"></i>商品列表</a>
+                    </li>
+                </ul>
+            </li>
+            <!--库存管理-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-settings"></i>
+                    <span class="title">库存管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('商品库存','Commodity/inStock/inStock.html','inStock','icon-user',this)"
+                           date-num="inStock">
+                            <i class="fa fa-area-chart"></i>商品库存</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('出库单','Commodity/inStock/outboundOrder.html','outboundOrder','icon-user',this)"
+                           date-num="outboundOrder">
+                            <i class="fa fa-area-chart"></i>出库单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('入库单','Commodity/inStock/inboundOrder.html','inboundOrder','icon-user',this)"
+                           date-num="inboundOrder">
+                            <i class="fa fa-area-chart"></i>入库单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('盘点单','Commodity/inStock/countingOrder.html','countingOrder','icon-user',this)"
+                           date-num="countingOrder">
+                            <i class="fa fa-area-chart"></i>盘点单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('库存调拨','Commodity/inStock/stockTransfer.html','stockTransfer','icon-user',this)"
+                           date-num="stockTransfer">
+                            <i class="fa fa-area-chart"></i>库存调拨</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('出入库明细','Commodity/inStock/Details.html','Details','icon-user',this)"
+                           date-num="Details">
+                            <i class="fa fa-area-chart"></i>出入库明细</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('商品收发汇总','Commodity/inStock/Summary.html','Summary','icon-user',this)"
+                           date-num="Summary">
+                            <i class="fa fa-area-chart"></i>商品收发汇总</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('成本调整','Commodity/inStock/Cost.html','Cost','icon-user',this)"
+                           date-num="Cost">
+                            <i class="fa fa-area-chart"></i>成本调整</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('期末结转','Commodity/inStock/carryOver.html','carryOver','icon-user',this)"
+                           date-num="carryOver">
+                            <i class="fa fa-area-chart"></i>期末结转</a>
+                    </li>
+                </ul>
+            </li>
+            <!--采购管理-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-settings"></i>
+                    <span class="title">采购管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('智能采购','Commodity/Purchase/smartProcurement.html','smartProcurement','icon-user',this)"
+                           date-num="smartProcurement">
+                            <i class="icon-user"></i>智能采购</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('采购订单','Commodity/Purchase/purchaseOrder.html','purchaseOrder','icon-user',this)"
+                           date-num="purchaseOrder">
+                            <i class="icon-user"></i>采购订单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('采购退货','Commodity/Purchase/purchaseReturns.html','purchaseReturns','icon-user',this)"
+                           date-num="purchaseReturns">
+                            <i class="icon-user"></i>采购退货</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('采购汇总','Commodity/Purchase/purchaseSummary.html','purchaseSummary','icon-user',this)"
+                           date-num="purchaseSummary">
+                            <i class="icon-user"></i>采购汇总</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--财务-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="fa fa-rmb"></i>
+            <span class="title">财务</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <!--资金管理-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-settings"></i>
+                    <span class="title">资金管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('收款单','Finance/Finance/Receipt.html','Receipt','icon-user',this)"
+                           date-num="Receipt">
+                            <i class="fa fa-file-text-o"></i>收款单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('付款单','Finance/Finance/Payment.html','Payment','icon-user',this)"
+                           date-num="Payment">
+                            <i class="fa fa-file-text-o"></i>付款单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('收款确认单','Finance/Finance/receiptConfirmation.html','receiptConfirmation','icon-user',this)"
+                           date-num="receiptConfirmation">
+                            <i class="fa fa-file-text-o"></i>收款确认单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('退款确认单','Finance/Finance/paymentConfirmation.html','paymentConfirmation','icon-user',this)"
+                           date-num="paymentConfirmation">
+                            <i class="fa fa-file-text-o"></i>退款确认单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('资金账户','Finance/Finance/fundAccount.html','fundAccount','icon-user',this)"
+                           date-num="fundAccount">
+                            <i class="fa fa-file-text-o"></i>资金账户</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('收款账户','Finance/Finance/accountsReceivable.html','accountsReceivable','icon-user',this)"
+                           date-num="accountsReceivable">
+                            <i class="fa fa-file-text-o"></i>收款账户</a>
+                    </li>
+                </ul>
+            </li>
+            <!--对账管理-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-settings"></i>
+                    <span class="title">对账管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('客户对账单','Finance/Reconciliation/customerStatement.html','customerStatement','icon-user',this)"
+                           date-num="customerStatement">
+                            <i class="fa fa-file-text-o"></i>客户对账单</a>
+                    </li>
+                </ul>
+            </li>
+            <!--资金统计-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-settings"></i>
+                    <span class="title">资金统计</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('收支明细','Finance/Statistics/Detail.html','Detail','icon-user',this)"
+                           date-num="Detail">
+                            <i class="fa fa-file-text-o"></i>收支明细</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('订单收款明细','Finance/Statistics/orderDetails.html','orderDetails','icon-user',this)"
+                           date-num="orderDetails">
+                            <i class="fa fa-file-text-o"></i>订单收款明细</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--报表-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="fa fa-pie-chart"></i>
+            <span class="title">报表</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('订单统计报表','Report/orderStatistics.html','orderStatistics','icon-user',this)"
+                   date-num="orderStatistics">
+                    <i class="fa fa-area-chart"></i>订单统计报表</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('地区统计报表','Report/regionalStatistics.html','regionalStatistics','icon-user',this)"
+                   date-num="regionalStatistics">
+                    <i class="fa fa-area-chart"></i>地区统计报表</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('商品销售报表','Report/Merchandising.html','Merchandising','icon-user',this)"
+                   date-num="Merchandising">
+                    <i class="fa fa-area-chart"></i>商品销售报表</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('客户订货报表','Report/customerOrder.html','customerOrder','icon-user',this)"
+                   date-num="customerOrder">
+                    <i class="fa fa-area-chart"></i>客户订货报表</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('销售毛利报表','Report/grossSales.html','productList','icon-user',this)"
+                   date-num="productList">
+                    <i class="fa fa-area-chart"></i>销售毛利报表</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<!-- END SIDEBAR MENU -->
+<script src="../assets/layouts/layout/scripts/layout.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".menu-toggler").click(function () {
+            if ($(".page-sidebar-wrapper").has(".page-sidebar-menu-closed")) {
+                $(".page-sidebar-wrapper").css({"overflow-x": "initial"})
+            } else {
+                $(".page-sidebar-wrapper").css({"overflow-x": "hidden"})
+            }
+        })
+    })
+</script>

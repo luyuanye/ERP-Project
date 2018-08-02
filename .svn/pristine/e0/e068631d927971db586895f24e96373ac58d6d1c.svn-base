@@ -1,0 +1,664 @@
+<div class="tabbable" style="position:relative;">
+	<div class="ulbox" style="position:fixed;z-index:10045;width：100%;background: #fff;">
+		<ul class="nav nav-tabs nav-tabs-lg" id="menuBar" style="background: #fff;">
+			<li class="" id="tblIndexLI">
+				<a href="#tab_1" data-toggle="tab" id="tblIndex" aria-expanded="false" style="border-left: transparent;">
+					<i class="icon-home"></i> 首页
+				</a>
+			</li>
+		</ul>
+		<div id="tabBtns" style="position:absolute;top: 0;right: 0;background: #fff;line-height: 40px;display: none;z-index: 999;border-left: 1px solid #eee;">
+
+			<i class="fa fa-arrow-left" style="padding:0 5px;"></i>
+			<i class="fa fa-arrow-right" style="padding:0 5px;"></i>
+		</div>
+	</div>
+	<!--首頁部分模块-->
+	<div class="tab-content" id="menuBarContent" style="margin-bottom: 40px;">
+		<div class="tab-pane" id="tab_1" style="padding: 10px;">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<a class="dashboard-stat dashboard-stat-v2 blue" href="javascript:;" onclick="addTab('系统日志','store_manage.html','store_manage')">
+						<div class="visual">
+							<i class="fa fa-comments"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								<span data-counter="counterup" data-value="1349">1349</span>PV
+							</div>
+							<div class="desc"> 当日访问量 </div>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<a class="dashboard-stat dashboard-stat-v2 red" href="javascript:;" onclick="">
+						<div class="visual">
+							<i class="fa fa-bar-chart-o"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								<span data-counter="counterup" data-value="1349">16579</span>M
+							</div>
+							<div class="desc"> APP活跃度 </div>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<a class="dashboard-stat dashboard-stat-v2 green" href="javascript:;" onclick="">
+						<div class="visual">
+							<i class="fa fa-shopping-cart"></i>
+						</div>
+						<div class="details">
+							<div class="number">
+								<span data-counter="counterup" data-value="1349">16579</span>km
+							</div>
+							<div class="desc"> 农庄种植总面积 </div>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<a class="dashboard-stat dashboard-stat-v2 purple" href="javascript:;" onclick="">
+						<div class="visual">
+							<i class="fa fa-globe"></i>
+						</div>
+						<div class="details">
+							<div class="number"> +
+								<span data-counter="counterup" data-value="89">2</span>% </div>
+							<div class="desc"> 数据异常状态 </div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<!---->
+			<div class="row">
+								<!--map-->
+				<!--<div class="col-lg-6 col-xs-12 col-sm-12" style="height: 800px;">
+					<div class="portlet  bordered">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-equalizer font-dark hide"></i>
+								<span class="caption-subject font-dark bold uppercase">农庄重点种植区域分布图</span>
+								<span class="caption-helper">上海市</span>
+							</div>
+							<div class="tools">
+								<a href="" class="collapse"> </a>				
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="" id="charts-map" style="min-width: 200px;">
+								
+							</div>
+						</div>
+						
+					</div>
+				</div>-->
+			
+				<!--实时数据正异常状况-->
+				<div class="col-lg-6 col-xs-12 col-sm-12" style="margin-bottom: 50px;">
+					<div class="portlet  bordered">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-equalizer font-dark hide"></i>
+								<span class="caption-subject font-dark bold uppercase">实时数据</span>
+								<span class="caption-helper">正异常状况</span>
+							</div>
+							<div class="tools">
+								<a href="" class="collapse"> </a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="" id="newdata" style="min-width: 200px;height: 400px;">
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+                 	<!--控制器，传感器，视频数量种类统计图-->
+				<div class="col-lg-6 col-xs-12 col-sm-12" style="margin-bottom: 50px;">
+					<div class="portlet  bordered">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-equalizer font-dark hide"></i>
+								<span class="caption-subject font-dark bold uppercase">设备统计</span>
+								<span class="caption-helper">种类展示</span>
+							</div>
+							<div class="tools">
+								<a href="" class="collapse"> </a>
+								<!--<a href="#portlet-config" data-toggle="modal" class="config"> </a>-->
+								<!--<a href="" class="reload"> </a>-->
+								<!--<a href="" class="remove"> </a>-->
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="row">
+								<div class="col-md-4  col-xs-4">
+									<div class="" id="facility" style="min-width: 100px;height: 400px;">
+							        </div>
+
+								</div>
+								<div class="col-md-4  col-xs-4 ">
+									<div class="" id="pie_bar1" style="min-width: 100px;">
+									</div>
+									<a class="title" href="javascript:;" style="display:block;text-align: center;"> 传感器
+										<i class="icon-arrow-right"></i>
+									</a>
+								</div>
+								<div class="col-md-4  col-xs-4">
+									<div class="" id="pie_bar2" style="min-width: 100px;">
+
+									</div>
+									<a class="title" href="javascript:;" style="display:block;text-align: center;"> 控制器
+										<i class="icon-arrow-right"></i>
+									</a>
+
+								</div>
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+			</div>
+			<!---->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$('#tblIndex').trigger('click');
+	$(function() {
+		$('.ulbox').width($('.tabbable').width());
+	})
+	$(function() {
+		if($('html').width() > 991) {
+			$('#menuBarContent').css("margin-top", "42px");
+		}
+
+	})
+</script>
+<!--饼图-->
+<script type="text/javascript">
+	var chart = null;
+	$(function() {
+		$('#pie_bar1').highcharts({
+				chart: {
+					plotBackgroundColor: null,
+					plotBorderWidth: null,
+					plotShadow: false,
+					//				spacing: [100, 0, 40, 0]
+				},
+				title: {
+					floating: true,
+					text: '传感器'
+				},
+				tooltip: {
+					pointFormat: '<span style="color:{point.color}">\u25CF</span> ' + '数量: <b>{point.z}</b><br/>' +
+						'占总设备比例: <b>{point.percentage:.1f}%</b><br/>'
+
+				},
+				plotOptions: {
+					pie: {
+						allowPointSelect: true,
+						cursor: 'pointer',
+						dataLabels: {
+							enabled: false,
+
+						},
+
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				series: [{
+					type: 'pie',
+					innerSize: '60%',
+					name: '传感器',
+					data: [{
+							name: '盐分传感器',
+							y: 3.2,
+							z: 66
+
+						},
+						{
+							name: 'PM2.5',
+							y: 6.8,
+							z: 125
+						},
+						{
+							name: 'PH值传感器',
+							y: 10,
+							z: 125,
+							sliced: true,
+							selected: true,
+							color: 'red',
+							url: 'http://www.hcharts.cn'
+						},
+						{
+							name: '露点传感器',
+							y: 9,
+							z: 125
+						},
+						{
+							name: 'TBQ总辐射',
+							y: 10.3,
+							z: 300
+						},
+						{
+							name: '数字气压传感器',
+							y: 0.7,
+							z: 52
+						},
+						{
+							name: '液位',
+							y: 4,
+							z: 125
+						},
+						{
+							name: '二氧化碳传感器',
+							y: 5,
+							z: 64
+						},
+						{
+							name: '总辐射累计',
+							y: 4,
+							z: 78
+						},
+						{
+							name: '日雨量累计',
+							y: 4,
+							z: 23
+						},
+						{
+							name: '光照强度传感器',
+							y: 6.8,
+							z: 78
+						},
+						{
+							name: '蒸发量',
+							y: 10,
+							z: 245
+						},
+						{
+							name: '风向传感器',
+							y: 2.3,
+							z: 24
+						},
+						{
+							name: '风向传感器',
+							y: 2.7,
+							z: 241
+						},
+						{
+							name: '湿度传感器',
+							y: 15,
+							z: 52
+						},
+
+					]
+				}]
+			},
+			function(c) {
+				// 环形图圆心
+				var centerY = c.series[0].center[1],
+					titleHeight = parseInt(c.title.styles.fontSize);
+				c.setTitle({
+					y: centerY + titleHeight / 2
+				});
+				chart = c;
+			});
+	});
+	$(function() {
+		$('#pie_bar2').highcharts({
+				chart: {
+					plotBackgroundColor: null,
+					plotBorderWidth: null,
+					plotShadow: false,
+				},
+				title: {
+					floating: true,
+					text: '控制器'
+				},
+				tooltip: {
+					pointFormat: '<span style="color:{point.color}">\u25CF</span> ' + '数量: <b>{point.z}</b><br/>' +
+						'占总设备比例: <b>{point.percentage:.1f}%</b><br/>'
+
+				},
+				plotOptions: {
+					pie: {
+						allowPointSelect: true,
+						cursor: 'pointer',
+						dataLabels: {
+							enabled: false,
+
+						},
+
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				series: [{
+					type: 'pie',
+					innerSize: '60%',
+					name: '控制器',
+					data: [{
+							name: '循环风机',
+							y: 3.2,
+							z: 66
+
+						},
+						{
+							name: '湿帘水泵',
+							y: 6.8,
+							z: 125
+						},
+						{
+							name: '内保温合拢',
+							y: 10,
+							z: 125,
+							sliced: true,
+							selected: true,
+							color: 'red',
+							url: 'http://www.hcharts.cn'
+						},
+						{
+							name: '内保温展开',
+							y: 9,
+							z: 125
+						},
+						{
+							name: '湿帘风机',
+							y: 10.3,
+							z: 300
+						},
+						{
+							name: '天窗展开',
+							y: 0.7,
+							z: 52
+						},
+						{
+							name: '天窗合拢',
+							y: 4,
+							z: 125
+						},
+						{
+							name: '侧窗合拢',
+							y: 5,
+							z: 64
+						},
+						{
+							name: '遮阳板合拢',
+							y: 4,
+							z: 78
+						},
+						{
+							name: '卷膜机合拢',
+							y: 4,
+							z: 23
+						},
+						{
+							name: '卷膜机展开',
+							y: 6.8,
+							z: 78
+						},
+						{
+							name: '电动阀',
+							y: 10,
+							z: 245
+						},
+						{
+							name: '侧窗展开',
+							y: 2.3,
+							z: 24
+						},
+						{
+							name: '遮阳板展开',
+							y: 2.7,
+							z: 241
+						},
+						{
+							name: '电磁阀',
+							y: 10,
+							z: 52
+						},
+						{
+							name: '水泵',
+							y: 5,
+							z: 520
+						},
+
+					]
+				}]
+			},
+			function(c) {
+				// 环形图圆心
+				var centerY = c.series[0].center[1],
+					titleHeight = parseInt(c.title.styles.fontSize);
+				c.setTitle({
+					y: centerY + titleHeight / 2
+				});
+				chart = c;
+			});
+	});
+</script>
+<!--实时数据-->
+<script>
+	Highcharts.setOptions({
+		global: {
+			useUTC: false
+		}
+	});
+
+	function activeLastPointToolip(chart) {
+		var points1 = chart.series[0].points;
+		//  var points2 = chart.series[1].points;
+		chart.tooltip.refresh(points1[points1.length - 1]);
+		//    chart.tooltip.refresh(points2[points2.length -1]);
+	}
+	$('#newdata').highcharts({
+		chart: {
+			type: 'spline',
+			animation: Highcharts.svg, // don't animate in old IE
+			marginRight: 10,
+			events: {
+				load: function() {
+					// set up the updating of the chart each second
+					var series1 = this.series[0],
+						chart = this;
+					setInterval(function() {
+						var x1 = (new Date()).getTime() + 1, // current time
+							y1 = Math.random();
+						series1.addPoint([x1, y1], true, true);
+						activeLastPointToolip(chart)
+					}, 1000);
+					//               var series2 = this.series[1],
+					//                  chart = this;
+					//              setInterval(function () {
+					//                  var x2 = (new Date()).getTime(), // current time
+					//                      y2 = Math.random();
+					//                  series2.addPoint([x2, y2], true, true);
+					//                  activeLastPointToolip(chart)
+					//              }, 1000);
+				}
+			}
+		},
+		credits: {
+			enabled: false
+		},
+		title: {
+			text: '动态实时数据'
+		},
+		xAxis: {
+			type: 'datetime',
+			tickPixelInterval: 150
+		},
+		yAxis: {
+			title: {
+				text: '值'
+			},
+			plotLines: [{
+				value: 0,
+				width: 1,
+				color: '#808080'
+			}]
+		},
+		tooltip: {
+			formatter: function() {
+				return '<b>' + this.series.name + '</b><br/>' +
+					Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+					Highcharts.numberFormat(this.y, 2);
+			}
+		},
+		legend: {
+			enabled: false
+		},
+		exporting: {
+			enabled: false
+		},
+		series: [{
+				name: '正常数据',
+				data: (function() {
+					// generate an array of random data
+					var data = [],
+						time = (new Date()).getTime(),
+						i;
+					for(i = -19; i <= 0; i += 1) {
+						data.push({
+							x: time + i * 1000,
+							y: Math.random()
+						});
+					}
+					return data;
+				}())
+			}
+			//  ,{
+			//      name: '异常数据',color:"red",
+			//      data: (function () {
+			//          // generate an array of random data
+			//          var data = [],
+			//              time = (new Date()).getTime(),
+			//              i;
+			//          for (i = -19; i <= 0; i += 1) {
+			//              data.push({
+			//                  x: time + i * 1000,
+			//                  y: Math.random()
+			//              });
+			//          }
+			//          return data;
+			//      }())
+			//  }
+		]
+	}, function(c) {
+		activeLastPointToolip(c)
+	});
+</script>
+<!--传感器控制器-->
+<script>
+	$(function() {
+		$('#facility').highcharts({
+			chart: {
+				type: 'column',
+				options3d: {
+					enabled: true,
+					viewDistance: 25,
+					depth: 40
+				},
+				marginTop: 80,
+				marginRight: 40
+			},
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: ''
+			},
+			xAxis: {
+				categories: ['各设备状态'],
+				color: '#000'
+			},
+			yAxis: {
+				allowDecimals: false,
+				min: 0,
+				title: {
+					text: '设备数量'
+				}
+			},
+			tooltip: {
+				headerFormat: '<b>{point.key}</b><br>',
+				pointFormat: '总数量:  {point.stackTotal}件<br/><span style="color:{series.color}">\u25CF</span> {series.name}: {point.y} / {point.stackTotal}'
+			},
+			plotOptions: {
+				column: {
+					stacking: 'normal',
+					depth: 40
+				}
+			},
+			series: [{
+				name: '控制异常',
+				data: [2],
+				color: '#ff5959',
+				stack: '控制器',
+				value: 30
+			}, {
+				name: '控制安全',
+				data: [13],
+				color: '#7092ff',
+				stack: '控制器',
+				value: 30
+			}, {
+				name: '传感异常',
+				data: [2],
+				color: '#f55e35',
+				stack: '传感器',
+				value: 23
+			}, {
+				name: '传感安全',
+				data: [16],
+				color: '#1fc8d2',
+				stack: '传感器',
+				value: 23
+			}, {
+				name: '视频异常',
+				data: [2],
+				color: '#ffd258',
+				stack: '视频',
+				value: 55
+			}, {
+				name: '视频安全',
+				data: [15],
+				color: '#94cd6f',
+				stack: '视频',
+				value: 55
+			}]
+		});
+	});
+</script>
+<!--地图-->
+
+<!--<script type="text/javascript">	
+$(function() {
+var data = [{"name":"黄浦区","value":14},{"name":"徐汇区","value":1},{"name":"长宁区","value":33},{"name":"静安区","value":25},{"name":"普陀区","value":85},{"name":"虹口区","value":85},{"name":"杨浦区","value":82},{"name":"闵行区","value":95},{"name":"宝山区","value":2},{"name":"嘉定区","value":67},{"name":"浦东新区","value":28},{"name":"金山区","value":61},{"name":"松江区","value":73},{"name":"青浦区","value":98},{"name":"奉贤区","value":25},{"name":"崇明区","value":87}];
+// 随机数据
+  var map = new Highcharts.Map('charts-map', {
+  title: {
+    text: '上海市'
+  },  
+  colorAxis: {
+    min: 0,
+    minColor: 'rgb(255,255,255)',
+    maxColor: '#006cee'
+  },
+  series: [{
+    data: data,
+    name: '随机数据',
+    mapData: Highcharts.maps['cn/shanghai'],
+    joinBy: 'name' // 根据 name 属性进行关联
+  }]
+  });});
+</script>-->
+

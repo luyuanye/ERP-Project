@@ -1,0 +1,263 @@
+<link href="../css/pageboxs.css" rel="stylesheet"/>
+<style type="text/css">
+
+    table.bottomNo + div.bottom {
+        position: relative !important;
+        display: none !important;
+    }
+
+    /*关于table  bottom的*/
+</style>
+<div class="page-boxs">
+    <!--title-->
+    <div class="page-titles">
+        <form class="page-form ">
+            <div class="row  m0">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-2 col-xs-2 w89 required">退货仓库：
+                        </label>
+                        <div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+                            <select class="form-control select2-allow-clear select2-hidden-accessible"
+                                    style="padding: 6px 8px;" id="areaSelect11vb1" name="dicKey" tabindex="-1"
+                                    aria-hidden="true">
+                                <option value="" disabled="" selected="" style="display:none;">请选择</option>
+                                <option value="1">技术部</option>
+                                <option value="2">人事部</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-2 col-xs-2 w89 required">退货仓库：
+                        </label>
+                        <div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+                            <select class="form-control select2-allow-clear select2-hidden-accessible"
+                                    style="padding: 6px 8px;" id="areaSelect11vb2" name="dicKey" tabindex="-1"
+                                    aria-hidden="true">
+                                <option value="" disabled="" selected="" style="display:none;">请选择</option>
+                                <option value="1">技术部</option>
+                                <option value="2">人事部</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group pull-right pr-10">
+                        <a class="btn btn-success " onclick="addOFAtr()"><i class="fa fa-plus"></i>新增行</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-2 col-xs-2 w89">供应商 :
+                        </label>
+                        <div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+                            <span class="lh29">xxx</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <!--table-wrap-->
+    <div class="tableboxWrap pos-r">
+        <table style="width: 100%;"
+               class="table table-striped table-bordered table-hover table-checkable order-column table_example bottomNo"
+               id="pruchaseReturnsAddModelTab">
+            <thead>
+            <tr>
+                <th style="min-width: 50px;">
+                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                        <input type="checkbox" class="group-checkable" data-set="#employATab .checkboxes"/><span></span>
+                    </label>
+                </th>
+                <th style="min-width: 50px;"> 序号</th>
+                <th></th>
+                <th style="min-width: 120px;"> 商品编码</th>
+                <th style="min-width: 100px;"> 商品名称</th>
+                <th style="min-width: 160px;"> 商品规格</th>
+                <th> 剩余可退数</th>
+                <th> 单位</th>
+                <th> 退货数</th>
+                <th> 退货单价（元）</th>
+                <th> 小计（元）</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="">
+                <td>
+                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                        <input type="checkbox" class="checkboxes" value="1"/>
+                        <span></span>
+                    </label>
+                </td>
+                <td>01</td>
+                <td>
+                    <a href="javascript:;" title="添加子行" onclick="add_row(this)">
+                        <i class="fa fa-plus"></i>
+                    </a>
+                    <!--<a href="#">
+                     <img class="target-img" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTYgMTYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE2IDE2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8Y2lyY2xlIGZpbGw9IiNGMkY0RjkiIGN4PSI0LjE5MyIgY3k9IjQuNzcxIiByPSIxLjE4OSIvPgoJPHBvbHlnb24gZmlsbD0iI0YyRjRGOSIgcG9pbnRzPSI5LjE4MiwxNi4wMDQgMCw4LjY1NSAwLDE2LjAwNCAJIi8+Cgk8cG9seWdvbiBmaWxsPSIjRjJGNEY5IiBwb2ludHM9IjEyLjgwOSw0LjE4NSA1LjM2MiwxMS42MzUgMTAuODkzLDE2LjAwNCAxNiwxNi4wMDQgMTYsNi42ODkgCSIvPgo8L2c+Cjwvc3ZnPgo=" style="background: rgb(255, 255, 255); border: 1px solid rgb(238, 241, 249); box-sizing: border-box;max-height: 50px;max-width: 50px;">
+                    </a> -->
+                </td>
+                <td>4457575</td>
+                <td>4457575</td>
+                <td> 白菜</td>
+                <td> xx</td>
+                <td>0.00</td>
+                <td>4457575</td>
+                <td>4457575</td>
+                <td>4457575</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-footer pr-10">
+            <div class="tr pt-5 lh29">
+                <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                    <input type="checkbox" class="group-checkable" data-set="#statisticsTab.checkboxes">
+                    <span style="margin-top: 8px;"></span>
+                    <i style="font-style: normal; margin-left:-5px;">
+                        已通过协商，获批退款金额为：</i>
+                </label>
+                <span class="tr pull-right wid100">
+                <input type="text" value="0.00" class="form-control wid100">
+                </span>
+            </div>
+            <div class="tr  pt-5">
+                应付金额：<span class=" text-danger wid100 tl">0.00</span>
+            </div>
+
+        </div>
+    </div>
+    <!--form-wrap-->
+    <div class="page-titles" style="border-bottom: none !important;">
+        <form class="page-form " style="border-top: 0px;">
+            <div class="row  m0">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-2 col-xs-2 w89 required">日期:
+                        </label>
+                        <div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+                            <div class="input-group date date-picker" data-date-format="yyyy-mm-dd">
+                                <input type="TEXT" class="form-control" placeholder="" name="datepicker"
+                                       aria-required="true" aria-describedby="datepicker-error">
+                                <span class="input-group-btn lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-2 col-xs-2 w89 required">采购退货单号：</label>
+                        <div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+                            <input type="text" class="form-control" id="" name="" value="" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-2 col-xs-2 w89">经办人：</label>
+                        <div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+                            <input type="text" class="form-control" id="" name="" value="" placeholder="输入经办人名称">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-2 col-xs-2 w89">制单人：</label>
+                        <div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+                            <input readonly type="text" class="form-control" id="" name="" value="lishunyang"
+                                   placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  m0">
+                <div class="form-group">
+                    <label class="control-label col-md-1 col-sm-2 col-xs-2  w89 required">备注：</label>
+                    <div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+                        <textarea name="" rows="3" class="form-control" cols=""></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="fixedFOOTER">
+        <div class="form-actions">
+            <button type="button" class="btn btn-default" id="">取消</button>
+            <button type="button" class="btn btn-success" id="">保存</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    /*搜索的下拉框*/// 下拉选择添加搜索功能
+    var control1 = $("#areaSelect11vb1");
+    control1.select2({
+        allowClear: false,
+        escapeMarkup: function (m) {
+            return m;
+        },
+        language: {
+            noResults: function (params) {
+                return "暂无数据";
+            }
+        }
+    });
+
+    var control2 = $("#areaSelect11vb2");
+    control2.select2({
+        allowClear: false,
+        escapeMarkup: function (m) {
+            return m;
+        },
+        language: {
+            noResults: function (params) {
+                return "暂无数据";
+            }
+        }
+    });
+
+    $(function () {
+        //可搜索的时间插件
+        	//可搜索的时间插件
+		$(".date-picker").datepicker({
+			language: 'zh-CN',
+			orientation: "left",
+			format: 'yyyy-mm-dd',
+			autoclose: true
+		});;
+
+        //table引入初始化
+        TableDatatablesManaged.init("#pruchaseReturnsAddModelTab");
+    })
+
+
+    //添加新的一行
+
+    function addOFAtr() {
+        var tds1 = '<td><label class="mt-checkbox mt-checkbox-single mt-checkbox-outline"><input type="checkbox" class="checkboxes" value="1" /><span></span></label></td>'
+        var tds2 = '<td>01</td>';
+        var tds3 = '<td></td>';
+        var tds4 = '<td> 4457575 </td>';
+        var tds5 = '<td> s </td>';
+        var tds6 = '<td> xxx </td>';
+        var tds7 = '<td> 1.11 </td>';
+        var tds8 = '<td> 1.11 </td>';
+        var tds9 = '<td> 1.11 </td>';
+        var tds10 = '<td> 1.11 </td>';
+        var tds11 = '<td> 1.11 </td>';
+        var tds = tds1 + tds2 + tds3 + tds4 + tds5 + tds6 + tds7 + tds8 + tds9 + tds10 + tds11;
+        var tr = '<tr>' + tds + '</tr>'
+        $("#pruchaseReturnsAddModelTab").append(tr)
+    }
+
+</script>
+

@@ -1,0 +1,145 @@
+<link href="../css/pageboxs.css" rel="stylesheet" />
+<div class="page-boxs">
+	<div class="page-titles" style="" >
+		<p class="headerTitle">角色权限管理</p>
+		<form class="form-inline pt-15 pl-15">
+		<div class="pull-left">
+			<div class="form-group" >
+				<label  class="pull-left lh29">选择角色：</label>
+				 <select class="form-control"  style="width: 227px;">
+		            <option>系统管理员 </option>
+		            <option>Option 2</option>
+		            <option>Option 3</option>
+		            <option>Option 4</option>
+		            <option>Option 5</option>
+	              </select>
+			</div>
+		</div>     
+		<div class="form-group ml-10" >
+		  <a data-toggle="modal" data-target="#memberModal" class="btn btn-success" data-title=" 修改角色名称" onclick="clickModel(this)" editUrl="System/rolePermissedit.html"><i class="fa fa-edit"></i> 修改角色名称</a>
+		</div>
+		</form>
+		<div class="explain">
+			<p class="explainP">
+			说明：<br/>
+			1、具备该角色的用户登录后显示操作员工作台；<br/>
+			2、修改角色权限后，所有赋予此角色的员工账号对应权限均将修改；<br/>
+			3、系统管理员角色不允许改名，也不允许修改其操作权限；<br/>
+			4、“禁止查看商品订货价”不得与【商品管理、商品删除、商品导出、促销管理权限】同时勾选；<br/>
+			5、“禁止查看订单金额”不得与【订单修改、订/退单审核、财务审核、代下订/退单、订单商品统计查看、订单商品统计导出、发货统计查看、发货统计导出、资金所有权限、报表所有权限】同时勾选。<br/>
+			6、需要实现仅让业务员看到自己客户商品报价并且能代下单的场景，请勾选“禁止查看商品订货价”、“报价单查看”、“代下订单”权限。<br/>
+			</p>
+		</div>
+	</div>
+
+	<div class="page-wraps">	
+		<p class="headerTitle">角色权限明细</p>
+		<table style="width: 100%;" class="table table-bordered" >			
+			<tbody>
+				<tr class="">					
+					<td class="grayStyle">订单</td>
+					<td> 												
+					<div class="mt-checkbox-inline">
+						<label class="mt-checkbox mt-checkbox-outline" >
+				            <input type="checkbox"> 订单查看
+				            <span></span>
+				        </label>
+						<label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 订单导出
+				            <span></span>
+				        </label>
+						<label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 订单修改
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 订单作废
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 订单删除
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 财务审核
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 出库审核
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 订单发货确认
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 订单退回
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 代下订单
+				            <span></span>
+				        </label>
+				        <!---->
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单查看
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单导出
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单作废
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单删除
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单收货确认
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单退款确认
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单退回
+				            <span></span>
+				        </label>
+					</div>		
+					</td>
+				</tr>
+				<tr class="">					
+					<td class="grayStyle">商品</td>
+					<td> 												
+					<div class="mt-checkbox-inline">
+						<label class="mt-checkbox mt-checkbox-outline" >
+			            <input type="checkbox"> 超级管理员
+			            <span></span>
+				        </label>
+							<label class="mt-checkbox mt-checkbox-outline" >
+				            <input type="checkbox"> 平台管理员
+				            <span></span>
+				        </label>
+							<label class="mt-checkbox mt-checkbox-outline" >
+				            <input type="checkbox"> 农庄用户
+				            <span></span>
+				        </label>
+					</div>		
+					</td>
+				</tr>
+			
+			</tbody>
+		</table>
+		
+	</div>
+<div class="fixedFOOTER">
+	<div class="form-actions">	
+		<button type="button" class="btn btn-default" id="">取消</button>
+		<button type="button" class="btn btn-success" id="">保存</button>
+	</div>
+</div>
+</div>

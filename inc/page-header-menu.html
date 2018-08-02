@@ -1,0 +1,471 @@
+
+<ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true"
+    data-slide-speed="200">
+    <!--系统管理-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="iconfont icon-xitongguanli"></i>
+            <span class="title">系统管理</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('组织管理','System/Department.html','Department','iconfont icon-zuzhiguanli',this)"
+                   date-num="Department">
+                    <i class="iconfont icon-zuzhiguanli"></i>组织管理</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('员工账号管理','System/employeeAccount.html','employeeAccount','iconfont icon-zhanghaoguanli',this)"
+                   date-num="employeeAccount">
+                    <i class="iconfont icon-zhanghaoguanli"></i>员工账号管理</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('菜单管理','System/Menu.html','Menu','iconfont icon-caidanguanli',this)"
+                   date-num="Menu">
+                    <i class="iconfont icon-caidanguanli"></i>菜单管理</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('角色权限管理','System/rolePermissions.html','rolePermissions','iconfont icon-quanxianguanli',this)"
+                   date-num="rolePermissions">
+                    <i class="iconfont icon-quanxianguanli"></i>角色权限管理</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('系统日志管理','System/systemLog.html','systemLog','iconfont icon-xitongrizhi',this)"
+                   date-num="systemLog">
+                    <i class="iconfont icon-xitongrizhi"></i>系统日志管理</a>
+            </li>
+        </ul>
+    </li>
+    <!--基础数据-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="iconfont icon-jichushujuguanli"></i>
+            <span class="title">基础数据</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('公司信息','Data/companyInformation.html','companyInformation','iconfont icon-gongsi',this)"
+                   date-num="companyInformation">
+                    <i class="iconfont icon-gongsi"></i>公司信息</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('商品分类','Data/Categories.html','Categories','iconfont icon-shangpinfenlei',this)"
+                   date-num="Categories">
+                    <i class="iconfont icon-shangpinfenlei"></i>商品分类</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('计量单位','Data/Measurement.html','Measurement','iconfont icon-fuwudanwei',this)"
+                   date-num="Measurement">
+                    <i class="iconfont icon-fuwudanwei"></i>计量单位</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('仓库管理','Data/Warehouse.html','Warehouse','iconfont icon-cangkuzhongchanpin',this)"
+                   date-num="Warehouse">
+                    <i class="iconfont icon-cangkuzhongchanpin"></i>仓库管理</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('客户归属区域','Data/customerArea.html','customerArea','iconfont icon-quyurenliu',this)"
+                   date-num="customerArea">
+                    <i class="iconfont icon-quyurenliu"></i>客户归属区域</a>
+            </li>
+        </ul>
+    </li>
+    <!--供应商-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="iconfont icon-gongyingshanghover"></i>
+            <span class="title">供应商</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('供应商信息','Supplier/Supplier.html','Supplier','iconfont icon-gongyingshangguanli',this)"
+                   date-num="Supplier">
+                    <i class="iconfont icon-gongyingshangguanli"></i>供应商信息</a>
+            </li>
+        </ul>
+    </li>
+    <!--	客户管理-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="iconfont icon-kehu"></i>
+            <span class="title">客户管理</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a class="nav-link " onclick="addTab('客户列表','Client/Client.html','Client','iconfont icon-kehuliebiao',this)"
+                   date-num="Client">
+                    <i class="iconfont icon-kehuliebiao"></i>客户列表</a>
+            </li>
+        </ul>
+    </li>
+    <!--订单-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="iconfont icon-CDdingdanguanli"></i>
+            <span class="title">订单</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <!--订单管理-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="iconfont icon-CDdingdanguanlisvg"></i>
+                    <span class="title">订单管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('订货单','Order/orderManagement/orderForm.html','orderForm','iconfont icon-dinghuodan',this)"
+                           date-num="orderForm">
+                            <i class="iconfont icon-dinghuodan"></i>订货单</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('退货单','Order/orderManagement/returnForm.html','returnForm','iconfont icon-tuihuodan',this)"
+                           date-num="returnForm">
+                            <i class="iconfont icon-tuihuodan"></i>退货单</a>
+                    </li>
+                </ul>
+            </li>
+            <!--订单统计-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="iconfont icon-dingdantongji"></i>
+                    <span class="title">订单统计</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('出库发货记录','Order/orderStatistics/deliveryRecord.html','deliveryRecord','iconfont icon-chukushenqing',this)"
+                           date-num="deliveryRecord">
+                            <i class="iconfont icon-chukushenqing"></i>出库发货记录</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('订单明细统计','Order/orderStatistics/statisticsDetail.html','statisticsDetail','iconfont icon-cloud-listing',this)"
+                           date-num="statisticsDetail">
+                            <i class="iconfont icon-cloud-listing"></i>订单明细统计</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('订单客户统计','Order/orderStatistics/statisticsClient.html','statisticsClient','iconfont icon-kehudingdan',this)"
+                           date-num="statisticsClient">
+                            <i class="iconfont icon-kehudingdan"></i>订单客户统计</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('订单商品统计','Order/orderStatistics/statisticsCommodity.html','statisticsCommodity','iconfont icon-youxuanshangpindingdan',this)"
+                           date-num="statisticsCommodity">
+                            <i class="iconfont icon-youxuanshangpindingdan"></i>订单商品统计</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('发货统计','Order/orderStatistics/Statistics.html','Statistics','iconfont icon-fahuoliangpaihang',this)"
+                           date-num="Statistics">
+                            <i class="iconfont icon-fahuoliangpaihang"></i>发货统计</a>
+                    </li>
+                </ul>
+            </li>
+            <!--退单统计-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="iconfont icon-tuihuodanhao"></i>
+                    <span class="title">退单统计</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item ">
+                        <a class="nav-link "
+                           onclick="addTab('退货商品统计','Order/refundStatistics/refundStatistics.html','refundStatistics','iconfont icon-tuikuanshibai',this)"
+                           date-num="refundStatistics">
+                            <i class="iconfont icon-tuikuanshibai"></i>退货商品统计
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--商品-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="iconfont icon-shangpindown"></i>
+            <span class="title">商品</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <!--商品管理-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="iconfont icon-shangpinguanli"></i>
+                    <span class="title">商品管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li>
+                        <a class="nav-link "
+                           onclick="addTab('商品列表','Commodity/Commodity/productList.html','productList','iconfont icon-shangpinliebiao',this)"
+                           date-num="productList">
+                            <i class="iconfont icon-shangpinliebiao"></i>商品列表</a>
+                    </li>
+                </ul>
+            </li>
+            <!--库存管理-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="iconfont icon-kucunguanli"></i>
+                    <span class="title">库存管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('商品库存','Commodity/inStock/inStock.html','inStock','iconfont icon-kucunhui',this)"
+                           date-num="inStock">
+                            <i class="iconfont icon-kucunhui"></i>商品库存</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('出库单','Commodity/inStock/outboundOrder.html','outboundOrder','iconfont icon-fq_chukudengji',this)"
+                           date-num="outboundOrder">
+                            <i class="iconfont icon-fq_chukudengji"></i>出库单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('入库单','Commodity/inStock/inboundOrder.html','inboundOrder','iconfont icon-ruku',this)"
+                           date-num="inboundOrder">
+                            <i class="iconfont icon-ruku"></i>入库单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('盘点单','Commodity/inStock/countingOrder.html','countingOrder','iconfont icon-pandianrenwu',this)"
+                           date-num="countingOrder">
+                            <i class="iconfont icon-pandianrenwu"></i>盘点单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('库存调拨','Commodity/inStock/stockTransfer.html','stockTransfer','iconfont icon-kucunyidong',this)"
+                           date-num="stockTransfer">
+                            <i class="iconfont icon-kucunyidong"></i>库存调拨</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('出入库明细','Commodity/inStock/Details.html','Details','iconfont icon-churukujilu',this)"
+                           date-num="Details">
+                            <i class="iconfont icon-churukujilu"></i>出入库明细</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('商品收发汇总','Commodity/inStock/Summary.html','Summary','iconfont icon-yuanliaoshoufa',this)"
+                           date-num="Summary">
+                            <i class="iconfont icon-yuanliaoshoufa"></i>商品收发汇总</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('成本调整','Commodity/inStock/Cost.html','Cost','iconfont icon-chengben',this)"
+                           date-num="Cost">
+                            <i class="iconfont icon-chengben"></i>成本调整</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('期末结转','Commodity/inStock/carryOver.html','carryOver','iconfont icon-qimojiezhuan-normal',this)"
+                           date-num="carryOver">
+                            <i class="iconfont icon-qimojiezhuan-normal"></i>期末结转</a>
+                    </li>
+                </ul>
+            </li>
+            <!--采购管理-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="iconfont icon-caigouguanli"></i>
+                    <span class="title">采购管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('智能采购','Commodity/Purchase/smartProcurement.html','smartProcurement','iconfont icon-zhinengcaigoujianyi',this)"
+                           date-num="smartProcurement">
+                            <i class="iconfont icon-zhinengcaigoujianyi"></i>智能采购</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('采购订单','Commodity/Purchase/purchaseOrder.html','purchaseOrder','iconfont icon-cf-c53',this)"
+                           date-num="purchaseOrder">
+                            <i class="iconfont icon-cf-c53"></i>采购订单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('采购退货','Commodity/Purchase/purchaseReturns.html','purchaseReturns','iconfont icon-tuihuo',this)"
+                           date-num="purchaseReturns">
+                            <i class="iconfont icon-tuihuo"></i>采购退货</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('采购汇总','Commodity/Purchase/purchaseSummary.html','purchaseSummary','iconfont icon-caigouhuizong',this)"
+                           date-num="purchaseSummary">
+                            <i class="iconfont icon-caigouhuizong"></i>采购汇总</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--财务-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="iconfont icon-caiwu"></i>
+            <span class="title">财务</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <!--资金管理-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="iconfont icon-cw"></i>
+                    <span class="title">资金管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('收款单','Finance/Finance/Receipt.html','Receipt','iconfont icon-shoukuan',this)"
+                           date-num="Receipt">
+                            <i class="iconfont icon-shoukuan"></i>收款单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('付款单','Finance/Finance/Payment.html','Payment','iconfont icon-fukuan',this)"
+                           date-num="Payment">
+                            <i class="iconfont icon-fukuan"></i>付款单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('收款确认单','Finance/Finance/receiptConfirmation.html','receiptConfirmation','iconfont icon-fukuandan',this)"
+                           date-num="receiptConfirmation">
+                            <i class="iconfont icon-fukuandan"></i>收款确认单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('退款确认单','Finance/Finance/paymentConfirmation.html','paymentConfirmation','iconfont icon-tuikuan',this)"
+                           date-num="paymentConfirmation">
+                            <i class="iconfont icon-tuikuan"></i>退款确认单</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('资金账户','Finance/Finance/fundAccount.html','fundAccount','iconfont icon-zijinzhanghu',this)"
+                           date-num="fundAccount">
+                            <i class="iconfont icon-zijinzhanghu"></i>资金账户</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('收款账户','Finance/Finance/accountsReceivable.html','accountsReceivable','iconfont icon-shoukuanzhanghu',this)"
+                           date-num="accountsReceivable">
+                            <i class="iconfont icon-shoukuanzhanghu"></i>收款账户</a>
+                    </li>
+                </ul>
+            </li>
+            <!--对账管理-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="iconfont icon-duizhang"></i>
+                    <span class="title">对账管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           onclick="addTab('客户对账单','Finance/Reconciliation/customerStatement.html','customerStatement','iconfont icon-duizhangdan',this)"
+                           date-num="customerStatement">
+                            <i class="iconfont icon-duizhangdan"></i>客户对账单</a>
+                    </li>
+                </ul>
+            </li>
+            <!--资金统计-->
+            <li class="nav-item">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="iconfont icon-zijinfenxi"></i>
+                    <span class="title">资金统计</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu" style="display: none;">
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('收支明细','Finance/Statistics/Detail.html','Detail','iconfont icon-shouzhimingxi-copy',this)"
+                           date-num="Detail">
+                            <i class="iconfont icon-shouzhimingxi-copy"></i>收支明细</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           onclick="addTab('订单收款明细','Finance/Statistics/orderDetails.html','orderDetails','iconfont icon-liushui',this)"
+                           date-num="orderDetails">
+                            <i class="iconfont icon-liushui"></i>订单收款明细</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--报表-->
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="iconfont icon-baobiao"></i>
+            <span class="title">报表</span>
+            <span class="arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('订单统计报表','Report/orderStatistics.html','orderStatistics','iconfont icon-dingdantongji1',this)"
+                   date-num="orderStatistics">
+                    <i class="iconfont icon-dingdantongji1"></i>订单统计报表</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('地区统计报表','Report/regionalStatistics.html','regionalStatistics','iconfont icon-quyutu',this)"
+                   date-num="regionalStatistics">
+                    <i class="iconfont icon-quyutu"></i>地区统计报表</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('商品销售报表','Report/Merchandising.html','Merchandising','iconfont icon-dianpuxiaoshoutongji',this)"
+                   date-num="Merchandising">
+                    <i class="iconfont icon-dianpuxiaoshoutongji"></i>商品销售报表</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('客户订货报表','Report/customerOrder.html','customerOrder','iconfont icon-weibiaoti1dinghuodan',this)"
+                   date-num="customerOrder">
+                    <i class="iconfont icon-weibiaoti1dinghuodan"></i>客户订货报表</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link "
+                   onclick="addTab('销售毛利报表','Report/grossSales.html','grossSales','iconfont icon-maolishenpi',this)"
+                   date-num="grossSales">
+                    <i class="iconfont icon-maolishenpi"></i>销售毛利报表</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<!-- END SIDEBAR MENU -->
+<script src="../assets/layouts/layout/scripts/layout.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".menu-toggler").click(function () {
+            if ($(".page-sidebar-wrapper").has(".page-sidebar-menu-closed")) {
+                $(".page-sidebar-wrapper").css({"overflow-x": "initial"})
+            } else {
+                $(".page-sidebar-wrapper").css({"overflow-x": "hidden"})
+            }
+        })
+    })
+</script>

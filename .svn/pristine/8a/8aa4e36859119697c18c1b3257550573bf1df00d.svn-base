@@ -1,0 +1,123 @@
+<!--<p>出库单</p>-->
+<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css">
+<div class="portlet light">
+    <div class="portlet-title">
+        <form class="form-inline">
+            <div class="pull-left">
+                <div class="btn-group pull-left">
+                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">全部仓库
+                        <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="javascript:;">默认仓</a></li>
+                        <li><a href="javascript:;">1号仓</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group pull-left  ml-10">
+                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">全部类型
+                        <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="javascript:;">全部类型</a></li>
+                        <li><a href="javascript:;">采购入库</a></li>
+                        <li><a href="javascript:;">销售退货</a></li>
+                        <li><a href="javascript:;">调拨入库</a></li>
+                        <li><a href="javascript:;">其他入库</a></li>
+                        <li><a href="javascript:;">盘盈</a></li>
+                    </ul>
+                </div>
+                <div class="form-group pull-left  ml-10">
+                    <div class="form-group">
+                        <label class="lh22">从</label>
+                        <div class="input-group date date-picker">
+                            <input type="TEXT" class="form-control" placeholder="开始时间">
+                            <span class="input-group-btn lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                        </div>
+                        <label class="lh22">到</label>
+                        <div class="input-group date date-picker">
+                            <input type="TEXT" class="form-control" placeholder="结束时间">
+                            <span class="input-group-btn  lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group pull-left  ml-10">
+                    <input type="text" class="form-control input-medium pull-left" placeholder="请输入单号">
+                    <button type="submit" class="btn green pull-left"><i class="fa fa-search"></i>搜索</button>
+                </div>
+            </div>
+            <div class="form-group pull-right">
+                <a class="btn btn-success"
+                   onclick="addTab('新增商品出库','Commodity/inStock/outbounOrderAdd.html','outbounOrderAdd','fa fa-plus',this)"
+                   date-num="orderFormAdd"><i class="fa fa-plus"></i>新增</a>
+            </div>
+        </form>
+    </div>
+    <div class="portlet-body">
+            <table style="width: 100%;"
+                   class="table table-striped table-bordered table-hover table-checkable order-column table_example dataTable no-footer"
+                   id="outboundOTab" role="grid" aria-describedby="outboundOTab_info">
+                <thead>
+                <tr role="row">
+                    <th style="min-width: 55px;">
+                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                            <input type="checkbox" class="group-checkable" data-set="#outboundOTab .checkboxes">
+                            <span></span>
+                        </label>
+                    </th>
+                    <th style="min-width: 120px;">单号</th>
+                    <th>出库日期</th>
+                    <th>所属仓库</th>
+                    <th>类型</th>
+                    <th>制单人</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                            <input type="checkbox" class="checkboxes" value="1">
+                            <span></span>
+                        </label>
+                    </td>
+                    <td class="sorting_1">IN-20180709-217457</td>
+                    <td>2018-07-09 09:51</td>
+                    <td>1号仓</td>
+                    <td>销售退货</td>
+                    <td>lishunyang</td>
+                    <td>
+                        <div class="action-buttons f18">
+                            <a  title="销售退货记录"
+                                onclick="addTab('销售退货记录','Commodity/inStock/outBoundOrderdetail.html','outBoundOrderdetail','fa fa-search',this)"
+                                date-num="orderFormdetail"><i class="fa fa-search "></i></a>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(function ($) {
+        TableDatatablesManaged.init("#outboundOTab");
+    })
+</script>
+<script type="text/javascript">
+    $(function () {
+        //可搜索的时间插件
+        $(".date-picker").datepicker({
+            language: 'zh-CN',
+            orientation: "left",
+            format: 'yyyy-mm-dd',
+            autoclose: true
+        });
+    })
+</script>

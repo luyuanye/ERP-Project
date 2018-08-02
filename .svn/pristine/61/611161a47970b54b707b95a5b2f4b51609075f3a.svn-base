@@ -1,0 +1,183 @@
+<style>
+
+		#formtabHead{
+			width: 100%;
+		    height: 35px;
+		    line-height: 35px;
+		    border-bottom: 1px solid #eee;
+		}
+		#formtabHead li{ 
+		   height: 34px;
+	    background: #fff;
+	    border-left: none;
+	    text-align: center;
+	    border-right:1px solid #eee;
+	    cursor: pointer;
+		}
+		#formtabHead li:nth-of-type(1){width:20%;float: left;}
+		#formtabHead li:nth-of-type(2){width: 20%;float: left;}
+		#formtabHead li.action{ 
+		    height: 35px;
+		    background: #659be0;
+		    color: #fff;
+		    border-left: none;		    
+		}	
+		#formtabContent li.action{ display: block;}	
+		
+		/*scroll*/
+		.formbox_scrollBox{
+			overflow-y: auto;
+	    overflow-x: hidden;
+	    padding:15px;
+	    box-sizing: border-box;	  
+	    }
+		/**/
+		.setform fieldset {
+		    border: 1px solid #dedede;		   
+		    padding: 3px 5px;
+		    box-sizing: border-box;
+		}
+		.setform fieldset legend {
+		     color: #36c6d3;
+		    font-size: 14px!important;
+		    margin-bottom: 0px!important;
+		    width: auto!important;
+		    text-align: left;
+		    border: none;
+		}
+		.setform fieldset legend  .mt-checkbox, .mt-radio{   
+			padding-left: 19px;
+            margin-bottom: 14px;
+        }
+       
+       .setform fieldset legend .mt-checkbox>span, .mt-radio>span {
+		  
+		    position: absolute;
+		    top: 2px;
+		    left: 5px;
+		    height: 14px;
+		    width: 14px;
+        }
+        .setform fieldset legend .mt-checkbox>span:after {
+		    left: 4px;
+		    top: 0px;
+		    width: 4px;
+		    height: 10px;
+		    border: solid #888;
+		    border-width: 0 2px 2px 0;
+		    transform: rotate(45deg);
+		}
+		/*.mt-checkbox>input, .mt-radio>input { 
+    z-index: 1;
+    opacity: 1;
+    filter: alpha(opacity=1);
+}*/
+</style>
+<form action="" method="post" class="form">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+		<p class="modal-title f16" id="myModalLabel"></p>
+	</div>
+    <!--scroll-->
+<div class="" > 	
+<ul id="formtabHead">
+	<li class="action" style="">农庄信息</li>
+	<li>设置账户</li>	
+</ul>
+<ul id="formtabContent" class="formbox_scrollBox">
+	<li class="action">
+            <div class="row form-group" >
+			    <div class="col-xs-2 col-sm-2 tr pl-0" >
+			        <label  class="required">角色名称:</label>
+			    </div>        
+			    <div class="col-xs-10 col-sm-10 pl-0">
+			        <input type="text" class="form-control" value="系统管理员" >
+			    </div> 
+		    </div>
+		    <div class="row form-group" >
+			    <div class="col-xs-2 col-sm-2  tr pl-0" >
+			        <label  class="required">角色说明:</label>
+			    </div>        
+			    <div class="col-xs-10 col-sm-10  pl-0 ">
+			        <input type="text" class="form-control" value="管理整个系统" >
+			    </div> 
+		    </div>                 	
+	</li>
+	<li style="display:none;">		
+		<div  class="setform">	
+			 <fieldset style="margin-bottom: 15px;">
+				  <legend>
+				  	<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+	                    <input type="radio" class="radio" value="1" name="radio">
+	                    <span></span>
+	                </label>
+				              新增信息:
+				  </legend>
+					  <div class="row form-group" >
+					    <div class="col-xs-2 col-sm-2 tr pl-0" >
+					        <label  class="required">用户名:</label>
+					    </div>        
+					    <div class="col-xs-10 col-sm-10 pl-0">
+					        <input type="text" class="form-control" value="系统管理员" >
+					    </div> 
+				    </div>
+				    <div class="row form-group" >
+					    <div class="col-xs-2 col-sm-2 tr pl-0" >
+					        <label  class="required">真实姓名:</label>
+					    </div>        
+					    <div class="col-xs-10 col-sm-10 pl-0">
+					        <input type="text" class="form-control" value="系统管理员" >
+					    </div> 
+				    </div>
+			 </fieldset>	
+			 <fieldset>
+				  <legend>
+				  	<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+	                    <input type="radio" class="radio" value="1" name="radio">
+	                    <span></span>
+	                </label>
+				              分配用户:
+				  </legend>
+					<div class="row form-group ">
+						 <div class="col-xs-2 col-sm-2 tr pl-0" >
+					        <label  class="required">用户名:</label>
+					    </div> 
+						<div class="col-xs-10 col-sm-10 pl-0">
+							<input type="text" class="form-control input-medium pull-left" placeholder="搜索分配用户">						
+							<a type="button" class="btn green pull-left modelbtn" data-toggle="modal" data-target="#bind_Modal" data-title="分配用户列表" onclick="clickModel(this)" editurl="fenpei.html" title="搜索用户"><i class="fa fa-search"></i>搜索</a>
+						</div> 
+					</div>
+				  
+			 </fieldset>	
+		 </div>
+		
+	</li>					
+</ul>
+</div><!--scroll-->
+<div class="modal-footer form-actions right">
+	        <button type="button" class="btn btn-info">保存</button>
+			<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>			
+</div>
+</form>
+<script src="../js/modelAfter.js" type="text/javascript"></script>
+ <script type="text/javascript">
+ 	$(function(){
+ 		$(".date-picker").datepicker();
+ 	})
+</script>
+<script>
+	$(function(){		
+		$("#formtabHead li").click(function(){
+			$(this).addClass("action").siblings().removeClass("action");
+			var index = $(this).index();
+			$("#formtabContent li").eq(index).css("display","block").siblings().css("display","none");
+		});
+		$("fieldset").css("height","11px");
+		$("fieldset .form-group ").hide();
+		$("fieldset .radio").prop("checked",false);  
+		$("fieldset .mt-checkbox").change(function(){
+			$(this).closest("fieldset").css("height","auto").find(".form-group ").show().find(".radio").prop("checked",true);
+			$(this).closest("fieldset").siblings().css("height","11px").find(".form-group ").hide().find(".radio").prop("checked",false);
+		});
+	});
+</script>

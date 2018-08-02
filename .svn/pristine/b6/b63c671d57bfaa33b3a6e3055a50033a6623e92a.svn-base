@@ -1,0 +1,318 @@
+<link href="../css/pageboxs.css" rel="stylesheet" />
+<link href="../js/treeview/bootstrap-treeview.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/treeview/bootstrap-treeview.js">
+</script>
+<div class="page-boxs">
+	<div class="page-titles" style="" >
+		<p class="headerTitle">基本信息</p>
+		<form class="page-form ">	
+	        <div class="row  m0" >
+	        	    <div class="col-lg-4  col-md-4   col-sm-6  col-xs-12" >
+						<div class="form-group ">
+							<label class="control-label  col-md-3  col-sm-2  col-xs-2  w89" style="" aria-required="true">登录账号：</label>							
+							<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+								<!--<div class="testInput">-->
+								 <input readonly="" type="text" class="form-control" id="" name="" value="" placeholder="1654689">
+								<!--</div>	-->								
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8  col-md-8   col-sm-6  col-xs-12 tc" style="height: 45px;line-height: 45px;">
+						<div class="form-group">
+							<span class="col-lg-1  col-md-2   col-sm-2  col-xs-5"  ><a href="javascript:;"  style="min-width:60px;display: inline-block;">密码重置</a></span>
+							<span class="col-lg-1  col-md-2   col-sm-2  col-xs-5" ><a href="javascript:;"  style="min-width:60px;display: inline-block;">解绑手机</a></span>							
+						</div>
+					</div>
+					<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-md-3  col-sm-2  col-xs-2  w89  required" >姓名:</label>
+						<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+							<input type="text" class="form-control" id="" name="" value="" placeholder="lsy">							
+						</div>
+					</div>
+					</div>
+					<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-md-3  col-sm-2  col-xs-2  w89   required" >手机号:</label>
+						<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+							<input type="text" class="form-control" id="" name="" value="" placeholder="1498799825">							
+						</div>
+					</div>
+					</div>
+					<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-md-3  col-sm-2  col-xs-2  w89  required" >部门:</label>
+						<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+							 <select class="form-control select2-allow-clear select2-hidden-accessible" style="padding: 6px 8px;" 
+			                	id="areaSelectyg" name="dicKey" tabindex="-1" aria-hidden="true">
+			                    <option value="" disabled="" selected="" style="display:none;">请选择</option>
+			                    <option value="1">技术部</option>
+			                    <option value="2">人事部</option>			                   
+			                </select>						
+						</div>
+					</div>
+					</div>
+					<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-md-3  col-sm-2  col-xs-2  w89   required" >职位:</label>
+						<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+							<input type="text" class="form-control" id="" name="" value="" placeholder="人事经理">							
+						</div>
+					</div>
+					</div>
+					
+					<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-md-3  col-sm-2  col-xs-2  w89   " >email:</label>
+						<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+							<input type="email" class="form-control" id="" name="" value="" placeholder="@">							
+						</div>
+					</div>
+					</div>
+					<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12">
+					<div class="form-group">
+						<label class="control-label col-md-3  col-sm-2  col-xs-2  w89  " >qq:</label>
+						<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+							<input type="text" class="form-control" id="" name="" value="" placeholder="599">							
+						</div>
+					</div>
+					</div>
+					<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+						<div class="form-group">
+							<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">部门负责人:</label>
+							<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+								<label class="mt-radio mt-radio-single mt-radio-outline m0">
+			                            <input type="radio" class="radioes" value="1">
+			                            <span style="margin-top: 7px;"></span>
+			                                                                                         是
+		                            </label>
+								<label class="mt-radio mt-radio-single mt-radio-outline m0">
+			                            <input type="radio" class="radioes" value="1">
+			                            <span style="margin-top: 7px;"></span>
+			                                                                                         否
+		                            </label>
+							</div>
+						</div>
+					</div>
+					
+        	</div>     
+	    </form>		
+	   
+	</div>
+    <div class="page-wraps">	
+		<p class="headerTitle">权限设置</p>
+		<table style="width: 100%;" class="table table-hover  m0" >			
+			<tbody>
+				<tr class="">					
+					<td class="grayStyle strong">账号权限:</td>
+					<td> 												
+					<div class="mt-checkbox-inline">
+						<label class="mt-checkbox mt-checkbox-outline">
+			            <input type="checkbox"> 超级管理员
+			            <span></span>
+				        </label>
+							<label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 平台管理员
+				            <span></span>
+				        </label>
+							<label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 农庄用户
+				            <span></span>
+				        </label>
+					</div>		
+					</td>
+				</tr>
+				<tr class="">					
+					<td class="grayStyle strong">数据权限:</td>
+					<td> 												
+					<div class="mt-checkbox-inline">
+						<label class="mt-radio mt-radio-single mt-radio-outline m0">
+                            <input type="radio" class="radioes" value="1" name="bm">
+                            <span style="margin-top: 7px;"></span>
+                                                                                         全部部门
+                        </label>
+					    <label class="mt-radio mt-radio-single mt-radio-outline m0" >
+                            <input type="radio" class="radioes" value="1" name="bm">
+                            <span style="margin-top: 7px;"></span>
+                                                                                        自己
+                        </label>
+                        <label class="mt-radio mt-radio-single mt-radio-outline m0 ZDtab"  id="">
+                            <input type="radio" class="radioes" value="1" name="bm">
+                            <span style="margin-top: 7px;"></span>
+                                                                                      指定部门
+                        </label>
+                        <div class="row form-group" id="ZDdiv" style="display: none;">						    
+					        <div class="col-xs-6 col-sm-6  pt-10 pos-r">
+					        	<input type="text" multiple="multiple" class="form-control" id="input_tab"  placeholder="请选择部门" name="" value="">
+					        	<div class="treebox pos-a" style="display: none;top:39px;left: 15px;right: 15px;background: #fff;z-index: 9;" >
+					        		<div id="ZDsystreeview"></div>
+					        	</div>						   
+						    </div>        
+					    </div>
+					</div>		
+					</td>
+				</tr>
+				<tr class="">					
+					<td class="grayStyle strong">权限明细:</td>
+					<td> 												
+					<table style="width: 100%;" class="table table-bordered table-hover" >			
+			           <tbody>							
+							<tr class="">					
+								<td class="grayStyle">商品</td>
+								<td> 												
+								<div class="mt-checkbox-inline">
+									<label class="mt-checkbox mt-checkbox-outline">
+						            <input type="checkbox"> 超级管理员
+						            <span></span>
+							        </label>
+										<label class="mt-checkbox mt-checkbox-outline">
+							            <input type="checkbox"> 平台管理员
+							            <span></span>
+							        </label>
+										<label class="mt-checkbox mt-checkbox-outline">
+							            <input type="checkbox"> 农庄用户
+							            <span></span>
+							        </label>
+								</div>		
+								</td>
+							</tr>	
+							<tr class="">					
+								<td class="grayStyle">商品</td>
+								<td> 												
+								<div class="mt-checkbox-inline">
+									<label class="mt-checkbox mt-checkbox-outline">
+						            <input type="checkbox"> 超级管理员
+						            <span></span>
+							        </label>
+										<label class="mt-checkbox mt-checkbox-outline">
+							            <input type="checkbox"> 平台管理员
+							            <span></span>
+							        </label>
+										<label class="mt-checkbox mt-checkbox-outline">
+							            <input type="checkbox"> 农庄用户
+							            <span></span>
+							        </label>
+								</div>		
+								</td>
+							</tr>		
+						</tbody>
+					</table>		
+					</td>
+				</tr>
+			
+			</tbody>
+		</table>
+		
+	</div>
+	<!--FIXED-->
+	<div class="fixedFOOTER">
+	<div class="form-actions" >	
+		<button type="button" class="btn btn-default" id="">取消</button>
+		<button type="button" class="btn btn-success" id="">提交</button>
+	</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var control = $("#areaSelectyg");
+    // 下拉选择添加搜索功能
+    control.select2({
+        allowClear: false,
+        escapeMarkup: function (m) {
+            return m;
+        },
+        language: {
+            noResults: function (params) {
+                return "暂无数据";
+            }
+        }
+    });
+ 	$(function(){
+ 		$(".date-picker").datepicker();
+ 		/*数据权限设置展示树tree*/
+ 		$(".mt-radio").change(function(){ 			
+ 			if($(this).hasClass("ZDtab")){ 
+ 				console.log(111)
+ 				$("#ZDdiv").slideDown();
+ 				$("#input_tab").focus(function(){
+ 					$(".treebox").slideDown();
+ 					 onLoadTree(); 					
+ 				})
+ 				
+ 			}else{ $("#ZDdiv").slideUp();}
+ 			
+ 		});
+ 		function onLoadTree() {
+			var defaultData = [{
+				"id": "1",
+				"nodes": [{
+					"id": "2d65bea4fd9345f9b1a07bfe93ccaea7",
+					"nodes": [{
+						"id": "68b39ee9fe12490f962670c6f4bc0cbc",
+						"nodes": [],
+						"pid": "2d65bea4fd9345f9b1a07bfe93ccaea7",
+						"text": "总部"
+					}],
+					"pid": "1",
+					"text": "销售部门"
+				}, {
+					"id": "a65352befb0c4884ad6f075d6081414e",
+					"nodes": [{
+						"id": "0b9f0e55836a40749da14ed091287ad3",
+						"nodes": [],
+						"pid": "a65352befb0c4884ad6f075d6081414e",
+						"text": "人事"
+					}],
+					"pid": "1",
+					"text": "人事部"
+				}, {
+					"id": "bd5e014b22e54fa6b9c3901513c53489",
+					"nodes": [],
+					"pid": "1",
+					"text": "财务部"
+				}, {
+					"id": "bde195a026c04401986dc70f59dd2284",
+					"nodes": [],
+					"pid": "1",
+					"text": "营销部"
+				}, {
+					"id": "c2b6f08cf5074106b78aa4bffa245956",
+					"nodes": [],
+					"pid": "1",
+					"text": "技术部"
+				}, {
+					"id": "d61b15402aac44deb8ff4cfdcab7164f",
+					"nodes": [],
+					"pid": "1",
+					"text": "产品部"
+				}, {
+					"id": "d670cba780774d07bae4ded0c643a8ad",
+					"nodes": [],
+					"pid": "1",
+					"text": "市场部门"
+				}],
+				"pid": "!",
+				"text": "总公司"
+			}];
+			$('#ZDsystreeview').treeview({
+				data: defaultData,
+				color: "#000000",
+				onNodeSelected: function(event, node) {
+					$("#selectId").val(node.id);
+					$("#selectText").val(node.text);
+					$("#input_tab").val(node.text);
+					$(".treebox").slideUp();
+				},
+				onNodeUnselected: function(event, node) {
+					
+				}
+			});
+			
+		}
+        
+ 		
+ 	})
+ 	
+ 
+    
+    
+</script>

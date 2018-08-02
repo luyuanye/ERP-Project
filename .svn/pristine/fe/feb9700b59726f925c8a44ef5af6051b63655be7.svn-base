@@ -1,0 +1,158 @@
+<style type="text/css">
+	.type-show {
+		border-top: 1px solid #e6ecf2
+	}
+	
+	.type-item {
+		position: relative;
+		padding-left: 20px;
+		height: 50px;
+		line-height: 50px;
+		border-bottom: 1px solid #e6ecf2;
+		border-color: #eef1f9
+	}
+	
+	.type-item button {
+		display: none;
+		float: right;
+		margin-right: 30px;
+		border: 0;
+		padding: 0;
+		height: 50px;
+		outline: 0;
+		cursor: pointer;
+		background-color: transparent
+	}
+	
+	.type-item button:hover {
+		color: #13c19f
+	}
+	
+	.type-item-fontcolor {
+		display: inline-block
+	}
+	
+	.type-item-fontcolor i {
+		margin-right: 10px;
+		font-size: 14px
+	}
+	
+	.type-cursor {
+		cursor: pointer
+	}
+	
+	.type-default-color,
+	.type-item .type-default-color:hover {
+		color: #96a6b6
+	}
+	
+	.type-item:hover {
+		background-color: #f5f7fc
+	}
+	
+	.type-item:hover .type-item-fontcolor {
+		color: #13c19f
+	}
+	
+	.type-item:hover button {
+		display: block
+	}
+	
+	.type-level2 .type-item {
+		padding-left: 48px
+	}
+	
+	.type-level3 .type-item {
+		padding-left: 78px
+	}
+	
+	.type-level4 .type-item {
+		padding-left: 103px
+	}
+	
+	.type-level5 .type-item {
+		padding-left: 133px
+	}
+	
+	.type-dele-tip {
+		height: 40px;
+		color: #96a6b6
+	}
+	
+	.type-dele-tip span {
+		display: inline-block;
+		margin-right: 5px;
+		border-radius: 50%;
+		height: 20px;
+		width: 20px;
+		line-height: 20px;
+		text-align: center;
+		color: #fff;
+		background-color: #f6b55a
+	}
+</style>
+<div class="portlet light bordered">
+	<div class="portlet-title" style="background: #F7F7F7;">
+		<a id="btnAdd" class="btn btn-success"><i class="fa fa-plus"></i> 新增</a>
+		<a id="btnEdit" class="btn btn-success"><i class="fa fa-minus"> 编辑</i></a>
+		<a id="btnDel" class="btn btn-danger"><i class="fa fa-trash"></i> 删除</a>
+	</div>
+	<div class="portlet-body">
+		<div class="type-show">
+			<div>
+				
+				<div class="type-level1" style="display: block;">
+					<div class="type-item">
+						<div class="type-item-fontcolor type-cursor"><i class="fa fa-minus">上海</i></div> 
+												
+						
+						<button class="type-default-color" disabled=""><i class="fa fa-trash">删除</i></button>
+						<button><i class="fa fa-trash">置顶</i> </button>
+						<button><i class="fa fa-edit">修改</i> </button>
+						<button class=""><i class="fa fa-plus">新增子部门</i></button>
+					</div>
+					<div>
+						<div class="type-level2" style="display: block;">
+							<div class="type-item">
+								<div class="type-item-fontcolor"><i class="fa fa-plus">浦东区</i>
+																		
+								</div>
+								<button class="type-default-color" disabled=""><i class="fa fa-trash">删除</i></button>
+								<button><i class="fa fa-trash">置顶</i> </button>
+								<button><i class="fa fa-edit">修改</i> </button>
+								<button class=""><i class="fa fa-plus">新增子部门</i></button>		
+						</div>
+					</div>
+				</div>
+				
+				<div class="type-level1" style="display: block;">
+					<div class="type-item">
+						<div class="type-item-fontcolor type-cursor"><i class="fa fa-minus">北京</i></div>
+														
+						
+						<button class="type-default-color" disabled=""><i class="fa fa-trash">删除</i></button>
+						<button><i class="fa fa-trash">置顶</i> </button>
+						<button><i class="fa fa-edit">修改</i> </button>
+						<button class=""><i class="fa fa-plus">新增子部门</i></button>
+					</div>
+					<div>
+						<div class="type-level2" style="display: block;">
+							<div class="type-item">
+								<div class="type-item-fontcolor"><i class="fa fa-plus">碑林区</i></div>
+																		
+								
+								<button class="type-default-color" disabled=""><i class="fa fa-trash">删除</i></button>
+								<button><i class="fa fa-trash">置顶</i> </button>
+								<button><i class="fa fa-edit">修改</i> </button>
+								<button class=""><i class="fa fa-plus">新增子部门</i></button>			
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	</script>

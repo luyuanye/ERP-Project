@@ -1,0 +1,74 @@
+
+<form action="" method="post" class="form">
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+	<p class="modal-title f16" id="myModalLabel"></p>
+</div>
+    <!--scroll start-->
+<div class="formbox_scroll scrollBox" > 
+   
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="">物流日期:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	    	<div class="form-group">														
+						<div class="input-group date date-picker" >
+                            <input type="TEXT" class="form-control" placeholder="交货日期" readonly="">
+                            <span class="input-group-btn  lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                 </div>	
+				
+	       
+	    </div> 
+    </div>
+    
+      </div>
+      <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2 tr pl-0" >
+	        <label  class="required">物流备注:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10 pl-0">
+	        <input type="text" class="form-control" placeholder="物流备注" >
+	    </div> 
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="required">物流公司:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	        <input type="text" class="form-control" placeholder="物流公司" >
+	    </div> 
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="required">物流单号:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	        <input type="text" class="form-control" placeholder="物流单号" >
+	    </div> 
+    </div>
+   
+</div>
+	
+<!--scroll end-->
+<div class="modal-footer form-actions right">
+    <button type="button" class="btn btn-info">保存</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>			
+</div>
+</form>
+ <script type="text/javascript">
+  $(function(){
+      //可搜索的时间插件
+      $(".date-picker").datepicker({
+          language: 'zh-CN',
+          orientation: "left",
+          format: 'yyyy-mm-dd',
+          autoclose: true
+      });
+ 	})
+ 
+</script>

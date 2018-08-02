@@ -1,0 +1,92 @@
+
+<form action="" method="post" class="form">
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+	<p class="modal-title f16" id="myModalLabel">扣款</p>
+</div>
+    <!--scroll start-->
+<div class="formbox_scroll scrollBox" > 
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2 tr pl-0" >
+	        <label  class=" lh29">客户名称:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10 pl-0">
+	        <input type="text" readonly="" class="form-control" placeholder="客户名称" >
+	    </div> 
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="required">扣款金额:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	        <input type="text" class="form-control" placeholder="扣款金额" >
+	    </div> 
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class=" lh29">扣款日期:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	       <div class="input-group date date-picker" data-date-format="dd-mm-yyyy">
+                <input type="TEXT" class="form-control" placeholder="开始时间" name="datepicker" aria-required="true" aria-describedby="datepicker-error">
+                <span class="input-group-btn lh22">
+            <button class="btn default" type="button">
+                <i class="fa fa-calendar"></i>
+            </button>
+             </span>
+            </div>
+	    </div> 
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="required">扣款账户:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	          <select class="form-control" >
+		            <option>扣款账户1 </option>
+		            <option>Option 2</option>
+		            <option>Option 3</option>
+		            <option>Option 4</option>
+		            <option>Option 5</option>
+	              </select>
+	    </div> 
+    </div>
+    <div class="row form-group">
+    	<div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label class="required lh29">扣款摘要:</label>
+	    </div>  
+       <div class="col-xs-10 col-sm-10  pl-0 ">
+             
+                <select class="form-control" >
+		            <option>其他付款 </option>
+		            <option>Option 2</option>
+		            <option>Option 3</option>
+		            <option>Option 4</option>
+		            <option>Option 5</option>
+	              </select>
+       </div>      
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class=" lh29">备注:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	       <textarea name="" rows="3" class="form-control" cols=""></textarea>
+	    </div> 
+    </div>
+</div>
+	
+<!--scroll end-->
+<div class="modal-footer form-actions right">
+    <button type="button" class="btn btn-success">保存</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>			
+</div>
+</form>
+
+ 
+<script type="text/javascript">
+ 	$(function(){
+ 		$(".date-picker").datepicker();
+ 	})
+
+</script>

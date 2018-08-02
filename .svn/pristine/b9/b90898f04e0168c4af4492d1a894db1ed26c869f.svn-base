@@ -1,0 +1,40 @@
+<form action="" method="post" class="form" id="usereditForm">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+		<p class="modal-title f16" id="myModalLabel"></p>
+	</div>
+    <!--scroll-->
+	<div class="formbox_scroll scrollBox">
+		<div class="row form-group">
+			<div class="col-xs-2 col-sm-2 tr pl-0">
+				<label class="required">原始密码：</label>
+			</div>
+			<div class="col-xs-10 col-sm-10 pl-0">
+				<input readonly type="text" class="form-control" value="1868978" name="">
+			</div>
+		</div>
+		<div class="row form-group">
+			<div class="col-xs-2 col-sm-2 tr pl-0">
+				<label class="required">新密码：</label>
+			</div>
+			<div class="col-xs-10 col-sm-10 pl-0">
+				<input  type="text" class="form-control" placeholder="请输入新密码" name="">
+			</div>
+		</div>
+		<div class="row form-group">
+			<div class="col-xs-2 col-sm-2 tr pl-0">
+				<label class="required">确认密码：</label>
+			</div>
+			<div class="col-xs-10 col-sm-10 pl-0">
+				<input  type="text" class="form-control" placeholder="请再次输入新密码" name="">
+			</div>
+		</div>
+	
+	
+	</div>
+	<!--scroll-->
+	<div class="modal-footer form-actions right">
+		<button type="submit" class="btn btn-success">保存</button>
+		<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	</div>
+</form>

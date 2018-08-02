@@ -1,0 +1,95 @@
+
+<form action="" method="post" class="form">
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+	<p class="modal-title f16" id="myModalLabel"></p>
+</div>
+    <!--scroll start-->
+<div class="formbox_scroll scrollBox" > 
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2 tr pl-0" >
+	        <label  class="required">菜单编码:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10 pl-0">
+	        <input type="text" class="form-control" placeholder="菜单编码" >
+	    </div> 
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="required">菜单名称:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	        <input type="text" class="form-control" placeholder="菜单名称" >
+	    </div> 
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="required">菜单序号:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	        <input type="text" class="form-control" placeholder="菜单序号" >
+	    </div> 
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="required">菜单样式:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	        <input type="text" class="form-control" placeholder="菜单样式" >
+	    </div> 
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="required">菜单级别:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	        <input type="text" class="form-control" placeholder="菜单级别" >
+	    </div> 
+    </div>
+  
+    <div class="row form-group">
+    	<div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label>父级菜单:</label>
+	    </div>  
+       <div class="col-xs-10 col-sm-10  pl-0 ">
+                <select class="form-control select2-allow-clear select2-hidden-accessible" style="padding: 6px 8px;" 
+                	id="areaSelect" name="dicKey" tabindex="-1" aria-hidden="true">
+                    <option value="" disabled="" selected="" style="display:none;">请选择所在地区</option>
+                    <option value="1">浦东新区</option>
+                    <option value="2">杨浦区</option>
+                    <option value="3">闵行区</option>                  
+                </select>
+       </div>      
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="">菜单路径:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	        <input type="text" class="form-control" placeholder="菜单路径" >
+	    </div> 
+    </div>
+</div>
+	
+<!--scroll end-->
+<div class="modal-footer form-actions right">
+    <button type="button" class="btn btn-success">保存</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>			
+</div>
+</form>
+ <script type="text/javascript">
+ 
+ 	var control = $("#areaSelect");
+    // 下拉选择添加搜索功能
+    control.select2({
+        allowClear: false,
+        escapeMarkup: function (m) {
+            return m;
+        },
+        language: {
+            noResults: function (params) {
+                return "暂无数据";
+            }
+        }
+    });
+</script>

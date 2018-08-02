@@ -1,0 +1,43 @@
+
+<form action="" method="post" class="form">
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+	<p class="modal-title f16" id="myModalLabel"></p>
+</div>
+    <!--scroll start-->
+<div class="formbox_scroll scrollBox" >
+	<div class=" " style="padding-left: 30px;">
+	   <p>	<span class="text-default pr-10">订单号：</span><span>DH-0-2018-02-155</span></p>
+	   <p>	<span class="text-default pr-10">金额：</span><span>20.00</span></p>
+	   <p>	<span class="text-default pr-10">支付方式：</span><span>微信</span></p>
+	   <p>	<span class="text-default pr-10">备注：</span><span>无</span></p>
+   
+      <p>	<span class="text-default pr-10">流水号：</span><span>2015842695289524</span></p>      
+      <p>	<span class="text-default pr-10">日期：</span><span>2018-02-12 19:21:32</span></p>
+      <p>	<span class="text-default pr-10">操作人：</span><span>admin</span></p>
+      <p>	<span class="text-default pr-10">审核人：</span><span>lsy</span></p>
+   
+    </div>
+</div>	
+<!--scroll end-->
+<div class="modal-footer form-actions right">
+    <button type="button" class="btn btn-success">保存</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>			
+</div>
+</form>
+ <script type="text/javascript">
+ 
+ 	var control = $("#areaSelect");
+    // 下拉选择添加搜索功能
+    control.select2({
+        allowClear: false,
+        escapeMarkup: function (m) {
+            return m;
+        },
+        language: {
+            noResults: function (params) {
+                return "暂无数据";
+            }
+        }
+    });
+</script>

@@ -1,0 +1,49 @@
+<style type="text/css">
+	.dropdown-user .dropdown-menu a:hover{text-decoration: underline;}
+</style>
+<div class="page-header-inner ">
+	<!--  LOGO -->
+	<div class="page-logo">
+		<a href="index.html" style="width: 85%;">
+			<img src="../assets/layouts/layout/img/logo_zhny.png" alt="logo" class="logo-default" style="display: inline-block;width: 100%;"/> 
+		</a>
+		<div class="menu-toggler sidebar-toggler">
+			<span></span>
+		</div>
+	</div>
+	<!-- 收缩左导航按钮 -->
+	<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		<span></span>
+	</a>
+	<!--系统状态按钮menu-->
+	<div class="top-menu">
+		<ul class="nav navbar-nav pull-right">
+			<!--退出、首页、修改密码-->
+			   <li class="dropdown dropdown-user">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                   data-close-others="true">
+                    <img alt="" class="img-circle" src="../assets/layouts/layout/img/avatar3_small.jpg" />
+                    <span class="username username-hide-on-mobile"> 当前用户：超级管理员</span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-default">
+                    <li>
+                        <a data-toggle="modal" data-target="#indexModal" onclick="clickModel(this)" title="用户资料"
+                           data-title="用户资料" editUrl="uerControl/userData.html">			
+                            <i class="icon-user"></i> 用户资料</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" data-target="#indexModal" onclick="clickModel(this)" title="修改密码"
+                           data-title="修改密码" editUrl="uerControl/changePassword.html">
+                            <i class="icon-calendar"></i> 修改密码 </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;" onclick="check()" title="退出">
+                            <i class="icon-key"></i> 退出 </a>
+                    </li>
+                </ul>
+            </li>
+		</ul>
+	</div>
+</div>

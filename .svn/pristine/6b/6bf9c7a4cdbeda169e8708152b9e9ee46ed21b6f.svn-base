@@ -1,0 +1,21 @@
+<form action="" method="post" class="form">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+        <p class="modal-title f16" id="myModalLabel"></p>
+    </div>
+    <!--scroll start-->
+    <div class="formbox_scroll scrollBox" >
+        <div class="overTapData" style="height: 300px;">
+
+            <textarea rows="3" cols="20" style="padding: 10px;width: 100%; height: 220px;"></textarea>
+            <span style="text-align: right; color: #c8d1d9; font-size: 12px;display: inline-block;">备注信息最多支持250字</span>
+        </div>
+
+    </div>
+
+    <!--scroll end-->
+    <div class="modal-footer form-actions right">
+        <button type="button" class="btn btn-success">保存</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+    </div>
+</form>

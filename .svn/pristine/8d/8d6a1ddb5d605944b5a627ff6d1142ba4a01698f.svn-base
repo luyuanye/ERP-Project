@@ -1,0 +1,20 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+            class="sr-only">关闭</span></button>
+    <p class="modal-title f16" id="myModalLabel"></p>
+</div>
+<!--scroll start-->
+<div class="formbox_scroll scrollBox">
+    <div class="overTapData" style="height: 130px;">
+        <div style="height: 130px;line-height: 110px;">是否确定退货单DH-R-20180713-229687通过退货单审核</div>
+    </div>
+
+</div>
+<!--scroll end-->
+<div class="modal-footer form-actions right">
+    <a class="btn btn-success" title="采购订单"
+       onclick="addTab('采购订单','Commodity/Purchase/purchaseOrder.html','purchaseOrder','fa fa-pencil',this)"
+       date-num="employeeAedit" data-dismiss="modal">
+        确定</a>
+    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+</div>

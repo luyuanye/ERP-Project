@@ -1,0 +1,404 @@
+<link href="../css/pageboxs.css" rel="stylesheet" />
+<div class="page-boxs">
+<div class="page-titles" style="">
+	<p class="headerTitle">公司信息</p>
+	<form class="page-form ">
+		<div class="row  m0">
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">客户名称:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+						<input type="text" class="form-control" id="" name="" value="" placeholder="lsy">
+					</div>
+				</div>
+			</div>
+				<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">客户名称:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+						<input type="text" class="form-control" id="" name="" value="" placeholder="lsy">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">客户编码:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+						<input type="text" class="form-control" id="" name="" value="" placeholder="1498799825">
+					</div>
+				</div>
+			</div>
+				<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">客户级别:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+					 <select class="form-control" >
+			            <option>请选择 </option>
+			            <option>Option 2</option>
+			            <option>Option 3</option>
+			            <option>Option 4</option>
+			            <option>Option 5</option>
+		              </select>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">默认发货仓库:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+						 <select class="form-control" >
+			            <option>请选择 </option>
+			            <option>Option 2</option>
+			            <option>Option 3</option>
+			            <option>Option 4</option>
+			            <option>Option 5</option>
+		              </select>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">所在部门:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+						 <select class="form-control" >
+			            <option>请选择 </option>
+			            <option>Option 2</option>
+			            <option>Option 3</option>
+			            <option>Option 4</option>
+			            <option>Option 5</option>
+		              </select>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">业务员:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+						 <select class="form-control" >
+			            <option>请选择 </option>
+			            <option>Option 2</option>
+			            <option>Option 3</option>
+			            <option>Option 4</option>
+			            <option>Option 5</option>
+		              </select>
+					</div>
+				</div>
+			</div>
+			
+           <div class="col-lg-8  col-md-8   col-sm-6  col-xs-12 ">	
+			<label class=" pull-left tr col-md-1 col-sm-2  w89">签约时间</label>
+           <div class="col-md-11 col-sm-10 offsetw89"> 
+                    <div class="form-group   col-md-4">                        
+                        <div class="input-group date date-picker" data-date-format="dd-mm-yyyy">
+                            <input type="TEXT" class="form-control" placeholder="开始时间" name="datepicker" aria-required="true" aria-describedby="datepicker-error">
+                            <span class="input-group-btn lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			             </span>
+                        </div>
+                        </div>
+                         <label class=" pull-left pl-5 pr-5" >到</label>
+                         <div class="form-group  col-md-4">
+                       
+                        <div class="input-group date date-picker" data-date-format="dd-mm-yyyy">
+                            <input type="TEXT" class="form-control" placeholder="结束时间" readonly="" name="datepicker" aria-required="true" aria-describedby="datepicker-error">
+                            <span class="input-group-btn  lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>                        
+                    </div>
+                </div>
+            </div>
+            
+           </div>  
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">区域:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+						 <select class="form-control" >
+			            <option>请选择 </option>
+			            <option>Option 2</option>
+			            <option>Option 3</option>
+			            <option>Option 4</option>
+			            <option>Option 5</option>
+		              </select>
+					</div>
+				</div>
+			</div>	
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >邮编:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >传真:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >详细地址:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >物流编号:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+			
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >物流编号:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >备用信息:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+
+			
+			
+           
+
+
+
+
+		
+
+		</div>
+	</form>
+</div>
+<div class="page-titles" style="">
+	<p class="headerTitle">个人信息</p>
+	<form class="page-form ">
+		<div class="row  m0">
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">姓名:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+						<input type="text" class="form-control" id="" name="" value="" placeholder="lsy">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">手机号码:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+						<input type="text" class="form-control" id="" name="" value="" placeholder="1498799825">
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >职位:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+		    <div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 " >email:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+					<input type="email" class="form-control" id="" name="" value="" placeholder="@">							
+				</div>
+			</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 " >qq:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+					<input type="text" class="form-control" id="" name="" value="" placeholder="@">							
+				</div>
+			</div>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="page-titles" style="border-bottom: none!important;">
+	<p class="headerTitle">账号信息 
+		<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline pl-20 ml-5" >
+                            <input type="checkbox" class="checkboxes" value="1">
+                            <span></span>
+                        </label>
+       <span class="text-danger">开通订货账号</span><span>（开通订货账号，客户才能进入此等单系统订货）</span></p>
+	<form class="page-form ">
+		<div class="row  m0 pb-15" >
+			
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 " >账号:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+					<input type="text" readonly class="form-control" id="" name="" value="" placeholder="账号">							
+				</div>
+			</div>
+			</div>
+			
+		   <div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 " >密码:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+					<input type="text" readonly class="form-control" id="" name="" value="" placeholder="密码">							
+				</div>
+			</div>
+			</div>
+			
+		    <div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 " >确认密码:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+					<input type="text" readonly class="form-control" id="" name="" value="" placeholder="确认密码">							
+				</div>
+			</div>
+			</div>
+			<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline" style="margin-left:70px">
+                            <input type="checkbox" class="checkboxes" value="1">
+                            <span></span>
+                        </label>
+           <span class="text-danger">发送订货账号开通邮件</span>
+			
+	 </div>	
+	</form>
+</div>
+<div class="page-titles" style="">
+	<p class="headerTitle">财务信息</p>
+	<form class="page-form ">
+		<div class="row  m0">
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">发票抬头:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+						<input type="text" class="form-control" id="" name="" value="" placeholder="lsy">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">纳税人识别号:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+						<input type="text" class="form-control" id="" name="" value="" placeholder="1498799825">
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >地址:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+		    <div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 " >电话:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+					<input type="text" class="form-control" id="" name="" value="" placeholder="@">							
+				</div>
+			</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >开户名称:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >开户银行:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >银行账号:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+				<div class="form-group">
+					<label class="control-label col-md-3  col-sm-2  col-xs-2  w89 required">账期类型:</label>
+					<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">
+						 <select class="form-control" >
+			            <option>请选择 </option>
+			            <option>Option 2</option>
+			            <option>Option 3</option>
+			            <option>Option 4</option>
+			            <option>Option 5</option>
+		              </select>
+					</div>
+				</div>
+			</div>	
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >上次对账日期:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" readonly="" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+			<div class="col-lg-4  col-md-4   col-sm-6  col-xs-12 ">
+			<div class="form-group">
+				<label class="control-label col-md-3  col-sm-2  col-xs-2  w89" >对账初始化:</label>
+				<div class="col-md-9  col-sm-9  col-xs-9 offsetw89">							
+					<input type="text" readonly="" class="form-control" id="" name="" value="" placeholder="599">							
+				</div>
+			</div>
+			</div>
+			
+		</div>
+	</form>
+</div>
+<div class="page-titles" style="">
+<p class="headerTitle">收货地址</p>
+<div class="pl-20">
+	<span class="w89" style="display: inline-block;">lsy</span>
+	<span class="w89" style="display: inline-block;">55</span>
+	<span class="w100" style="display: inline-block;">13125458536</span>
+	<span class="w89" style="display: inline-block;">默认</span>
+</div>	
+</div>
+
+ 
+	<!--FIXED-->
+	<div class="fixedFOOTER">
+	<div class="form-actions" >	
+		<button type="button" class="btn btn-default" id="">取消</button>
+		<button type="button" class="btn btn-success" id="">保存</button>
+	</div>
+	</div>
+</div>
+<script type="text/javascript">
+ 	$(function(){
+ 		$(".date-picker").datepicker();
+ 	})
+
+</script>

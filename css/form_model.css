@@ -1,0 +1,73 @@
+/*模态框样式*/
+
+.formbox_scroll {
+	padding: 25px 15px 5px;
+	box-sizing: border-box;
+}
+
+.scrollBox {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.detailBg-black {
+	background-color: #ebf2f9;
+	font-weight: 600;
+}
+
+.radiotest .form-control-feedback {
+	top: -8px;
+	right: -45px;
+}
+
+.selectest .form-control-feedback {
+	right: 20px;
+}
+
+
+/*模态框可拖动，可esc退出*/
+/*主流的webkit和火狐浏览器可以通过样式来调整，而ie的浏览器用过一句简单的js解决。*/
+
+.select {
+	-moz-user-select: none;
+	/*火狐*/
+	-webkit-user-select: none;
+	/*webkit浏览器*/
+	-ms-user-select: none;
+	/*IE10*/
+	-khtml-user-select: none;
+	/*早期浏览器*/
+	user-select: none;
+}
+
+.modal-header {
+	cursor: move;
+}
+
+/*#memberModal .modal-dialog,
+#bind_Modal .modal-dialog,
+#erwmModal .modal-dialog {
+	background: transparent;
+	border: transparent;
+	box-shadow: none;
+}*/
+
+
+/*智能采购页面的提示框*/
+
+.orderTap1 {
+	text-align: center;
+	padding: 30px 0px 50px 0px;
+}
+
+.orderTap1 h4 {
+	margin-top: 12px;
+	color: #415161;
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: normal;
+}
+
+.orderTap1 h4 span {
+	color: #03b8cc;
+}

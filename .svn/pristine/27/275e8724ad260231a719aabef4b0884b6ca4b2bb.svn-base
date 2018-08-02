@@ -1,0 +1,21 @@
+<link href="../css/pageboxs.css" rel="stylesheet" />
+<script src="../js/pageboxs.js" type="text/javascript"></script>
+
+<div class="ERPtabbox">
+	<div class="tabErp">
+    	<a href="javascript:;" class="on tabErpA">订单详情</a>
+        <a href="javascript:;" class="tabErpA">出库发货记录</a>
+        <a href="javascript:;" class="tabErpA">收款记录</a>
+        <a href="javascript:;" class="tabErpA">发货签收记录</a>
+       
+    </div>
+    <div class="contentErp">
+    	<ul class="contentErpboxUL">
+        	<li><p>tab1内容1</p></li>
+            <li><p>tab1内容2</p></li>
+            <li><p>tab1内容3</p></li>
+            <li><p>tab1内容4</p></li>
+        </ul>
+    </div>
+</div>
+

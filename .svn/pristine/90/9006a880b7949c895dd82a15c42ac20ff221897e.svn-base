@@ -1,0 +1,630 @@
+.statistics-box {
+    width: 100%;   
+    padding: 15px 5px;  
+    float: left;
+
+}
+
+.ant-col-sm-8 {
+    width: 33.33333%;
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+  
+}
+
+.ant-col-width25 {
+    width: 25%;
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+}
+
+.ant-col-sm-8 .statistics-item {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.ant-col-sm-8 .statistics-item h4 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.ant-col-sm-8 .item-font h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.ant-col-sm-8 .item-font h4 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.ant-col-sm-8 .item-font h4 span {
+    font-size: 20px;
+}
+
+.ant-col-sm-8 .bg-light-red {
+    background: #fb7884;
+}
+
+.ant-col-sm-8 .bg-light-blue {
+    background: #03a9f3;
+}
+
+.ant-col-sm-8 .bg-light-purple {
+    background: #9675ce;
+}
+
+.ant-col-sm-8 .bg-light-orange {
+    background: #fca489;
+}
+
+table.dataTable thead .sorting_asc {
+    background: none;
+}
+
+table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting, table.dataTable thead > tr > td.sorting_asc, table.dataTable thead > tr > td.sorting_desc, table.dataTable thead > tr > td.sorting {
+    padding-right: 0px;
+    position: relative;
+}
+
+
+
+
+.rule-help {
+    float: left;
+    font-size: 12px;
+    margin-right: 12px;
+    line-height: 29px;
+    position: relative;
+}
+
+.rule-help span {
+    cursor: pointer;
+}
+
+.rule-help:hover span {
+    color: #f7b659;
+}
+
+.rule-help-wrap {
+    position: absolute;
+    width: 400px;
+    border: 1px solid #f7b659;
+    background: #fffdf7;
+    border-radius: 4px !important;
+    overflow: hidden;
+    right: 0px;
+    padding: 10px;
+    z-index: 999999999999999;
+    display: none;
+}
+
+.rule-help-wrap p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.rule-help:hover .rule-help-wrap {
+    display: block;
+
+}
+/*盘点界面样式统一 start*/
+
+/*关于盘点的页面流程样式nm*/
+.flowpageboxs{height:100%;}	
+.flowpageboxs.section-box .section-step {}
+.flowpageboxs.section-box .section-conts {height: calc(100% - 74px - 53px);overflow-x: hidden;}
+/*关于盘点的页面流程样式nm*/
+.section-box {
+    width: 100%;
+    float: left;
+}
+
+.flowpageboxs.section-box .section-step {
+    padding: 20px 10%;
+    background-color: #f0f8f4;
+}
+
+.flowpageboxs.section-box .section-step .ant-steps-tail {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.flowpageboxs.section-box .section-step .ant-steps-tail p {
+    border: 1px solid #415161;
+    background-color: #fff;
+    border-radius: 20px !important;
+    width: 140px;
+    height: 34px;
+    margin: 0px;
+    line-height: 34px;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+
+.flowpageboxs.section-box .section-step .ant-click p {
+    color: #fff;
+    background-color: #415161;
+}
+
+.flowpageboxs.section-box .section-step .ant-steps-tail i {
+    position: absolute;
+    width: 100%;
+    top: 17px;
+    height: 1px;
+    background: #cdd9e6;
+    display: block;
+}
+
+.flowpageboxs.section-box .section-step .ant-steps-tail i em {
+    background: #415161;
+    display: block;
+    position: absolute;
+    width: 0px;
+    top: 0px;
+    height: 1px;   
+    transition-duration: 0.3s;
+    transition-property: width;
+    transition-timing-function: linear;
+}
+
+
+.flowpageboxs.section-box .section-conts .text-muted {
+    font-size: 12px;
+}
+
+.flowpageboxs.section-box .section-step .ant-animt i em {
+    background: #227447!important;   
+    width: 100%; 
+    transition-duration: 0.3s;
+    transition-property: width;
+    transition-timing-function: linear;
+}
+
+
+ .ant-btn {
+    display: inline-block; 
+}
+ .ant-btn-ready-click {
+    display: none;   
+}
+ .ordButton {   
+    display: none;
+}
+
+
+
+
+/*到此结束流程页面end*/
+.form-width {
+    background-color: #fff !important;
+    width: 461px !important;
+}
+
+.basic-import-instruction {
+    display: block;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.basic-import-instruction .basic-list {
+    display: inline-block;
+    color: #415161;
+    margin-right: 25px;
+}
+
+.basic-import-instruction .order-mane {
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 15px;
+
+}
+
+.purchBeiZhu {
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.purchBeiZhu p {
+    color: #788ea4;
+    margin: 10px 0px 0px 0px;
+}
+
+.purchBeiZhu p span {
+    color: #415161;
+}
+
+/*订单详情导入按钮*/
+/*资金流动导入start*/
+.puchaseWrap {
+    padding: 0px 35px;
+}
+
+.puchaseWrap .puchaseDown {
+    font-size: 14px;
+    color: #545454;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.puchaseWrap .puchaseDown span {
+    cursor: pointer;
+}
+
+.puchaseWrap .puchaseSelect {
+    display: block;
+    border: 1px #d0d0d0 dashed;
+    padding: 100px 0px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+.col-md-6 a{
+    color: #415161;
+}
+
+.puchaseWrap .puchaseTap {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #96a6b6;
+}
+/*资金流动导入end*/
+
+
+/*报表 订单统计报表*/
+.timeSwitch {
+    float: left;
+    border: 1px #d0d0d0 solid;
+    border-radius: 4px !important;
+    height: 32px;
+    overflow: hidden;
+}
+
+.timeSwitch li {
+    float: left;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 32px;
+    border-right: 1px #d0d0d0 solid;
+    line-height: 32px;
+    color: #415161;
+    cursor: pointer;
+}
+
+.timeSwitch li.timeSwitchHove {
+    background: #13c19f;
+    color: #fff;
+}
+
+.timeSwitch li:last-child {
+    border-right: 0px #d0d0d0 solid;
+}
+
+div.reportReverst div.bottom {
+    position: relative !important;
+    margin-top: 25px;
+}
+
+div.reportReverst div.relative {
+    display: none;
+}
+
+.reportWrapper {
+    width: 100%;
+    position: relative;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #e0dedb;
+}
+
+.reportSum {
+    width: 100%;
+    height: 110px;
+    border-bottom: 1px solid #f1f2f7;
+    background: #f8f9fd;
+}
+
+.reportSumList {
+    border-right: 1px solid #f1f2f7;
+    height: 110px;
+    min-width: 110px;
+    float: left;
+}
+
+.reportSumList:last-child {
+    border-right: 0px solid #f1f2f7;
+}
+
+.reportFont {
+    text-align: center;
+    padding-top: 35px;
+}
+
+.reportFont h3 {
+    color: #96a6b6;
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 8px;
+
+}
+
+.reportFont a {
+
+}
+
+.reportFont h4 {
+    color: #7b8aa1;
+    font-size: 13px;
+    font-weight: normal;
+/ / margin-bottom: 8 px;
+}
+
+.reportFont h4 span {
+    color: #415161;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.reportFont h4 .wrap {
+    color: #f33333;
+}
+
+.reportFont .report-top {
+    border-bottom: 1px solid #f1f2f7;
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.reportFont .report-top h3 {
+    margin-top: 15px;
+}
+
+.reportFont .report-top h3, .reportFont .report-top h4 span {
+    color: #00bacf;
+}
+
+.reportFont .report-bottom {
+    margin-top: 10px;
+    display: block;
+}
+
+.reportFont .report-bottom span {
+    color: #96a6b6;
+    font-size: 12px;
+}
+
+.chart-top {
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.mar-left {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.chat-radio {
+    float: left;
+}
+
+.chat-radio .ant-radio-button-wrapper {
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 15px;
+    width: 44px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 3px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    font-size: 13px;
+    border: none;
+    box-shadow: none;
+    border-radius: 24px !important;
+}
+
+.ant-radio-button-wrapper > .ant-radio-button {
+    margin-left: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    color: #415161;
+}
+
+.chat-radio .ant-radio-button {
+    display: none;
+}
+
+.chat-radio .ant-radio-button-wrapper-checked {
+    background-color: #b7c0cc;
+    color: #fff;
+}
+
+.chart-right {
+    float: right;
+    height: 43px;
+    margin-right: 20px;
+}
+
+.chart-right h3 {
+    float: left;
+    line-height: 43px;
+    font-size: 26px;
+    color: #415161;
+    font-weight: normal;
+    border-right: 1px #d0d0d0 solid;
+    padding-right: 12px;
+}
+
+.chart-right div {
+    float: right;
+    margin-left: 12px;
+}
+
+.chart-right div span {
+    display: block;
+    font-size: 12px;
+    color: #415161;
+}
+
+.Mechan .reportSumList {
+    border: 0px;
+
+}
+
+.Merchandising-radio label {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.merchang-list {
+    width: 65%;
+    float: left;
+    height: 300px;
+    display: inline-table;
+    position: relative;
+}
+
+.merchang-list ul {
+    display: inline-table;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 100%;
+}
+
+.merchang-list ul li {
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.merchang-list ul li span {
+    width: 30%;
+    color: #415161;
+    display: inline-table;
+}
+
+.tableTitle {
+    margin-bottom: 12px;
+}
+
+.marhc-lsitH {
+    width: 60%;
+}
+
+.marhc-lsitH ul li span {
+    width: 30%;
+}
+
+.portle-modify {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-indent: 25px;
+    color: #415161;
+}
+
+.portle-modify span {
+    color: #13c19f;
+}
+
+.inputTap {
+    width: 45px;
+    text-align: center;
+    height: 34px;
+    border: 1px solid #cdd9e6;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.inputTap:hover {
+    border: 1px solid #4bd0b6;
+    color: #4bd0b6;
+}
+
+.inputTap:focus {
+    border: 1px solid #4bd0b6;
+    color: #4bd0b6;
+}
+
+.overTap {
+
+}
+
+.overTap .overTapData {
+    height: 34px;
+    display: block;
+}
+
+.overTap .overTapData .label {
+    height: 34px;
+    float: left;
+    line-height: 24px;
+    color: #415161;
+    font-size: 13px;
+}
+
+.overTap .overTapData .label i {
+    color: #f04134;
+    font-style: normal;
+}
+
+.overTap .overTapText {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.overTap .overTapText span {
+    font-size: 13px;
+    color: #415161;
+    line-height: 22px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.moneyNum {
+    float: right;
+    color: #415161;
+    font-size: 18px;
+}
+
+.moneyNum span {
+    color: #f96868;
+    font-size: 22px;
+}
+
+.fixed—But {
+    box-shadow: 0 0 12px 5px #eee;
+    z-index: 9999;
+    background: #fff;
+}
+
+.hoverColor:hover .reportFont h3{
+ color: #227447;
+}
+.hoverColor:hover .reportFont h4{
+    color: #227447;
+}
+.hoverColor:hover .reportFont h4 span{
+    color: #227447;
+}

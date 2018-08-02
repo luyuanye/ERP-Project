@@ -1,0 +1,28 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+            class="sr-only">关闭</span></button>
+    <p class="modal-title f16" id="myModalLabel"></p>
+</div>
+<!--scroll start-->
+<div class="formbox_scroll scrollBox">
+      <div class="orderTap1">
+          <h4>滞销商品：指近 <input type="text" value="30" class="inputTap">天内，销售≤<input type="text" value="0" class="inputTap">且有库存的商品。</h4>
+      </div>
+
+</div>
+<!--scroll end-->
+<div class="modal-footer form-actions right">
+    <a class="btn btn-success"  title="采购订单" onclick="addTab('采购订单','Commodity/Purchase/purchaseOrder.html','purchaseOrder','fa fa-pencil',this)" date-num="employeeAedit" data-dismiss="modal">
+        确定</a>
+    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $(".date-picker").datepicker({
+            language: 'zh-CN',
+            orientation: "left",
+            format: 'yyyy-mm-dd',
+            autoclose: true
+        });
+    })
+</script>

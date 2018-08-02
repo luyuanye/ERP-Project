@@ -1,0 +1,125 @@
+<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css">
+<div class="portlet light">
+    <div class="portlet-title">
+        <form class="form-inline">
+            <div class="pull-left">
+                <div class="btn-group pull-left">
+                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">全部级别<i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="javascript:;"><i class="fa fa-clock-o"></i>全部仓库</a></li>
+                        <li><a href="javascript:;"><i class="fa fa-clock-o"></i>默认仓</a></li>
+                    </ul>
+                </div>
+                <div class="form-group pull-left ml-10">
+                    <input type="text" class="form-control input-medium pull-left" placeholder="请输入订单号/客户名称">
+                    <button type="submit" class="btn green pull-left"><i class="fa fa-search"></i>搜索</button>
+                </div>
+                <div class="btn-group pull-left" style="margin-left: 12px; margin-top: -4px;">
+                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                        <input type="checkbox" class="group-checkable" data-set="#statisticsTab.checkboxes" >
+                        <span style="margin-top: 8px;"></span>
+                        <i style="font-style: normal; margin-left:-5px;">按商品合并</i>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group pull-right">
+                <div class="rule-help">
+                    <span>统计说明 <i class="fa fa-file-excel-o"></i></span>
+                    <div class="rule-help-wrap">
+                        <p>1、退货单提交订单后即计入统计；</p>
+                        <p>2、如需【品牌】字段有内容，需在【系统设置-系统参数设置-商品设置】中启用商品品牌，并在商品列表完善商品品牌信息；</p>
+                        <p>3、客户归属的【部门】、【业务员】及【区域】信息均取的客户列表中当前最新值。</p>
+                    </div>
+                </div>
+                <a href="" type="button" class="btn btn-default"><i class="fa fa-file-excel-o"></i> 导 出</a>
+            </div>
+        </form>
+    </div>
+    <div class="portlet-body">
+        <div class="portlet-body">
+                <table style="width: 100%;"
+                       class="table table-striped table-bordered table-hover table-checkable order-column table_example dataTable no-footer "
+                       id="custonerOdAdTab" role="grid" aria-describedby="custonerOdAdTab_info">
+                    <thead>
+                    <th>客户名称</th>
+                    <th>最近一次订货时间</th>
+                    <th>累计订单数</th>
+                    <th>累计订单金额</th>
+                    <th>平均订单金额</th>
+                    <th>累计退单数</th>
+                    <th>累计退单金额</th>
+                    <th>平均订货间隔（天）</th>
+                    <th>截至目前未订货天数</th>
+                    <th>最近一次登陆时间</th>
+                    <th>累计登陆次数</th>
+                    <th>创建时间</th>
+                    <th>首次订货时间</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd" role="row">
+                        <td>白菜</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</div>
+<script>
+    var amountOfAccess = function () {
+        var myChart2 = echarts.init(document.getElementById('container2'));
+        option2 = {
+            title: {
+                text: '',
+                subtext: '',
+                x: ''
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: ['白菜', '敌敌畏']
+            },
+            series: [
+                {
+                    name: '',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    data: [
+                        {value: 335, name: '白菜'},
+                        {value: 10, name: '敌敌畏'},
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+        myChart2.setOption(option2);
+    }
+    amountOfAccess();
+</script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        TableDatatablesManaged.init("#MerchandisingAdTab");
+    })
+</script>

@@ -1,0 +1,128 @@
+<!--<p>采购退货</p>-->
+<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css">
+<div class="portlet light">
+    <div class="portlet-title">
+        <form class="form-inline">
+            <div class="form-group pull-left">
+                <a class="btn btn-success"
+                   onclick="addTab('采购退货详情','Commodity/Purchase/purchaseReturnsAddModel.html','purchaseReturnsAddModel','fa fa-plus',this)"
+                   date-num="orderFormAdd"><i class="fa fa-plus"></i> 新 增</a>
+            </div>
+             <div class="pull-right">
+                <div class="btn-group pull-left">
+                    <button class="btn green  btn-outline dropdown-toggle pr-5" data-toggle="dropdown">全部仓库
+                        <i class="fa fa-angle-down ml-5"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-left">
+                        <li><a href="javascript:;">全部仓库</a></li>
+                        <li><a href="javascript:;">默认仓库</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group pull-left ml-10">
+                    <button class="btn green  btn-outline dropdown-toggle pr-5" data-toggle="dropdown">全部状态
+                        <i class="fa fa-angle-down ml-5"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-left">
+                        <li><a href="javascript:;">全部状态</a></li>
+                        <li><a href="javascript:;">已完成</a></li>
+                        <li><a href="javascript:;">已作废</a></li>
+                    </ul>
+                </div>
+                <div class="form-group pull-left ml-10">
+                    <input type="text" class="form-control input-medium pull-left" placeholder="关键字搜索">
+                    <button type="submit" class="btn green pull-left"><i class="fa fa-search"></i>搜索</button>
+                </div>
+            </div>
+           
+        </form>
+    </div>
+    <div class="portlet-body">
+       <table style="white-space: nowrap;text-overflow: ellipsis; overflow: hidden;width: 100%;"
+               class="table table-striped table-bordered table-hover table-checkable order-column table_example dataTable no-footer"
+               id="returnsTab" role="grid" aria-describedby="returnsTab_info">
+            <thead>
+            <tr  >
+                <th style="width: 50px;">
+                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                        <input type="checkbox" class="group-checkable" data-set="#returnsTab .checkboxes"><span></span>
+                    </label>
+                </th>
+                <th>采购退货单号</th>
+                <th style="min-width: 116px;">供应商</th>
+                <th>退货仓库</th>
+                <th>退货金额</th>
+                <th>制单人</th>
+                <th>经办人</th>
+                <th>时间</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                        <input type="checkbox" class="checkboxes" value="1">
+                        <span></span>
+                    </label>
+                </td>
+                <td class="sorting_1">P2217815771</td>
+                <td>白菜</td>
+                <td>仓库名字1</td>
+                <td>100000</td>
+                <td>名字1</td>
+                <td>名字2</td>
+                <td>04-09 17:07:20</td>
+                <td>已完成</td>
+                <td>
+                    <div class="action-buttons f18">
+                        <a title="采购退货详情"
+                           onclick="addTab('采购退货详情','Commodity/Purchase/purchaseReturnsDetail.html','purchaseReturnsDetail','fa fa-search',this)"
+                           date-num="purchaseReturnsDetail"><i class="fa fa-search "></i></a>
+                    </div>
+                </td>
+            </tr>
+            <tr class="even"  >
+                <td>
+                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                        <input type="checkbox" class="checkboxes" value="1">
+                        <span></span>
+                    </label>
+                </td>
+                <td class="sorting_1">P2217815771</td>
+                <td>土豆</td>
+                <td>仓库名字</td>
+                <td>100000</td>
+                <td>名字1</td>
+                <td>名字2</td>
+                <td>04-09 17:07:20</td>
+                <td>未完成</td>
+                <td>
+                    <div class="action-buttons f18">
+                        <a title="采购退货详情"
+                           onclick="addTab('采购退货详情','Commodity/Purchase/purchaseReturnsDetail.html','outBoundOrderdetail','fa fa-search',this)"
+                           date-num="orderFormdetail"><i class="fa fa-search "></i></a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(function ($) {
+        TableDatatablesManaged.init("#returnsTab");
+    })
+</script>
+<script type="text/javascript">
+    $(function () {
+        	//可搜索的时间插件
+		$(".date-picker").datepicker({
+			language: 'zh-CN',
+			orientation: "left",
+			format: 'yyyy-mm-dd',
+			autoclose: true
+		});;
+    })
+</script>
+

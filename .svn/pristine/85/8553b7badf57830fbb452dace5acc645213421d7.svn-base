@@ -1,0 +1,114 @@
+<!--<p>订单/发货统计</p>-->
+<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css">
+<div class="portlet light">
+    <div class="portlet-title">
+        <form class="form-inline">
+            <div class="pull-left">
+                <div class="form-group pull-left ml-10">
+                    <div class="form-group">
+                        <label class="lh22">从</label>
+                        <div class="input-group date date-picker">
+                            <input type="TEXT" class="form-control" placeholder="开始时间">
+                            <span class="input-group-btn lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                        </div>
+                        <label class="lh22">到</label>
+                        <div class="input-group date date-picker">
+                            <input type="TEXT" class="form-control" placeholder="结束时间">
+                            <span class="input-group-btn  lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                        </div>
+                    </div>
+                </div>
+             
+                  <div class="btn-group pull-left lh29 ml-10">
+                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline lh22 mb-0">
+                        <input type="checkbox" class="group-checkable" data-set="#statisticsTab.checkboxes" >
+                        <span style="margin-top: 2px;"></span>
+                        <em style="font-style: normal;">按商品合并</em>
+                    </label>
+                </div>
+               
+            </div>
+            <div class="form-group pull-right">
+                <a href="javasctipt:vido:;" type="button" class="btn green btn-outline radius"><i class="fa fa-file-excel-o"></i> 导 出</a>
+            </div>
+        </form>
+    </div>
+    <div class="portlet-body">
+        <div class="statistics-box  ">
+            <div class="ant-row">
+                <div class="ant-col-sm-8">
+                    <div class="statistics-item bg-light-red"><h4>0.00</h4>发货单数</div>
+                </div>
+                <div class="ant-col-sm-8">
+                    <div class="statistics-item bg-light-blue"><h4>0</h4>发货商品数
+                    </div>
+                </div>
+                <div class="ant-col-sm-8">
+                    <div class="statistics-item bg-light-purple"><h4>0.00</h4>发货金额</div>
+                </div>
+            </div>
+        </div>
+            <table style="width: 100%;"
+                   class="table table-striped table-bordered table-hover table-checkable order-column table_example dataTable no-footer"
+                   id="statisticsTab" role="grid" aria-describedby="statisticsTab_info">
+                <thead>
+                <tr role="row">
+                    <th style="width: 50px;">
+                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                            <input type="checkbox" class="group-checkable" data-set="#statisticsTab.checkboxes">
+                            <span></span>
+                        </label>
+                    </th>
+                    <th>流水号</th>
+                    <th>订单号</th>
+                    <th>客户名称</th>
+                    <th>客户编码</th>
+                    <th>商品名称</th>
+                    <th>商品规格</th>
+                    <th>发货时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                            <input type="checkbox" class="checkboxes" value="1">
+                            <span></span>
+                        </label>
+                    </td>
+                    <td>DH-R-20180709-211452</td>
+                    <td>DH-R-20180709-211452</td>
+                    <td>白菜</td>
+                    <td>DH-R-20180709-211452</td>
+                    <td>白菜</td>
+                    <td>1箱</td>
+                    <td>2017-09-01</td>
+                </tr>
+                </tbody>
+            </table>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(function ($) {
+        TableDatatablesManaged.init("#statisticsTab");
+    })
+</script>
+<script type="text/javascript">
+    $(function () {
+        //可搜索的时间插件
+        $(".date-picker").datepicker({
+            language: 'zh-CN',
+            orientation: "left",
+            format: 'yyyy-mm-dd',
+            autoclose: true
+        });
+    })
+</script>

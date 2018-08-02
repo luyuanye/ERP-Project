@@ -1,0 +1,100 @@
+<!--<p>供应商信息</p>-->
+<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#areaSelectCg+.select2.select2-container{width: 270px!important;}
+</style>
+<div class="portlet light">
+    <div class="portlet-title">
+        <form class="form-inline">
+            <div class="pull-left">            	
+                <div class="btn-group pull-left">
+                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">全部分类<i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="javascript:;"><i class="fa fa-clock-o"></i>1</a></li>
+                        <li><a href="javascript:;"><i class="fa fa-clock-o"></i>2</a></li>
+                        <li><a href="javascript:;"><i class="fa fa-clock-o"></i>通用</a></li>
+                    </ul>
+                </div>
+                <div class="form-group pull-left ml-10">
+                   <div class="input-group" >
+				 	<select class="form-control  col-md-9 select2-allow-clear select2-hidden-accessible" 
+		            	id="areaSelectCg" name="dicKey" tabindex="-1" aria-hidden="true">
+		                <option value="" disabled="" selected="" style="display:none;">请选择</option>
+		                <option value="1">lsy</option>
+		                <option value="2">nmj</option>			                   
+		            </select>
+					  <span class="input-group-addon p0" style="border:none">
+					  	<a data-toggle="modal" data-target="#memberModal" class="btn btn-success" data-title="高级搜索" onclick="clickModel(this)" editurl="Client/ClientGoodsmodel.html"><i class="fa fa-search"></i>高级搜索</a>
+                       </span>
+					  	
+			       </div>
+                </div>
+            </div>
+            <div class="form-group pull-right">
+              <a href="javascript:;" type="button" class="btn btn-default"><i class="fa fa-file-excel-o"></i> 导 出</a></div>
+        </form>
+    </div>
+    <div class="portlet-body">     
+            <table style="width: 100%;"
+                   class="table table-striped table-bordered table-hover table-checkable order-column table_example dataTable no-footer" id="ClientGoodsTab" role="grid" aria-describedby="ClientGoodsTab_info">
+                <thead>
+                <tr>
+                    <th >
+                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                            <input type="checkbox" class="group-checkable" data-set="#ClientGoodsTab .checkboxes">
+
+                        </label>
+                    </th>
+                    <th>商品图</th>
+                    <th>商品编码</th>
+                    <th>商品名称</th>
+                    <th>商品规格</th>  
+                     <th>单位</th> 
+                     <th>订货价</th> 
+                </tr>
+                </thead>
+                <tbody>
+                <tr >
+                    <td>
+                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                            <input type="checkbox" class="checkboxes" value="1">
+                            <span></span>
+                        </label>
+                    </td>
+                    <td>
+                    	<!-- <a href="#">
+            	         <img class="target-img" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTYgMTYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE2IDE2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8Y2lyY2xlIGZpbGw9IiNGMkY0RjkiIGN4PSI0LjE5MyIgY3k9IjQuNzcxIiByPSIxLjE4OSIvPgoJPHBvbHlnb24gZmlsbD0iI0YyRjRGOSIgcG9pbnRzPSI5LjE4MiwxNi4wMDQgMCw4LjY1NSAwLDE2LjAwNCAJIi8+Cgk8cG9seWdvbiBmaWxsPSIjRjJGNEY5IiBwb2ludHM9IjEyLjgwOSw0LjE4NSA1LjM2MiwxMS42MzUgMTAuODkzLDE2LjAwNCAxNiwxNi4wMDQgMTYsNi42ODkgCSIvPgo8L2c+Cjwvc3ZnPgo=" style="background: rgb(255, 255, 255); border: 1px solid rgb(238, 241, 249); box-sizing: border-box;max-height: 50px;max-width: 50px;">
+                        </a> --> 
+                    </td>                
+                    <td>是的</td>
+                    <td>5448</td>
+                    <td>785</td>   
+                    <td>5448</td>
+                    <td>785</td>  
+                </tr>
+                </tbody>
+            </table>
+            
+    </div>
+</div>
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        TableDatatablesManaged.init("#ClientGoodsTab");
+        	var control = $("#areaSelectCg");
+		    // 下拉选择添加搜索功能
+		    control.select2({
+		        allowClear: false,
+		        escapeMarkup: function (m) {
+		            return m;
+		        },
+		        language: {
+		            noResults: function (params) {
+		                return "暂无数据";
+		            }
+		        }
+		    });
+    })
+</script>
+

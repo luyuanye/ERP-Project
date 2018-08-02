@@ -1,0 +1,91 @@
+<style type="text/css">
+	/**************************** table 不需要 bottom*/
+#orderFormAddModelTab + .bottom{position: relative!important;display: none; }
+</style>
+<form action="" method="post" class="form">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+		<p class="modal-title f16" id="myModalLabel"></p>
+	</div>
+	<!--scroll start-->
+	<div class=" scrollBox">
+		<div class="portlet light ">
+			<div class="portlet-title">
+				<form class="form-inline">
+					<div class="pull-left">
+						<div class="btn-group pull-left">
+							<button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">全部级别
+                            <i class="fa fa-angle-down"></i>
+                            </button>
+							<ul class="dropdown-menu pull-right">
+								<li>
+									<a href="javascript:;"><i class="fa fa-clock-o"></i> 不折扣 </a>
+								</li>
+								<li>
+									<a href="javascript:;"><i class="fa fa-clock-o"></i> 普通 </a>
+								</li>
+								<li>
+									<a href="javascript:;"><i class="fa fa-clock-o"></i> vip </a>
+								</li>
+							</ul>
+						</div>
+						<div class="form-group pull-left  ml-10">
+							<label class="pull-left lh22">选择客户：</label>
+							<input type="text" class="form-control input-medium pull-left" placeholder=".input-medium">
+							<button type="submit" class="btn green pull-left"><i class="fa fa-search"></i>搜索</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="portlet-body">
+				<table style="width: 100%;" class="table table-striped table-bordered table-hover table-checkable order-column table_example" id="orderFormAddModelTab">
+					<thead>
+						<tr>
+							<th>
+								<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                            <input type="checkbox" class="group-checkable" data-set="#orderFormAddModelTab .checkboxes" />
+                            <span></span>
+                        </label>
+							</th>
+							<th> 客户名称 </th>
+							<th> 客户编码 </th>
+							<th> 地区 </th>
+							<th> 级别 </th>						
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="">
+							<td>
+								<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                            <input type="checkbox" class="checkboxes" value="1" />
+                            <span></span>
+                        </label>
+							</td>
+							<td> lsy</td>
+							<td> 49 </td>
+							<td>
+								vip
+							</td>
+							<td>
+								普通
+							</td>
+							
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+	<!--scroll end-->
+	<div class="modal-footer form-actions right">
+		<button type="button" class="btn btn-info">保存</button>
+		<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	</div>
+</form>
+<script type="text/javascript">
+	jQuery(function($) {
+		TableDatatablesManaged.init("#orderFormAddModelTab");
+	})
+</script>

@@ -1,0 +1,175 @@
+<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+
+<div class="portlet light ">
+	<div class="portlet-title" >
+		<form class="form-inline">		
+			<div class="btn-group">
+				<button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">全部时间
+                            <i class="fa fa-angle-down"></i>
+                </button>
+				<ul class="dropdown-menu pull-right">				
+					<li><a href="javascript:;"> 全部时间 </a></li>
+					<li><a href="javascript:;"> 最近一天 </a></li>
+					<li><a href="javascript:;"> 最近一月 </a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">全部
+                            <i class="fa fa-angle-down"></i>
+                </button>
+				<ul class="dropdown-menu pull-right">				
+					<li><a href="javascript:;"> 全部 </a></li>
+					<li><a href="javascript:;"> 本人 </a></li>
+				</ul>
+			</div>
+	
+			<div class="form-group   ml-10" >
+				<label  class="pull-left lh22">关键字：</label>
+				<input type="text" class="form-control input-medium pull-left" placeholder=".input-medium">
+				<button type="submit" class="btn green pull-left"><i class="fa fa-search"></i>搜索</button>
+			</div>
+		
+		</form>
+	</div>
+	<div class="portlet-body">
+		<table style="width: 100%;" class="table table-striped table-bordered table-hover table-checkable order-column table_example" id="systemLogTab" >
+			<thead>
+				<tr>
+					<th>
+						<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                            <input type="checkbox" class="group-checkable" data-set="#systemLogTab .checkboxes" />
+                        </label>
+					</th>
+					<th> 操作人 </th>
+					<th> 时间 </th>
+					<th> 操作类型 </th>
+					<th> 操作日志 </th>					
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="">
+					<td>
+						<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                            <input type="checkbox" class="checkboxes" value="1" />
+                            <span></span>
+                        </label>
+					</td>
+					<td> admin </td>
+					<td>
+						2018-01-10 14:22:15
+					</td>
+					<td>
+						 系统登录 
+					</td>
+					<td>
+						用户登录:15456456
+					</td>
+				</tr>
+			
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<script type="text/javascript">
+	jQuery(function($) {
+		TableDatatablesManaged.init("#systemLogTab");
+	})
+</script>
+<!--<script type="text/javascript">
+    jQuery(function ($) {
+        // 获取portlet-body的高度，减去底部分页信息高度，再减去table头部的高度
+    var pBodyHeight = $("#userpage").height() - $("#userpage .bottom").outerHeight()-33;     
+    //初始化table
+     $(window).resize(function () {
+        pBodyHeight = $("#userpage").height() - $("#userpage .bottom").outerHeight()-33 ;
+         $("#userpage .dataTables_scrollBody").css("max-height", pBodyHeight + "px");
+          console.log(pBodyHeight)
+     });
+    setTimeout(function () {
+            var oTable1 = $('#systemLogTab')
+                .dataTable(
+                    {
+                        "dom": '<"top">rt<"bottom"ilp><"clear">',//分页大小显示位置
+//                      "pagingType": "bootstrap_full_number",                     
+                        "bScrollCollapse": true, //当显示的数据不足以支撑表格的默认的高度、默认flase
+                        "bFilter": false, //搜索栏
+                        "bSort": false, //是否支持排序功能、默认true
+                        "bDestroy": true,//使用传递的新的初始化对象中的属性构造一个新的表格，并替换一个匹配指定的选择器的表格，如果没有匹配到表格，新的表格会被作为一个普通表格被构建、默认false
+                        "searching": true,//控制控件的搜索功能,如果为false,控件的搜索功能被完全禁用,而且默认搜索组件会被隐藏.、默认true
+                        scrollY: pBodyHeight,
+                        scrollX: true,
+                        'bProcessing': true, //开启读取服务器数据时显示正在加载中……特别是大数据量的时候，开启此功能比较好、默认false
+                        "bServerSide": true,//服务器处理分页，默认是false，需要服务器处理，必须true
+                        "sAjaxDataProp": "aData",//是服务器分页的标志，必须有
+                        "sAjaxSource": "${ctxPath!}/user/pageList",//通过ajax实现分页的url路径。
+                        
+                        
+                        
+                         "oLanguage": {//语言设置
+                            "sProcessing": '<div><div class="load-4"><div class="ring-1"></div></div></div>',
+                            "sLengthMenu": "显示 _MENU_ 条结果",
+                            // "sZeroRecords": "没有匹配结果",
+                            "sInfo": "显示第 _START_ 至 _END_ 条结果，共 _TOTAL_ 条",
+                            "sInfoEmpty": "显示第 0 至 0 条结果，共 0 条",
+                            "sInfoFiltered": "(由 _MAX_ 条结果过滤)",
+                            "sInfoPostFix": "",
+                            "sSearch": "搜索:",
+                            "sUrl": "",
+                            "sEmptyTable": "没有相关记录！",
+                            "oPaginate": {
+                                "sFirst": "首页",
+                                "sPrevious": "上页",
+                                "sNext": "下页",
+                                "sLast": "末页",
+                                "sJump": "跳转"
+                            },
+                         
+                        },
+                        "fnInitComplete": function (oSettings, json) {
+                            //初始化完成事件
+                        }
+                    });
+                  //单选、隔行变色
+            oTable1.on('change', 'tbody tr .group-checkable', function () {
+                var checked = jQuery(this).is(":checked");
+                $('tbody tr .group-checkable').each(function (index, item) {
+                    $(this).parents('tr').removeClass("active");
+                    $(item).prop("checked", false);
+                });
+
+                if (checked) {
+                    $(this).parents('tr').addClass("active");
+                    $(this).prop("checked", true);
+                } else {
+                    $(this).parents('tr').removeClass("active");
+                    $(this).prop("checked", false);
+                }
+            });
+            oTable1.on('click', 'tbody tr td', function () {//部分选，当行高亮==>复选框选
+                //&& !$(this).find('input').hasClass("group-checkable")
+                // if (!$(this).find('div').hasClass("action-buttons")) {
+                var ck = $(this).parents("tr").find("td:first .group-checkable");
+                var flag = ck.prop("checked");
+                $('tbody tr .group-checkable').each(function (index, item) {
+                    $(this).parents('tr').removeClass("active");
+                    $(item).prop("checked", false);
+                });
+
+                if (!$(this).find('div').hasClass("action-buttons")) {
+                    if (flag) {
+                        $(this).parents('tr').removeClass("active");
+                        ck.prop("checked", false);
+                    } else {
+                        ck.parents('tr').addClass("active");
+                        ck.prop("checked", true);
+                    }
+                } else {
+                    ck.parents('tr').addClass("active");
+                    ck.prop("checked", true);
+                }
+                // }
+            });
+    }, 500);
+    });
+</script>

@@ -1,0 +1,153 @@
+<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+	.form-inline .select2-hidden-accessible+.select2-container--bootstrap{width: 227px!important;float: left;}
+	tr td.grayStyle{background:#fbfcfd;width: 120px;text-align: center;}
+	.mt-checkbox-inline label.mt-checkbox-outline{margin-bottom: 0;line-height: 22px;}
+		
+	
+</style>
+<div class="portlet light ">
+	<div class="portlet-title" style="border-bottom: 1px solid transparent;" >
+		<form class="form-inline">
+		<div class="pull-left pt-6">
+			<div class="form-group" >
+				<label  class="pull-left lh29">选择角色：</label>		
+				 <select class="select2-allow-clear select2-hidden-accessible" style=""
+                	id="areaSelect2" name="dicKey" tabindex="-1" aria-hidden="true">
+                    <option value="" disabled="" selected="" >系统管理员</option>
+                    <option value="1">业务负责人</option>
+                    <option value="2">订单审核员</option> 
+                     <option value="1">财务审核员</option>
+                    <option value="2">发货审核员</option> 
+                    <option value="1">业务经理</option>
+                    <option value="2">仓库管理员</option> 
+                </select>
+			<!--	<button type="submit" class="btn green pull-left"><i class="fa fa-edit"></i>修改角色名称</button>-->
+				<a data-toggle="modal" data-target="#memberModal" class="btn btn-success pull-left" data-title="修改角色名称" onclick="clickModel(this)" editUrl="System/rolePermissedit.html"><i class="fa fa-plus"></i>修改角色名称</a>
+		
+			</div>
+		</div> 
+		</form>
+	</div>
+	<div class="portlet-body">
+		<form action="" method="post">
+		<table style="width: 100%;" class="table table-bordered table-hover" >			
+			<tbody>
+				<tr class="">					
+					<td class="grayStyle">订单</td>
+					<td> 												
+					<div class="mt-checkbox-inline">
+						<label class="mt-checkbox mt-checkbox-outline" >
+				            <input type="checkbox"> 订单查看
+				            <span></span>
+				        </label>
+						<label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 订单导出
+				            <span></span>
+				        </label>
+						<label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 订单修改
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 订单作废
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 订单删除
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 财务审核
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 出库审核
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 订单发货确认
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 订单退回
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 代下订单
+				            <span></span>
+				        </label>
+				        <!---->
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单查看
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单导出
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单作废
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单删除
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单收货确认
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单退款确认
+				            <span></span>
+				        </label>
+				        <label class="mt-checkbox mt-checkbox-outline">
+				            <input type="checkbox"> 退单退回
+				            <span></span>
+				        </label>
+					</div>		
+					</td>
+				</tr>
+				<tr class="">					
+					<td class="grayStyle">商品</td>
+					<td> 												
+					<div class="mt-checkbox-inline">
+						<label class="mt-checkbox mt-checkbox-outline" style="margin-bottom: 0;line-height: 22px;">
+			            <input type="checkbox"> 超级管理员
+			            <span></span>
+				        </label>
+							<label class="mt-checkbox mt-checkbox-outline" style="margin-bottom: 0;line-height: 22px;">
+				            <input type="checkbox"> 平台管理员
+				            <span></span>
+				        </label>
+							<label class="mt-checkbox mt-checkbox-outline" style="margin-bottom: 0;line-height: 22px;">
+				            <input type="checkbox"> 农庄用户
+				            <span></span>
+				        </label>
+					</div>		
+					</td>
+				</tr>
+			
+			</tbody>
+		</table>
+		</form>
+	</div>
+</div>
+<script type="text/javascript">
+ 	
+ 	
+ 	var control = $("#areaSelect2");
+    // 下拉选择添加搜索功能
+    control.select2({
+        allowClear: false,
+        escapeMarkup: function (m) {
+            return m;
+        },
+        language: {
+            noResults: function (params) {
+                return "暂无数据";
+            }
+        }
+    });
+</script>

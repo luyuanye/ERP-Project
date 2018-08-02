@@ -1,0 +1,120 @@
+<!--<p>订单/出库发货记录</p>-->
+<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css">
+<div class="portlet light">
+    <div class="portlet-title">
+        <form class="form-inline">
+            <div class="pull-left">
+                <div class="btn-group pull-left">
+                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">出库时间
+                        <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="javascript:;">出库时间</a></li>
+                        <li><a href="javascript:;">入库时间</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group pull-left" style="margin-left: 12px;">
+                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">全部物流
+                        <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="javascript:;">全部物流</a></li>
+                        <li><a href="javascript:;">无物流</a></li>
+                        <li><a href="javascript:;">有物流</a></li>
+                    </ul>
+                </div>
+                <div class="form-group pull-left ml-10">
+                    <div class="form-group">
+                        <label class="lh22">从</label>
+                        <div class="input-group date date-picker">
+                            <input type="TEXT" class="form-control" placeholder="开始时间">
+                            <span class="input-group-btn lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                        </div>
+                        <label class="lh22">到</label>
+                        <div class="input-group date date-picker">
+                            <input type="TEXT" class="form-control" placeholder="结束时间">
+                            <span class="input-group-btn  lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group pull-left ml-10">
+                    <input type="text" class="form-control input-medium pull-left" placeholder="请输入出库/发货单号/订单号/客户名称">
+                    <button type="submit" class="btn green pull-left"><i class="fa fa-search"></i>搜索</button>
+                </div>
+            </div>
+            <div class="form-group pull-right">
+                <a title="物流单导入" onclick="addTab('物流单导入','Order/orderStatistics/deliveryRecordYe.html','deliveryRecordYe','fa fa-pencil',this)" date-num="orderFormdetail" class="btn green btn-outline radius">物流单导入</a>
+            </div>
+        </form>
+    </div>
+    <div class="portlet-body">
+        <table style="width: 100%;"
+               class="table table-striped table-bordered table-hover table-checkable order-column table_example dataTable no-footer"
+               id="deliveryRecordTab" role="grid" aria-describedby="deliveryRecordTab_info">
+            <thead>
+            <tr role="row">
+                <th style="min-width: 55px;">
+                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                        <input type="checkbox" class="group-checkable"
+                               data-set="#deliveryRecordTab .checkboxes">
+                    </label>
+                </th>
+                <th style="min-width: 120px;">编号</th>
+                <th style="min-width: 116px;">客户名称</th>
+                <th style="min-width: 116px;">物流单状态</th>
+                <th style="min-width: 100px;">关联订单</th>
+                <th style="min-width: 80px;">出库时间</th>
+                <th style="min-width: 85px;">发货时间</th>
+                <th style="min-width: 85px;">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                        <input type="checkbox" class="checkboxes" value="1">
+                        <span></span>
+                    </label>
+                </td>
+                <td>L-20180710-355484</td>
+                <td>lsy</td>
+                <td>无</td>
+                <td>DH-O-20180710-361113</td>
+                <td>2018-07-10 14:25</td>
+                <td>2017-12-05 00:00</td>
+                <td>
+                    <div class="action-buttons f18">
+                        <a title="明细"
+                           onclick="addTab('明细','Order/orderManagement/orderFormdetail.html','orderFormdetail','fa fa-pencil',this)"
+                           date-num="orderFormdetail"><i class="fa fa-search "></i></a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(function ($) {
+        TableDatatablesManaged.init("#deliveryRecordTab");
+    })
+</script>
+<script type="text/javascript">
+    $(function () {
+        //可搜索的时间插件
+        $(".date-picker").datepicker({
+            language: 'zh-CN',
+            orientation: "left",
+            format: 'yyyy-mm-dd',
+            autoclose: true
+        });
+    })
+</script>

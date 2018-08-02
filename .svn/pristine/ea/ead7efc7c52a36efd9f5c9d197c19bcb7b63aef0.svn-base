@@ -1,0 +1,124 @@
+
+<form action="" method="post" class="form">
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+	<p class="modal-title f16" id="myModalLabel">充值</p>
+</div>
+    <!--scroll start-->
+<div class="formbox_scroll scrollBox" > 
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2 tr pl-0" >
+	        <label  class="">客户名称:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10 pl-0">
+	        <input type="text" readonly="" class="form-control" placeholder="客户名称" >
+	    </div> 
+    </div>
+     <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="required">充值账户:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	          <select class="form-control" >
+		            <option>充值账户1 </option>
+		            <option>Option 2</option>
+		            <option>Option 3</option>
+		            <option>Option 4</option>
+		            <option>Option 5</option>
+	              </select>
+	    </div> 
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="required">充值金额:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	        <input type="text" class="form-control" placeholder="充值金额" >
+	    </div> 
+    </div>
+    <div class="row form-group">
+    	<div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label class="required">充值摘要</label>
+	    </div>  
+       <div class="col-xs-10 col-sm-10  pl-0 ">
+             
+                <select class="form-control" >
+		            <option>其他付款 </option>
+		            <option>Option 2</option>
+		            <option>Option 3</option>
+		            <option>Option 4</option>
+		            <option>Option 5</option>
+	              </select>
+       </div>      
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="">充值日期:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	       <div class="input-group date date-picker" data-date-format="dd-mm-yyyy">
+                <input type="TEXT" class="form-control" placeholder="开始时间" name="datepicker" aria-required="true" aria-describedby="datepicker-error">
+                <span class="input-group-btn lh22">
+            <button class="btn default" type="button">
+                <i class="fa fa-calendar"></i>
+            </button>
+             </span>
+            </div>
+	    </div> 
+    </div>
+   
+   <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="">收款方式:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	     
+		<label class="mt-radio mt-radio-single mt-radio-outline m0">
+                <input type="radio" class="radioes" value="1">
+                <span style="margin-top: 7px;"></span>
+                                                                             现金
+            </label>
+		<label class="mt-radio mt-radio-single mt-radio-outline m0">
+                <input type="radio" class="radioes" value="1">
+                <span style="margin-top: 7px;"></span>
+                                                                             银行转账
+            </label>
+					
+	    </div> 
+    </div>
+    
+     <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="">附加信息:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	       <div class="form-group">														
+					 <input type="file" id="exampleInputFile1">
+			             <p class="help-block"> some help text here. </p>	
+			</div>
+	    </div> 
+    </div>
+    <div class="row form-group" >
+	    <div class="col-xs-2 col-sm-2  tr pl-0" >
+	        <label  class="">备注:</label>
+	    </div>        
+	    <div class="col-xs-10 col-sm-10  pl-0 ">
+	       <textarea name="" rows="3" class="form-control" cols=""></textarea>
+	    </div> 
+    </div>
+</div>
+	
+<!--scroll end-->
+<div class="modal-footer form-actions right">
+    <button type="button" class="btn btn-success">保存</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>			
+</div>
+</form>
+
+ 
+<script type="text/javascript">
+ 	$(function(){
+ 		$(".date-picker").datepicker();
+ 	})
+
+</script>

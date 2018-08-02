@@ -1,0 +1,170 @@
+<link href="../css/luBase.css" rel="stylesheet" />
+<link href="../css/pageboxs.css" rel="stylesheet" />
+<div class="flowpageboxs section-box">
+	<div class="section-step">
+		<div class="ant-steps-tail ant-click" style="margin-right: -75px; width: 50%;">
+			<p>上传导入文件</p>
+			<i><em></em></i>
+		</div>
+		<div class="ant-steps-tail" style="margin-right: -75px; width: 50%;">
+			<p>导入文件预览</p>
+			<i><em></em></i>
+		</div>
+		<div class="ant-steps-tail">
+			<p>导入完成</p>
+		</div>
+	</div>
+	<div class="section-conts pl-20">
+		<div class="section-wraps1" style="">
+			<form action="" method="POST" enctype="multipart/form-data" id=" " class="form-horizontal form-bordered">
+				<div class="row pt-25  m0">
+
+					<div class="form-group col-lg-12 col-md-12 col-sm-12  col-mx-12 mt-20">
+						<label class="col-md-12">
+                                                    <span style="vertical-align: inherit;">1.选择导入仓库</span></label>
+						<div class="col-md-12">
+
+							<div class="col-lg-5 col-md-8 col-sm-9  col-mx-12 p0" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" style="padding-left: 0px;">
+								<select id="storeInventId" name="storeInventId" class="form-control select2-allow-clear" type="radio">
+								</select>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="form-group col-lg-12 col-md-12 col-sm-12  col-mx-12 mt-20">
+						<label class="col-md-12">
+                                                    <span style="vertical-align: inherit;">2、下载商品入库数据模版</span></label>
+						<div class="col-md-12">
+
+							<div class="col-lg-5 col-md-8 col-sm-9  col-mx-12 p0" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" style="padding-left: 0px;">
+								<select id="2" name="storeInventId" class="form-control select2-allow-clear" type="radio">
+								</select>
+								<span style="position: absolute; right: -150px; margin-top: -25px;"><a href="#"><i class="fa fa-download"></i>下载商品库存数据</a></span>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="form-group col-lg-12 col-md-12 col-sm-12  col-mx-12 mt-20">
+						<label class="col-md-12">
+                                                    <span style="vertical-align: inherit;">
+                                                        3、上传成本调整数据</span></label>
+						<div class="col-md-12">
+
+							<div class="col-lg-5 col-md-8 col-sm-9  col-mx-12 p0">
+
+								<div class=" col-lg-3 col-md-3 col-sm-4  col-mx-4 p0" style="width: 160px; ">
+									<div class="btn-group pull-left" style="line-height: 30px;">入库类型：</div>
+									<div class="btn-group pull-left">
+										<button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">销售退货
+                                                            <i class="fa fa-angle-down"></i>
+                                                        </button>
+										<ul class="dropdown-menu pull-right">
+											<li>
+												<a href="javascript:;"><i class="fa fa-clock-o"></i>销售退货</a>
+											</li>
+											<li>
+												<a href="javascript:;"><i class="fa fa-clock-o"></i>1号仓</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="input-group col-lg-9 col-md-9 col-sm-8  col-mx-8 p0" style="width: calc(100% - 160px);">
+									<input onkeydown='if(event.keyCode==13) return false;' type="text" class="form-control " placeholder="请选择文件" readonly="readonly" id="excelfile" name="excelfile" onkeydown='if(event.keyCode==13) return false;'>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</form>
+		</div>
+		<!-- 2.导入文件预览 -->
+		<div class="section-wraps2" style="display: none;">
+			<div class="basic-import-instruction">
+				<div class="basic-list">前 4 <span>条数据预览</span></div>
+				<div class="basic-list">盘点仓库：<span>默认仓</span></div>
+				<div class="basic-list">盘点时间：<span>2018-07-11 16:49:31</span></div>
+				<div class="basic-list">经办人：<span></span></div>
+			</div>
+			<table class="table table-striped table-bordered table-hover" id="showTable"></table>
+		</div>
+		<!-- 3.导入完成 -->
+		<div class="section-wraps3" style="display: none;">
+			<div class="row col-md-12 text-center" style="margin-top: 40px;">
+				<div class="import-step-three">
+					<div class="import-result-error" style="display: block;">
+						<div class="show-result">
+							<h4 class="warning">导入失败！</h4>
+							<p>数据，成功导入
+								<span style="color: rgb(19, 193, 159);">0</span> 条，导入失败
+								<span class="text-danger">4</span> 条
+							</p>
+						</div>
+						<div class="show-result">
+							<h4>导入失败的原因可能有：</h4>
+							<ul class="">
+								<li>
+									<p>1、系统中没有指定商品存在</p>
+								</li>
+								<li>2、盘点数量不能为空</li>
+								<li>
+									<p>3、商品编码、商品名称、商品规格完全相同的多条商品</p>
+								</li>
+							</ul>
+							<div class="download-result">
+								<button type="button" class="btn btn-default btn-xs"><i class="icon iconfont"></i><span>下载导入失败数据</span>
+                                </button>
+								<p class="text-muted">按上述要求检查修改后，重新上传</p>
+							</div>
+						</div>
+					</div>
+					<div class="import-result-success" style="display: none;">
+						<div class="show-result">
+							<h3 class="tip-success">恭喜您</h3>
+							<p class="tip-info">共有</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fixedFOOTER">
+	<div class="form-actions steps-action">
+		<button class="ant-btn  ant-btn-ghost-click btn btn-default">取消</button>
+		<button class="ant-btn ant-btn-primary  ant-btn-primary-click btn btn-success" id="InpBtn">下一步</button>
+		<button class="ant-btn  ant-btn-ready-click btn btn-success" id="inventorySave">确定导入</button>
+		<button class="ordButton btn btn-success">重新上传</button>
+	</div>
+</div>
+<script>
+	$(".ant-btn-primary-click").click(function() { // 点击下一步按钮时的效果
+		$(this).hide(); // 隐藏当前元素
+		$(".ant-btn-ready-click").show(); // 显示确定导入按钮
+		$(".section-step").children(".ant-steps-tail:eq(0)").addClass("ant-animt") // 给一个导航增加动画
+		$(".section-step").children(".ant-steps-tail:eq(1)").addClass("ant-click") // 给第二个元素添加背景颜色
+		$(".section-conts .section-wraps2").css("display", "block").siblings().css("display", "none");
+	})
+	$(".ant-btn-ready-click").click(function() { // 点击确定导入按钮时的效果
+		$(".ant-btn").hide(); // 隐藏所有按钮
+		$(".ordButton").show(); //  显示重新上传或者继续上传按钮
+		$(".section-step").children(".ant-steps-tail:eq(1)").addClass("ant-animt") // 给二个导航增加动画
+		$(".section-step").children(".ant-steps-tail:eq(2)").addClass("ant-click") // 给第三个元素添加背景颜色
+		$(".section-conts .section-wraps3").css("display", "block").siblings().css("display", "none");
+	})
+	$(".ant-btn-ghost-click").click(function() { // 点击取消按钮时的效果
+		$(".ant-btn-ready-click").hide(); // 隐藏确定导入按钮
+		$(".ant-btn-primary-click").show(); // 显示下一步按钮
+		$(".section-step").children(".ant-steps-tail:eq(0)").removeClass("ant-animt") // 取消第一个元素动画
+		$(".section-step").children(".ant-steps-tail:eq(1)").removeClass("ant-click") // 取消第二个元素背景
+		$(".section-conts .section-wraps1").css("display", "block").siblings().css("display", "none");
+	})
+	$(".ordButton").click(function() { // 点击取消按钮时的效果
+		$("#menuBar .active").trigger("click") //刷新页面
+	})
+</script>

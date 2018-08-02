@@ -1,0 +1,31 @@
+<form action="" method="post" class="form" id="usereditForm">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+		<p class="modal-title f16" id="myModalLabel"></p>
+	</div>
+    <!--scroll-->
+	<div class="formbox_scroll scrollBox">
+		<div class="row form-group">
+			<div class="col-xs-2 col-sm-2 tr pl-0">
+				<label class="required">用户名称：</label>
+			</div>
+			<div class="col-xs-10 col-sm-10 pl-0">
+				<input readonly type="text" class="form-control" placeholder="admin" name="full_name">
+			</div>
+		</div>
+		<div class="row form-group">
+			<div class="col-xs-2 col-sm-2 tr pl-0">
+				<label class="required">真是姓名：</label>
+			</div>
+			<div class="col-xs-10 col-sm-10 pl-0">
+				<input readonly type="text" class="form-control" placeholder="欧阳" name="role_name">
+			</div>
+		</div>
+	
+	</div>
+	<!--scroll-->
+	<div class="modal-footer form-actions right">
+		<button type="submit" class="btn btn-info">保存</button>
+		<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	</div>
+</form>

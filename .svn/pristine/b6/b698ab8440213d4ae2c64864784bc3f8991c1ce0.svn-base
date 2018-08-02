@@ -1,0 +1,227 @@
+<!--<p>商品销售报表</p>-->
+<link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css">
+<div class="portlet light">
+    <div class="portlet-title">
+        <form class="form-inline">
+            <div class="pull-left">
+                <div class="btn-group pull-left" role="group" aria-label="...">
+                    <button type="button" class="btn btn-info"><i class="fa fa-calendar f12"></i>&nbsp;&nbsp;本周</button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-calendar f12"></i>&nbsp;&nbsp;上周</button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-calendar f12"></i>&nbsp;&nbsp;本月</button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-calendar f12"></i>&nbsp;&nbsp;上月</button>
+                </div>
+                <div class="form-group pull-left ml-10">
+                    <div class="form-group">
+                        <label class="lh22">从</label>
+                        <div class="input-group date date-picker">
+                            <input type="TEXT" class="form-control" placeholder="开始时间">
+                            <span class="input-group-btn lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                        </div>
+                        <label class="lh22">到</label>
+                        <div class="input-group date date-picker">
+                            <input type="TEXT" class="form-control" placeholder="结束时间">
+                            <span class="input-group-btn  lh22">
+			            <button class="btn default" type="button">
+			                <i class="fa fa-calendar"></i>
+			            </button>
+			        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group pull-right">
+                <div class="rule-help">
+                    <span>统计说明 <i class="fa fa-question"></i></span>
+                    <div class="rule-help-wrap">
+                        <p>1、退货单提交订单后即计入统计；</p>
+                        <p>2、如需【品牌】字段有内容，需在【系统设置-系统参数设置-商品设置】中启用商品品牌，并在商品列表完善商品品牌信息；</p>
+                        <p>3、客户归属的【部门】、【业务员】及【区域】信息均取的客户列表中当前最新值。</p>
+                    </div>
+                </div>
+                <a href="javascript:;" type="button" class="btn green btn-outline radius"><i class="fa fa-file-excel-o"></i> 导 出</a>
+            </div>
+        </form>
+    </div>
+    <div class="portlet-body">
+        <div class="reportWrapper" style="border-bottom: 0px;">
+            <div class="reportSum Mechan">
+                <div class="reportSumList col-md-5" style="padding: 0px;">
+                    <div class="reportFont col-md-3">
+                        <h3>订货单</h3>
+                        <h4><span>4</span>笔</h4>
+                    </div>
+                    <div class="reportFont col-md-3">
+                        <h3>退货单</h3>
+                        <h4><span>4</span>笔</h4>
+                    </div>
+                    <div class="reportFont col-md-3">
+                        <h3>订货数量</h3>
+                        <h4><span>4</span></h4>
+                    </div>
+                    <div class="reportFont col-md-3">
+                        <h3>退货数量</h3>
+                        <h4><span>4</span></h4>
+                    </div>
+                </div>
+                <div class="reportSumList col-md-7">
+                    <div class="reportFont col-md-3">
+                        <h3>订货金额</h3>
+                        <h4><span>0.00</span></h4>
+                    </div>
+                    <div class="reportFont col-md-3">
+                        <h3>退货金额</h3>
+                        <h4><span>101.00</span></h4>
+                    </div>
+                    <div class="reportFont col-md-3">
+                        <h3>金额合计</h3>
+                        <h4><span>-101.00</span></h4>
+                    </div>
+                    <a class="" title="滞销商品统计"
+                       onclick="addTab('滞销商品统计','Report/MerchandisingAedit.html','MerchandisingAedit','fa fa-pencil',this)"
+                       date-num="MerchandisingAedit" data-dismiss="modal">
+                        <div class="reportFont col-md-3">
+                            <h3>滞销商品数</h3>
+                            <h4><span>0</span></h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="echartsWrapper">
+                <div class="chart-top">
+                    <div class="btn-group pull-left mar-left">
+                        <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">订货数量排行 / 按商品统计<i
+                                class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="javascript:;">订货数量排行</a></li>
+                            <li><a href="javascript:;">订货数量排行</a></li>
+                            <li><a href="javascript:;">订货数量排行</a></li>
+                            <li><a href="javascript:;">订货数量排行</a></li>
+                            <li><a href="javascript:;">订货数量排行</a></li>
+                        </ul>
+                    </div>
+                   <!-- <div class="Merchandising-radio">
+                        <label for="radio1" class="">
+                            <input type="radio" class="ant-radio-button-input" value="on" id="radio1">
+                            <span>按单规格统计</span>
+                        </label>
+                        <label for="radio2" class="">
+                            <input type="radio" class="ant-radio-button-input" value="on" id="radio2">
+                            <span>按多规格汇总统计</span>
+                        </label>
+                    </div>-->
+                </div>
+                <div class="chart-wrapper" style="height: 300px;">
+                    <div id="container2"
+                         style="width:40%;height:350px; margin-top: -45px; margin-left: -7%; display: inline-block ; float: left"></div>
+                    <div class="merchang-list">
+                        <ul>
+                            <li>
+                                <span>白菜</span>
+                                <span>1</span>
+                                <span>50.00%</span>
+                            </li>
+                            <li>
+                                <span>敌敌畏</span>
+                                <span>1</span>
+                                <span>50.00%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tablePortlet clear">
+               <table style="white-space: nowrap;text-overflow: ellipsis; overflow: hidden;width: 100%;"
+                       class="table table-striped table-bordered table-hover table-checkable order-column table_example dataTable no-footer "
+                       id="MerchandisingTab" role="grid" aria-describedby="MerchandisingTab_info">
+                    <thead>
+                    <th style="min-width: 100px;">日期(2018-07-01~2018-07-12)</th>
+                    <th>订货单</th>
+                    <th>退货单</th>
+                    <th>订货数量</th>
+                    <th>退货数量</th>
+                    <th>订货金额</th>
+                    <th>退货金额</th>
+                    <th>金额小计</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd"  >
+                        <td>白菜</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    var amountOfAccess = function () {
+        var myChart2 = echarts.init(document.getElementById('container2'));
+        option2 = {
+            title: {
+                text: '',
+                subtext: '',
+                x: ''
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: ['白菜', '敌敌畏']
+            },
+            series: [
+                {
+                    name: '',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    data: [
+                        {value: 335, name: '白菜'},
+                        {value: 10, name: '敌敌畏'},
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+        myChart2.setOption(option2);
+    }
+    amountOfAccess();
+</script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        TableDatatablesManaged.init("#MerchandisingTab");
+    })
+</script>
+<script type="text/javascript">
+    $(function () {
+        $(".date-picker").datepicker({
+            language: 'zh-CN',
+            orientation: "left",
+            format: 'yyyy-mm-dd',
+            autoclose: true
+        });
+    })
+</script>
+
